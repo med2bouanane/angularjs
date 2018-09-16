@@ -1,0 +1,615 @@
+﻿/*************** Général ******************/
+BODY
+{
+    background-color: #b7b8b1;
+    font: 11px/14px Arial, Helvetica, Verdana, sans-serif;
+}
+P
+{
+    padding-bottom: 3px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 3px;
+}
+H1
+{
+    font: 26px VAGRoundedThin, Arial;
+    color: #ff3700;
+}
+H2
+{
+    font: 20px VAGRoundedThin, Arial;
+    color: #414141;
+}
+
+INPUT[type=text]
+{
+    border-bottom: #b7b8b1 1px solid;
+    border-left: #b7b8b1 1px solid;
+    padding-bottom: 2px;
+    background-color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+    font: normal normal 11px/11px Arial, Helvetica, Verdana, sans-serif;
+    border-top: #b7b8b1 1px solid;
+    border-right: #b7b8b1 1px solid;
+    padding-top: 2px;
+
+}
+
+INPUT[type=password]
+{
+
+    padding-bottom: 2px;
+    background-color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+    font: 11px/11px Arial, Helvetica, Verdana, sans-serif;
+    border-bottom: #b7b8b1 1px #ff3700;
+    border-left:  #b7b8b1 1px #ff3700;
+    border-top: #b7b8b1 1px #ff3700;
+    border-right: #b7b8b1 1px  #ff3700;
+    padding-top: 2px;
+
+}
+
+INPUT[type=password].zonetxtoblig, .zonetxtoblig
+{
+    border: 1px solid #ff3700;
+    padding-bottom: 2px;
+    background-color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+    font: 11px/11px Arial, Helvetica, Verdana, sans-serif;
+    padding-top: 2px;
+}
+
+TEXTAREA
+{
+    border-bottom: #b7b8b1 1px solid;
+    border-left: #b7b8b1 1px solid;
+    padding-bottom: 2px;
+    background-color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+    font: 11px/11px Arial, Helvetica, Verdana, sans-serif;
+    border-top: #b7b8b1 1px solid;
+    border-right: #b7b8b1 1px solid;
+    padding-top: 2px;
+}
+
+OPTION
+{
+    border-bottom: medium none;
+    border-left: medium none;
+    border-top: medium none;
+    border-right: medium none;
+}
+INPUT[type=button]
+{
+    border-bottom: #999999 1px solid;
+    border-left: #999999 1px solid;
+    background-color: white;
+    font: 11px/11px Arial, Helvetica, Verdana, sans-serif;
+    height: 20px;
+    border-top: #999999 1px solid;
+    border-right: #999999 1px solid;
+    width:100px;
+}
+INPUT[type=reset]
+{
+    border-bottom: #999999 1px solid;
+    border-left: #999999 1px solid;
+    background-color: white;
+    width: 100px;
+    font: 11px/11px Arial, Helvetica, Verdana, sans-serif;
+    height: 20px;
+    border-top: #999999 1px solid;
+    border-right: #999999 1px solid;
+}
+INPUT[type=submit]
+{
+    border-bottom: #999999 1px solid;
+    border-left: #999999 1px solid;
+    background-color: white;
+    font: 11px/11px Arial, Helvetica, Verdana, sans-serif;
+    height: 20px;
+    border-top: #999999 1px solid;
+    border-right: #999999 1px solid;
+}
+INPUT[type=button]:hover
+{
+    color: #ff3700;
+}
+INPUT[type=reset]:hover
+{
+    color: #ff3700;
+}
+INPUT[type=submit]:hover
+{
+    color: #ff3700;
+}
+INPUT[type=button]:active
+{
+    background-color: #e6e1d4;
+}
+INPUT[type=reset]:active
+{
+    background-color: #e6e1d4;
+}
+INPUT[type=submit]:active
+{
+    background-color: #e6e1d4;
+}
+INPUT[type=radio]
+{
+    border-bottom: white 0px solid;
+    border-left: white 0px solid;
+    border-top: white 0px solid;
+    border-right: white 0px solid;
+}
+INPUT[type=checkbox]
+{
+    border-bottom: white 0px solid;
+    border-left: white 0px solid;
+    border-top: white 0px solid;
+    border-right: white 0px solid;
+}
+
+header
+{
+    width: 100%;
+    background: url(../Images/header.jpg) no-repeat #414141 ;
+    float: left;
+    height: 127px;
+    padding-right: 10px;
+}
+
+header label
+{
+    color: White;
+}
+header #transverse
+{
+    margin: 10px 5px 0px 0px;
+    width: 100%;
+    height: 18px;
+    color: white;
+}
+header #transverse UL
+{
+    list-style-type: none;
+    float: right;
+    vertical-align: middle;
+
+}
+header A
+{
+    color: white;
+    text-decoration: none;
+}
+header #transverse A:hover
+{
+    color: #ff3700;
+}
+header #transverse LI
+{
+   /* width: 100px;*/
+    display: inline-block;
+    float: left;
+    height: 15px;
+    margin-left:38px;
+}
+header #transverse SELECT
+{
+    border-bottom: medium none;
+    border-left: medium none;
+    background-color: #50504f;
+    width: 80px;
+    font: 10px/10px Arial, Helvetica, Verdana, sans-serif;
+    height: 18px;
+    color: white;
+    border-top: medium none;
+    border-right: medium none;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    border-width: 0px;
+}
+header #transverse OPTION
+{
+    border-bottom: medium none;
+    border-left: medium none;
+    width: 50px;
+    height: 15px;
+    border-top: medium none;
+    border-right: medium none;
+}
+
+header #titre
+{
+    display: inline-block;
+    width: 85%;
+    text-align: right;
+    font-size: 3em;
+    margin-top: 20px;
+}
+
+header #login
+{
+    display: inline-block;
+    float: right;
+}
+
+header #login #inscription
+{
+    display: block;
+    background-color: Green;
+    margin-left: 300px;
+}
+/****************************/
+
+.ImageIdentification
+{
+    background-image:url('../Images/eKPI.jpg');
+    background-repeat:no-repeat; 
+    height:426px;
+    width:282px;
+}
+
+.EnteteIdentification
+{
+    background-image:url('../Images/CoinBlanc.gif');
+    background-repeat:no-repeat;
+    background-position:top right;
+    Height:39px;
+    padding-left:20px;
+    padding-top:40px;
+    vertical-align:baseline;
+    line-height:20px;
+}
+
+.PiedPageIdentification
+{
+    background-image:url('../Images/CoinGris.gif');
+    background-repeat:no-repeat;
+    background-position:bottom right;
+    height:63px;
+    background-color:#414141;
+}
+
+.LogoCapclient
+{
+    padding-bottom:10px;
+    background-repeat:no-repeat;
+    background-image: url('../Images/LogoFiveStar.png');
+    background-position: bottom 10px right 10px; 
+    height:80px;
+    background-size: 80px;
+}
+
+H4
+{
+    font-weight:bold;   
+    color: #ff3700;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 18px;
+    line-height: normal;
+    font-family: VAGRoundedThin, Arial;
+    width: 245px;
+}
+
+.FondBlanc
+{
+    background-color: White;
+}
+
+.texterouge
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    color: #ff3700;
+    font-size: 11px;
+}
+
+.texteboxLength
+{
+    width:350px;
+    height: 21px;
+}
+input[type=text].zonetxtgris, .zonetxtgris
+{
+    background-color: #b7b8b1;
+    border: 1px solid #b7b8b1;
+}
+
+input[type=text].zonetxtgris2, .zonetxtgris2
+{
+    background-color: #414141;
+    border: 1px solid #b7b8b1;
+    color: #ddd9cd;
+}
+
+.btdefaut
+{
+    border-bottom: #999999 1px solid;
+    border-left: #999999 1px solid;
+    background-color: white;
+    font: 11px/11px Arial, Helvetica, Verdana, sans-serif;
+    height: 20px;
+    border-top: #999999 1px solid;
+    border-right: #999999 1px solid;
+    width:100px;
+}
+
+
+/**************************************************************************************
+						        	- Master head -
+***************************************************************************************/
+
+.largeurSite
+{
+    width:955px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.divBienvenueDroite
+{
+    width:100%;
+    text-align:right;
+}
+
+/**************************************************************************************
+						        	- Etapes -
+***************************************************************************************/
+
+
+.DebutEtapeGrise
+{
+	background-image: url(../Images/Etapes/DebutEtapeGrise.gif);
+	/*height: 20px;*/
+	background-repeat: no-repeat;
+/*	background-position-x: right;*/
+}
+
+.EtapeGrise
+{
+	font-family: Arial, Helvetica, sans-serif;
+	/*height: 20px;*/
+	background-color: #737572;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 10px;
+}
+
+.EtapeFondGrisClair
+{
+	/*height: 20px;*/
+	background-color: #e6e1d4;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 10px;
+	white-space:nowrap;
+}
+
+.DebutEtapeGrisClair
+{
+	background-image: url(../Images/Etapes/DebutEtapeGrisClair.gif);
+	background-size:10px 20px;
+	background-repeat: no-repeat;
+}
+
+.TransitionEtapeGrisClair
+{
+   	background-image: url(../Images/Etapes/TransitionEtapeGrisClair.gif);
+	background-size:10px 20px;
+	background-repeat: no-repeat;
+	padding-left: 10px;
+}
+
+.FinEtapeGrisClair
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 10px;
+	background-image: url(../Images/Etapes/FinEtapeGrisClair.gif);
+	background-size:10px 20px;
+	background-repeat: no-repeat;
+	/*height: 20px;*/
+	/*width: 10px;*/
+	/*background-position-x: right;*/
+}
+
+.FinEtapeGrisFonce
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 10px;
+	background-image: url(../Images/Etapes/FinEtapeGrisfonce.gif);
+	background-size:10px 20px;
+	background-repeat: no-repeat;
+	/*height: 20px;*/
+	/*width: 10px;*/
+	/*background-position-x: right;*/
+}
+
+.stretch {
+    /*width:100%;*/
+    height:100%;
+}
+/**************************************************************************************
+						        	- CheckBoxList -
+***************************************************************************************/
+
+.scrollingControlContainer
+{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.scrollingCheckBoxList
+{
+    border: 1px #808080 solid;
+    margin: 10px 10px 10px 10px;
+}
+
+/**************************************************************************************
+						        	- Datagrid -
+***************************************************************************************/
+
+.DatagridHeader
+{
+    /*font-weight: bold;*/
+    color: Black;
+    background-color: #999999;
+    height: 25px;
+    vertical-align: middle;
+    /*font-variant: normal;*/
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.DatagridHeader td, .DatagridItemStyle td, .DatagridAlternatingItemStyle td, .DatagridEditItemStyle td, .DatagridHeader th
+{
+    padding-left: 2px; 
+    padding-right: 2px;
+    border-style: none;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.DatagridHeader td table td, .DatagridItemStyle td table td, .DatagridAlternatingItemStyle td table td, .DatagridEditItemStyle td table td, .DatagridHeader th table td
+{
+    border-color: transparent;
+}
+
+/*.DatagridHeader td td, .DatagridItemStyle td td, .DatagridAlternatingItemStyle td td, .DatagridEditItemStyle td td
+{
+    padding-left: 2px; 
+    padding-right: 2px;
+    border-style: none;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}*/
+
+.DatagridItemStyle
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    background-color: #ddd9cd;
+    padding-left: 4px;
+    line-height: 14px;
+    height: 25px;
+}
+
+.DatagridAlternatingItemStyle
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    color: Black;
+    background-color: white;
+    padding-left: 4px;
+    line-height: 14px;
+    height: 25px;
+}
+
+.DatagridFooterStyle
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+    color: Black;
+    background-color: #999999;
+    height: 25px;
+    vertical-align: middle;
+    font-variant: normal;
+    padding-left: 4px;
+    line-height: 14px;
+    height: 25px;
+    border-style: none;
+    border-left: 1px solid White;
+    border-right: 1px solid White;
+}
+
+.DatagridPagerStyle
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #999999;
+    height: 25px;
+    vertical-align: middle;
+    font-variant: normal;
+    line-height: 14px;
+    text-align: right;
+    border-style: none;
+    border-left: 1px solid White;
+    border-right: 1px solid White;
+}
+
+.DatagridPagerStyle table {
+    float: right;
+}
+
+.DatagridEditItemStyle
+{
+    font-size: x-small;
+    height: 25px;
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    color: Black;
+}
+
+.divApplyAll
+{
+    position: absolute;
+    width: 184px;
+    display: none;
+    border-right: black thin solid;
+    border-top: black thin solid;
+    border-left: black thin solid;
+    border-bottom: black thin solid;
+    left: 56px;
+    top: 8px;
+    background-color: #ddd9cd;
+    color: #425963;
+}
+
+
+/* Supprimer les croix qui permettent de vider les champs texte dans IE */
+
+input[type=text]::-ms-clear {
+    display: none;
+}
+
+.page
+{
+    padding: 10px;  
+}
+
+/* Accordéons */
+.accordeon
+{
+    width: 810px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.accordeonEnTete
+{
+    background-color: #b7b8b1;
+    cursor: pointer;
+    line-height: 20px;
+    color: Black;
+    font-weight: bold;
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+}
+.row{
+    margin-top: 3px;
+}
+

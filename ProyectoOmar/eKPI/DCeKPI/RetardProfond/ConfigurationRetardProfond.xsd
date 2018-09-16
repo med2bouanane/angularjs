@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConfigurationRetardProfond" targetNamespace="http://tempuri.org/ConfigurationRetardProfond.xsd" xmlns:mstns="http://tempuri.org/ConfigurationRetardProfond.xsd" xmlns="http://tempuri.org/ConfigurationRetardProfond.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="certificatConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="certificatConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DCeKPI.My.MySettings.GlobalReference.Default.certificatConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConfigurationRetardProfond" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ConfigurationRetardProfond" msprop:Generator_UserDSName="ConfigurationRetardProfond">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ConfigurationRetardProfond" msprop:Generator_TableClassName="ConfigurationRetardProfondDataTable" msprop:Generator_TableVarName="tableConfigurationRetardProfond" msprop:Generator_TablePropName="_ConfigurationRetardProfond" msprop:Generator_RowDeletingName="ConfigurationRetardProfondRowDeleting" msprop:Generator_UserTableName="ConfigurationRetardProfond" msprop:Generator_RowChangingName="ConfigurationRetardProfondRowChanging" msprop:Generator_RowEvHandlerName="ConfigurationRetardProfondRowChangeEventHandler" msprop:Generator_RowDeletedName="ConfigurationRetardProfondRowDeleted" msprop:Generator_RowEvArgName="ConfigurationRetardProfondRowChangeEvent" msprop:Generator_RowChangedName="ConfigurationRetardProfondRowChanged" msprop:Generator_RowClassName="ConfigurationRetardProfondRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdConfigurationRetardProfond" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdConfigurationRetardProfond" msprop:Generator_ColumnPropNameInRow="IdConfigurationRetardProfond" msprop:Generator_ColumnPropNameInTable="IdConfigurationRetardProfondColumn" msprop:Generator_UserColumnName="IdConfigurationRetardProfond" type="xs:int" minOccurs="0" />
+              <xs:element name="IdUtilisateurCreateur" msprop:Generator_ColumnVarNameInTable="columnIdUtilisateurCreateur" msprop:Generator_ColumnPropNameInRow="IdUtilisateurCreateur" msprop:Generator_ColumnPropNameInTable="IdUtilisateurCreateurColumn" msprop:Generator_UserColumnName="IdUtilisateurCreateur" type="xs:int" minOccurs="0" />
+              <xs:element name="DateCreation" msprop:Generator_ColumnVarNameInTable="columnDateCreation" msprop:Generator_ColumnPropNameInRow="DateCreation" msprop:Generator_ColumnPropNameInTable="DateCreationColumn" msprop:Generator_UserColumnName="DateCreation" type="xs:dateTime" />
+              <xs:element name="IdUtilisateurModificateur" msprop:Generator_ColumnVarNameInTable="columnIdUtilisateurModificateur" msprop:Generator_ColumnPropNameInRow="IdUtilisateurModificateur" msprop:Generator_ColumnPropNameInTable="IdUtilisateurModificateurColumn" msprop:Generator_UserColumnName="IdUtilisateurModificateur" type="xs:int" minOccurs="0" />
+              <xs:element name="DateModification" msprop:Generator_ColumnVarNameInTable="columnDateModification" msprop:Generator_ColumnPropNameInRow="DateModification" msprop:Generator_ColumnPropNameInTable="DateModificationColumn" msprop:Generator_UserColumnName="DateModification" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IdSite" msprop:Generator_ColumnVarNameInTable="columnIdSite" msprop:Generator_ColumnPropNameInRow="IdSite" msprop:Generator_ColumnPropNameInTable="IdSiteColumn" msprop:Generator_UserColumnName="IdSite" type="xs:short" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Periode" msprop:Generator_ColumnVarNameInTable="columnPeriode" msprop:Generator_ColumnPropNameInRow="Periode" msprop:Generator_ColumnPropNameInTable="PeriodeColumn" msprop:Generator_UserColumnName="Periode" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Tonnage" msprop:Generator_ColumnVarNameInTable="columnTonnage" msprop:Generator_ColumnPropNameInRow="Tonnage" msprop:Generator_ColumnPropNameInTable="TonnageColumn" msprop:Generator_UserColumnName="Tonnage" type="xs:double" minOccurs="0" />
+              <xs:element name="TonnageSansBlocage" msprop:Generator_ColumnVarNameInTable="columnTonnageSansBlocage" msprop:Generator_ColumnPropNameInRow="TonnageSansBlocage" msprop:Generator_ColumnPropNameInTable="TonnageSansBlocageColumn" msprop:Generator_UserColumnName="TonnageSansBlocage" type="xs:double" minOccurs="0" />
+              <xs:element name="Actif" msprop:Generator_ColumnVarNameInTable="columnActif" msprop:Generator_ColumnPropNameInRow="Actif" msprop:Generator_ColumnPropNameInTable="ActifColumn" msprop:Generator_UserColumnName="Actif" type="xs:boolean" />
+              <xs:element name="ObjectifTonnage" msprop:Generator_ColumnVarNameInTable="columnObjectifTonnage" msprop:Generator_ColumnPropNameInRow="ObjectifTonnage" msprop:Generator_ColumnPropNameInTable="ObjectifTonnageColumn" msprop:Generator_UserColumnName="ObjectifTonnage" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

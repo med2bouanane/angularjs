@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <ul>
+        <li class="principales" data-ng-repeat="p in principales">
+            {{p.Description}}
+            <ul data-ng-repeat=" p2 in p.hijos">
+                <li class="hijos" data-ng-repeat=" h in hijos">{{}}</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿{
+  "lblIdentifiantLibelle": "Login",
+  "lblAncienMotPass": "Old password",
+  "lblNouveauMotPass": "New password",
+  "lblConfirmationMotPass": "Confirm new password",
+  "btnValider": "Validate",    
+  "msgErrorFormat": "One or more fields do not meet the required format",
+  "msgErrorEncodage": "Fields marked with * are required",
+  "msgSucces": "Password changed successfully",
+  "msgErrorCorrespendanceNouveauConfirmation": "The password does not match",
+  "msgErrorNouveauAncienDifferent": "the new password must be different from the old",
+  "msgErrorAncienMotPassIncorrect": "Thèse passwords don't match",
+  "msgErrorLienPerime": "This link has expired, you must restart the procedure"
+}
+
+
+  

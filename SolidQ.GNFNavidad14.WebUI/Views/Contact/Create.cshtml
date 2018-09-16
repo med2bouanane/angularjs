@@ -1,0 +1,454 @@
+﻿@model SolidQ.GNFNavidad14.WebUI.ViewModels.ContactVM
+
+@{
+    ViewBag.Title = @SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.SendingForm;
+}
+
+<div class="row principal">
+    <div class="col-md-4 col-sm-4 movil-tablet">
+        <img id="image-tablet" src="~/Images/Icons/form_tablet_v3.jpg" class="img-responsive" />
+    </div>
+    <div class="col-md-8 col-sm-8 form-principal" ng-controller="contactController" data-ng-init="init('@Microsoft.WindowsAzure.CloudConfigurationManager.GetSetting("gmail")','@Microsoft.WindowsAzure.CloudConfigurationManager.GetSetting("hotmail")','@Microsoft.WindowsAzure.CloudConfigurationManager.GetSetting("yahoo")')">
+
+        @using (Html.BeginForm())
+        {
+            @*<h2>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.SloganFormSending</h2>*@
+
+            <p class="align-right required-field-text">@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.RequiredFields</p>
+
+            <div class="section-separator"><hr /></div>
+
+            <div id="addUser">
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary()
+
+                <div class="form-horizontal">
+                    <h4>Tus datos</h4>
+                    <!--
+                    <div id="msg-error-user" class="validation-summary-errors" style="display:none;">
+                        <p>{{error1}}</p>
+                        <p>{{error2}}</p>
+                        <p>{{error3}}</p>
+                        <p>{{error4}}</p>
+                        <p>{{error5}}</p>
+                        <p>{{error10}}</p>
+                    </div>
+                    -->
+                    <div class="form-group form-field-padding">
+                        @Html.Label(@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.YourName, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <input type="text" id="input-error-nameuser" class="form-control" data-ng-model="nameUser" required />
+                            <div id="msg-error-nameuser" class="validation-errors" style="display:none;">
+                                <p>{{error1 | translate}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="form-group form-field-padding">
+                            @Html.Label(@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.YourSurname, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input type="text" id="input-error-surnameuser" class="form-control" data-ng-model="surnameUser" required />
+                                <div id="msg-error-surnameuser" class="validation-errors" style="display:none;">
+                                    <p>{{error2}}</p>
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="form-group form-field-padding">
+                        @Html.Label(@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.YourEmailAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <input type="email" id="emailUser" class="form-control" data-ng-model="emailUser" name="emailUser" required />
+                            <div id="msg-error-emailuser" class="validation-errors" style="display:none;">
+                                <p>{{error3 | translate}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-separator"><hr /></div>
+
+            <h4>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.SendingLanguage</h4>
+
+            <div class="form-horizontal row form-field-padding language-selection" style="margin-left:0;margin-right:0">
+                <div class="radio col-xs-6 col-sm-2">
+                    <label>
+                        <input type="radio" name="opciones" id="opciones_1" value="es" ng-checked="true" ng-model="language">
+                        Castellano
+                    </label>
+                </div>
+                <div class="radio col-xs-6 col-sm-2">
+                    <label>
+                        <input type="radio" name="opciones" id="opciones_2" value="ca" ng-checked="{{checked_ca}}" ng-model="language">
+                        Català
+                    </label>
+                </div>
+                <div class="radio col-xs-6 col-sm-2">
+                    <label>
+                        <input type="radio" name="opciones" id="opciones_3" value="en" ng-checked="{{checked_en}}" ng-model="language">
+                        English
+                    </label>
+                </div>
+                <div class="radio col-xs-6 col-sm-2">
+                    <label>
+                        <input type="radio" name="opciones" id="opciones_4" value="gl" ng-checked="{{checked_gl}}" ng-model="language">
+                        Galego
+                    </label>
+                </div>
+                <div class="radio col-xs-6 col-sm-2">
+                    <label>
+                        <input type="radio" name="opciones" id="opciones_5" value="it" ng-checked="{{checked_it}}" ng-model="language">
+                        Italiano
+                    </label>
+                </div>
+                <div class="radio col-xs-6 col-sm-2">
+                    <label>
+                        <input type="radio" name="opciones" id="opciones_6" value="fr" ng-checked="{{checked_fr}}" ng-model="language">
+                        Français
+                    </label>
+                </div>
+                <div class="radio col-xs-6 col-sm-2">
+                    <label>
+                        <input type="radio" name="opciones" id="opciones_7" value="pt" ng-checked="{{checked_pt}}" ng-model="language">
+                        Português
+                    </label>
+                </div>
+                <div class="radio col-xs-6 col-sm-2">
+                    <label>
+                        <input type="radio" name="opciones" id="opciones_8" value="ru" ng-checked="{{checked_ru}}" ng-model="language">
+                        Pусский
+                    </label>
+                </div>
+                <div class="radio col-xs-6 col-sm-2">
+                    <label>
+                        <input type="radio" name="opciones" id="opciones_9" value="ro" ng-checked="{{checked_ro}}" ng-model="language">
+                        Română
+                    </label>
+                </div>
+                <div class="radio col-xs-6 col-sm-2">
+                    <label>
+                        <input type="radio" name="opciones" id="opciones_10" value="de" ng-checked="{{checked_de}}" ng-model="language">
+                        Deutsch
+                    </label>
+                </div>
+                <div class="radio col-xs-6 col-sm-2">
+                    <label>
+                        <input type="radio" name="opciones" id="opciones_11" value="nl" ng-checked="{{checked_nl}}" ng-model="language">
+                        Nederlands
+                    </label>
+                </div>
+            </div>
+
+            <div class="section-separator"><hr /></div>
+
+            <h4>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.addContact</h4>
+            <p>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.InfoAddContact</p>
+
+            <div id="msg-error-agregar" class="validation-summary-errors" style="display:none;">
+                <p>{{error4 | translate}}</p>
+            </div>
+
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs" role="tablist">
+                    <li class="active"><a href="#manually" role="tab" data-toggle="tab" id="manually-tab">@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.tabManualy</a></li>
+                    <li class=""><a href="#outlook" role="tab" data-toggle="tab" id="outlook-tab">Outlook</a></li>
+                    <li class=""><a href="#hotmail" role="tab" data-toggle="tab" id="hotmail-tab">Hotmail</a></li>
+                    <li class=""><a href="#gmail" role="tab" data-toggle="tab" id="gmail-tab">GMail</a></li>
+                    <li class=""><a href="#yahoo" role="tab" data-toggle="tab" id="yahoo-tab">Yahoo</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="manually">
+                        <!--
+                        <div id="msg-error-contact" class="validation-summary-errors" style="display:none;">
+                            <p>{{error6}}</p>
+                            <p>{{error7}}</p>
+                            <p>{{error8}}</p>
+                            <p>{{error9}}</p>
+                        </div>
+                        -->
+                        <div id="addContactManually">
+                            <div class="form-horizontal">
+                                <br />
+                                <div class="form-group form-field-padding">
+                                    @Html.Label(@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.RecipientName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        <input id="namecontact" type="text" class="form-control" data-ng-model="nameContact" required />
+                                        <div id="msg-error-namecontact" class="validation-errors" style="display:none;">
+                                            <p>{{error6 | translate}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*<div class="form-group form-field-padding">
+                                        @Html.Label(@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.RecipientSurname, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            <input id="surnamecontact" type="text" class="form-control" data-ng-model="surnameContact" required />
+                                            <div id="msg-error-surnamecontact" class="validation-errors" style="display:none;">
+                                                <p>{{error7}}</p>
+                                            </div>
+                                        </div>
+                                    </div>*@
+                                <div class="form-group form-field-padding">
+                                    @Html.Label(@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.RecipientEmailAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        <input id="emailContact" type="email" class="form-control" data-ng-model="emailContact" name="emailContact" required />
+                                        <div id="msg-error-emailcontact" class="validation-errors" style="display:none;">
+                                            <p>{{error8 | translate}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-field-padding">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="button" value="@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.btnAddContact" class="btn btn-default" ng-click="addContactManually()" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="outlook">
+
+                        <form name="uploadForm" enctype="multipart/form-data">
+                            <div id="msg-error-csv" class="validation-summary-errors" style="display:none;">
+                                <p>{{csvError}}</p>
+                            </div>
+                            <fieldset class="fieldset-upload">
+                                <h5 class="subtitle"><b>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.InstructionsOutlook</b></h5>
+                                <ol class="outlook_list">
+                                    <li>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.Instruction1</li>
+                                    <li>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.Instruction2</li>
+                                    <li>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.Instruction3</li>
+                                    <li>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.Instruction4</li>
+                                    <li>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.Instruction5</li>
+                                    <li>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.Instruction6</li>
+                                    <li>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.Instruction7</li>
+                                    <li>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.Instruction8</li>
+                                </ol>
+
+
+                                
+
+                                <div id="upload-section">
+                                    <div class="col-xs-7" id="filename">
+                                        <input id="uploadFile" disabled="disabled" />
+                                    </div>
+                                    <div class="col-xs-5 fileUpload btn btn-default cancel-button">
+
+
+                                        <span>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.Browser</span>
+                                        @*<input id="uploadBtn" class="upload" type="file" accept=" *" />*@
+                                        <input id="uploadBtn" class="upload" type="file" ng-file-select="onFileSelect($files)">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="send-upload">
+                                            <!--class="divButtons"-->
+                                        <input type="button" id="outlook-send-button" ng-click="uploadFile()" class="btn btn-default" value="@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.SendButton">
+                                    </div>
+                            </fieldset>
+                        </form>
+                        @*<div>
+                                <div class="form-horizontal">
+                                    <br />
+                                    <div id="msg-error-outlook" class="validation-errors" style="display:none;">
+                                        <p>{{erroroutlook | translate}}</p>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.Label("Usuario", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            <input id="outlookuser" type="text" class="form-control" ng-model="userOutlook" required />
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.Label("Contraseña", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            <input id="outlookpass" class="form-control" type="password" ng-model="passOutlook" name="emailContact" required />
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="button" ng-click="submitOutlook()" class="btn btn-default" value="Cargar Contactos" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
+                        <!-- <input id="cd" type="hidden" value="@ViewBag.cargarDatos" />
+                         <span>{{cargarDatos}}</span>
+                         <input type="text" ng-model="userOutlook" />
+                         <input type="password" ng-model="passOutlook" />
+                         <input type="button" ng-click="submitOutlook()" class="button" value="Cargar Contactos" />-->
+                    </div>
+                    <div class="tab-pane fade only-button" id="hotmail">
+                        <input type="button" value="Cargar contactos" class="btn btn-default" ng-click="getFriends('windows', 'me/contacts')">
+                    </div>
+                    <div class="tab-pane fade only-button" id="gmail">
+                        <input type="button" value="Cargar contactos" class="btn btn-default" ng-click="getFriends('google', 'me/contacts')">
+                    </div>
+                    <div class="tab-pane fade only-button" id="yahoo">
+                        <input type="button" value="Cargar contactos" class="btn btn-default" ng-click="getFriends('yahoo', 'me/friends')">
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <br />
+
+            <div class="panel panel-default contacts">
+                <!-- Default panel contents -->
+                <div class="panel-heading">@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.NumContacts ({{contacts.length}})</div>
+                @*<div class="alert alert-info" ng-show="loading">
+                    <!-- <input id="cd" type="hidden" value="@ViewBag.cargarDatos" />
+                    <span>{{cargarDatos}}</span>
+                    <input type="text" ng-model="userOutlook" />
+                    <input type="password" ng-model="passOutlook" />
+                    <input type="button" ng-click="submitOutlook()" class="button" value="Cargar Contactos" />-->
+                    </div>
+                    <div class="tab-pane fade only-button" id="hotmail">
+                    <input type="button" value="Cargar contactos" class="btn btn-default" ng-click="getFriends('windows', 'me/contacts')">
+                    </div>
+                    <div class="tab-pane fade only-button" id="gmail">
+                    <input type="button" value="Cargar contactos" class="btn btn-default" ng-click="getFriends('google', 'me/contacts')">
+                    </div>
+                    <div class="tab-pane fade only-button" id="yahoo">
+                    <input type="button" value="Cargar contactos" class="btn btn-default" ng-click="getFriends('yahoo', 'me/friends')">
+                    </div>
+                    </div>
+                    </div>
+
+                    <br />
+                    <br />
+
+                    <div class="panel panel-default contacts">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.NumContacts ({{contacts.length}})</div>
+                    @*<div class="alert alert-info" ng-show="loading">
+                    Conectando...
+                    <div class="progress">
+                            <div id="progress" class="progress-bar" role="progressbar" aria-valuenow="0"
+                                 aria-valuemin="0" aria-valuemax="100">
+                                <span class="sr-only">60% completado</span>
+                            </div>
+                        </div>
+                    </div>*@
+
+                <!--<div class="p
+                        </div>
+                        <div class="tab-pane fade only-button" id="hotmail">
+                            <input type="button" value="Cargar contactos" class="btn btn-default" ng-click="getFriends('windows', 'me/contacts')">
+                        </div>
+                        <div class="tab-pane fade only-button" id="gmail">
+                            <input type="button" value="Cargar contactos" class="btn btn-default" ng-click="getFriends('google', 'me/contacts')">
+                        </div>
+                        <div class="tab-pane fade only-button" id="yahoo">
+                            <input type="button" value="Cargar contactos" class="btn btn-default" ng-click="getFriends('yahoo', 'me/friends')">
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="panel panel-default contacts">
+                    <!-- Default panel contents -->
+               @* <div class="panel-heading">@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.NumContacts ({{contacts.length}})</div>
+                <div class="alert alert-info" ng-show="loading">
+                        Conectando...
+                        <div class="progress">
+                            <div id="progress" class="progress-bar" role="progressbar" aria-valuenow="0"
+                                 aria-valuemin="0" aria-valuemax="100">
+                                <span class="sr-only">60% completado</span>
+                            </div>
+                        </div>
+                    </div>*@
+
+                <!--<div class="panel-body">{{contactsAdded}}</div>-->
+                <div id="area">
+                    <table class="table" id="table-contacts">
+                        <tr ng-repeat="item in contacts">
+                            <td class="first-td">
+                                <img id="{{item.pos}}" src="~/Images/Icons/IcoEliminar.png" class="delete-contact" ng-click="openDialog($index)" />
+                            </td>
+                            <td class="second-td">
+                                <span class="name-contact">{{item.name}}</span>
+                                <!--<span class="surname-contact">{{item.surname}}</span>-->
+                            </td>
+                            <td class="third-td">
+                                <span class="email-contact">{{item.email}}</span>
+                            </td>
+                            <!--<td>
+                                <img src="{{item.image}}" class="image-contact" />
+                            </td>-->
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <input type="button" value="@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.DeleteAll" class="btn btn-default btn-delete-all" ng-click="deleteAllContacts()">
+            <br />
+            <div class="section-separator"><hr /></div>
+
+            <h4>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.LegalConditions</h4>
+
+            <div id="legalconditions-container">
+                <img src="~/Images/Icons/IcoEliminar.png" class="close-button" ng-click="closeLegalConditions()" />
+                <p>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.LegalConditionsContent</p>
+            </div>
+
+            <div class="form-group form-field-padding" id="acceptLegalConditions">
+                <div>
+                    <input id="checkValidacion" type="checkbox" data-ng-model="acceptLegalConditions"> <span class="col-xs-11">@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.chekLegalConditions <a class="link-text" ng-click="openDialogLegalConditions()">@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.chekLegalConditions2</a>*</span>
+                    <div id="msg-error-condiciones" class="validation-summary-errors" style="display:none;">
+                        <p>{{error5 | translate}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="clear:both"></div>
+
+            <div class="form-group">
+                <div class="buttons-section">
+                    @*@Html.ActionLink(SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.BackButton, "Index", "Home", null, new { @class = "btn btn-default cancel-button" })*@
+                    <button type="button" id="AnimateSend"  class="btn btn-default send" ng-click="submitContacts2()">
+                        <span id="canvasloader-container">@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.SendButton</span>
+                    </button>
+                </div>
+            </div>
+    <div id="ggg"></div>
+        }
+
+        <script type="text/ng-template" id="templateId">
+            <div class="dialog-contents">
+                <div class="ngdialog-message">
+                    <h3>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.DialogTitle</h3>
+                    <p>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.DialogContent</p>
+                    <!--<p>¿Está seguro de que desea eliminar el contacto seleccionado?</p>-->
+                </div>
+                <div class="ngdialog-buttons">
+                    <button type="button" class="btn btn-default cancel-button" ng-click="closeThisDialog()">@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.DialogBack</button>
+                    <button type="button" class="btn btn-default" ng-click="confirm()">@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.DialogConfirm</button>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/ng-template" id="legalConditions">
+            <div class="dialog-contents">
+                <div class="ngdialog-message">
+                    <h3>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.LegalConditionsTitle</h3>
+                    <p>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.LegalConditionsContent</p>
+                </div>
+                <div class="ngdialog-buttons">
+                    <button type="button" class="btn btn-default" ng-click="closeThisDialog()">@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.btnLegalConditions</button>
+                </div>
+            </div>
+        </script>
+
+    </div>
+    <div class="col-md-4 col-sm-4 desktop">
+        <img id="image-escritorio" src="~/Images/Icons/form_desktop_v3.jpg" class="img-responsive" />
+    </div>
+    <br />
+    @*<div >
+            @Html.Partial("_Statistics")
+        </div>*@
+</div>
+
+
+

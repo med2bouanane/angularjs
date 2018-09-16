@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Commande" targetNamespace="http://tempuri.org/Commande.xsd" xmlns:mstns="http://tempuri.org/Commande.xsd" xmlns="http://tempuri.org/Commande.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Commande" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Commande" msprop:Generator_UserDSName="Commande">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Commande" msprop:Generator_TableClassName="CommandeDataTable" msprop:Generator_TableVarName="tableCommande" msprop:Generator_TablePropName="_Commande" msprop:Generator_RowDeletingName="CommandeRowDeleting" msprop:Generator_RowChangingName="CommandeRowChanging" msprop:Generator_RowEvHandlerName="CommandeRowChangeEventHandler" msprop:Generator_RowDeletedName="CommandeRowDeleted" msprop:Generator_UserTableName="Commande" msprop:Generator_RowChangedName="CommandeRowChanged" msprop:Generator_RowEvArgName="CommandeRowChangeEvent" msprop:Generator_RowClassName="CommandeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumCom" msprop:Generator_ColumnVarNameInTable="columnNumCom" msprop:Generator_ColumnPropNameInRow="NumCom" msprop:Generator_ColumnPropNameInTable="NumComColumn" msprop:Generator_UserColumnName="NumCom" type="xs:string" minOccurs="0" />
+              <xs:element name="IdBackOffice" msprop:Generator_ColumnVarNameInTable="columnIdBackOffice" msprop:Generator_ColumnPropNameInRow="IdBackOffice" msprop:Generator_ColumnPropNameInTable="IdBackOfficeColumn" msprop:Generator_UserColumnName="IdBackOffice" type="xs:int" minOccurs="0" />
+              <xs:element name="RefCom" msprop:Generator_ColumnVarNameInTable="columnRefCom" msprop:Generator_ColumnPropNameInRow="RefCom" msprop:Generator_ColumnPropNameInTable="RefComColumn" msprop:Generator_UserColumnName="RefCom" type="xs:string" minOccurs="0" />
+              <xs:element name="DateCom" msprop:Generator_ColumnVarNameInTable="columnDateCom" msprop:Generator_ColumnPropNameInRow="DateCom" msprop:Generator_ColumnPropNameInTable="DateComColumn" msprop:Generator_UserColumnName="DateCom" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NumAccuse" msprop:Generator_ColumnVarNameInTable="columnNumAccuse" msprop:Generator_ColumnPropNameInRow="NumAccuse" msprop:Generator_ColumnPropNameInTable="NumAccuseColumn" msprop:Generator_UserColumnName="NumAccuse" type="xs:int" minOccurs="0" />
+              <xs:element name="Segment" msprop:Generator_ColumnVarNameInTable="columnSegment" msprop:Generator_ColumnPropNameInRow="Segment" msprop:Generator_ColumnPropNameInTable="SegmentColumn" msprop:Generator_UserColumnName="Segment" type="xs:string" minOccurs="0" />
+              <xs:element name="IdSite" msprop:Generator_ColumnVarNameInTable="columnIdSite" msprop:Generator_ColumnPropNameInRow="IdSite" msprop:Generator_ColumnPropNameInTable="IdSiteColumn" msprop:Generator_UserColumnName="IdSite" type="xs:int" minOccurs="0" />
+              <xs:element name="CodeModeTransport" msprop:Generator_ColumnVarNameInTable="columnCodeModeTransport" msprop:Generator_ColumnPropNameInRow="CodeModeTransport" msprop:Generator_ColumnPropNameInTable="CodeModeTransportColumn" msprop:Generator_UserColumnName="CodeModeTransport" type="xs:string" minOccurs="0" />
+              <xs:element name="Longueur" msprop:Generator_ColumnVarNameInTable="columnLongueur" msprop:Generator_ColumnPropNameInRow="Longueur" msprop:Generator_ColumnPropNameInTable="LongueurColumn" msprop:Generator_UserColumnName="Longueur" type="xs:double" minOccurs="0" />
+              <xs:element name="Largeur" msprop:Generator_ColumnVarNameInTable="columnLargeur" msprop:Generator_ColumnPropNameInRow="Largeur" msprop:Generator_ColumnPropNameInTable="LargeurColumn" msprop:Generator_UserColumnName="Largeur" type="xs:double" minOccurs="0" />
+              <xs:element name="Epaisseur" msprop:Generator_ColumnVarNameInTable="columnEpaisseur" msprop:Generator_ColumnPropNameInRow="Epaisseur" msprop:Generator_ColumnPropNameInTable="EpaisseurColumn" msprop:Generator_UserColumnName="Epaisseur" type="xs:double" minOccurs="0" />
+              <xs:element name="IdIncotermSAP" msprop:Generator_ColumnVarNameInTable="columnIdIncotermSAP" msprop:Generator_ColumnPropNameInRow="IdIncotermSAP" msprop:Generator_ColumnPropNameInTable="IdIncotermSAPColumn" msprop:Generator_UserColumnName="IdIncotermSAP" type="xs:int" minOccurs="0" />
+              <xs:element name="VilleIncoterm" msprop:Generator_ColumnVarNameInTable="columnVilleIncoterm" msprop:Generator_ColumnPropNameInRow="VilleIncoterm" msprop:Generator_ColumnPropNameInTable="VilleIncotermColumn" msprop:Generator_UserColumnName="VilleIncoterm" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreTole" msprop:Generator_ColumnVarNameInTable="columnNombreTole" msprop:Generator_ColumnPropNameInRow="NombreTole" msprop:Generator_ColumnPropNameInTable="NombreToleColumn" msprop:Generator_UserColumnName="NombreTole" type="xs:int" minOccurs="0" />
+              <xs:element name="Tonnage" msprop:Generator_ColumnVarNameInTable="columnTonnage" msprop:Generator_ColumnPropNameInRow="Tonnage" msprop:Generator_ColumnPropNameInTable="TonnageColumn" msprop:Generator_UserColumnName="Tonnage" type="xs:double" minOccurs="0" />
+              <xs:element name="DelaiExpedition" msprop:Generator_ColumnVarNameInTable="columnDelaiExpedition" msprop:Generator_ColumnPropNameInRow="DelaiExpedition" msprop:Generator_ColumnPropNameInTable="DelaiExpeditionColumn" msprop:Generator_UserColumnName="DelaiExpedition" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CodeNatureProduit" msprop:Generator_ColumnVarNameInTable="columnCodeNatureProduit" msprop:Generator_ColumnPropNameInRow="CodeNatureProduit" msprop:Generator_ColumnPropNameInTable="CodeNatureProduitColumn" msprop:Generator_UserColumnName="CodeNatureProduit" type="xs:string" minOccurs="0" />
+              <xs:element name="DimensionsAnglaise" msprop:Generator_ColumnVarNameInTable="columnDimensionsAnglaise" msprop:Generator_ColumnPropNameInRow="DimensionsAnglaise" msprop:Generator_ColumnPropNameInTable="DimensionsAnglaiseColumn" msprop:Generator_UserColumnName="DimensionsAnglaise" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LongueurAnglaise" msprop:Generator_ColumnVarNameInTable="columnLongueurAnglaise" msprop:Generator_ColumnPropNameInRow="LongueurAnglaise" msprop:Generator_ColumnPropNameInTable="LongueurAnglaiseColumn" msprop:Generator_UserColumnName="LongueurAnglaise" type="xs:double" minOccurs="0" />
+              <xs:element name="LargeurAnglaise" msprop:Generator_ColumnVarNameInTable="columnLargeurAnglaise" msprop:Generator_ColumnPropNameInRow="LargeurAnglaise" msprop:Generator_ColumnPropNameInTable="LargeurAnglaiseColumn" msprop:Generator_UserColumnName="LargeurAnglaise" type="xs:double" minOccurs="0" />
+              <xs:element name="EpaisseurAnglaise" msprop:Generator_ColumnVarNameInTable="columnEpaisseurAnglaise" msprop:Generator_ColumnPropNameInRow="EpaisseurAnglaise" msprop:Generator_ColumnPropNameInTable="EpaisseurAnglaiseColumn" msprop:Generator_UserColumnName="EpaisseurAnglaise" type="xs:double" minOccurs="0" />
+              <xs:element name="IdDivision" msprop:Generator_ColumnVarNameInTable="columnIdDivision" msprop:Generator_ColumnPropNameInRow="IdDivision" msprop:Generator_ColumnPropNameInTable="IdDivisionColumn" msprop:Generator_UserColumnName="IdDivision" type="xs:int" minOccurs="0" />
+              <xs:element name="IdNatureLaminage" msprop:Generator_ColumnVarNameInTable="columnIdNatureLaminage" msprop:Generator_ColumnPropNameInRow="IdNatureLaminage" msprop:Generator_ColumnPropNameInTable="IdNatureLaminageColumn" msprop:Generator_UserColumnName="IdNatureLaminage" type="xs:int" minOccurs="0" />
+              <xs:element name="IdBlocageLivraison" msprop:Generator_ColumnVarNameInTable="columnIdBlocageLivraison" msprop:Generator_ColumnPropNameInRow="IdBlocageLivraison" msprop:Generator_ColumnPropNameInTable="IdBlocageLivraisonColumn" msprop:Generator_UserColumnName="IdBlocageLivraison" type="xs:int" minOccurs="0" />
+              <xs:element name="BlocageClient" msprop:Generator_ColumnVarNameInTable="columnBlocageClient" msprop:Generator_ColumnPropNameInRow="BlocageClient" msprop:Generator_ColumnPropNameInTable="BlocageClientColumn" msprop:Generator_UserColumnName="BlocageClient" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

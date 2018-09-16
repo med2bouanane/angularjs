@@ -1,0 +1,10 @@
+﻿{
+"REQUIRED": "Camp obligatori",
+"EMAILFORMAT": "El format del camp adreça electrònica no és correcte.",
+"DUPLICATECONTACT": "Un contacte amb la mateixa adreça electrònica ja ha estat agregat.",
+"NONECONTACT": "No s'ha agregat cap contacte.",
+"LOGINERROR": "Usuari o contrasenya incorrectes.",
+"CONFIRMDELETE": "Esteu segur que voleu eliminar el contacte seleccionat?",
+"SENDINGERROR": "No s'ha pogut enviar la felicitació.",
+"CONFIRMDELETEALL": "Està segur que vol eliminar tots els contactes?"
+}

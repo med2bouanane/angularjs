@@ -1,0 +1,7 @@
+<div ng-repeat="post in posts">
+        <h1>{{post.name}}</h1>
+        <p>{{post.content}}</p>
+
+        <h2> {{post.comments.length}} Comentarios.</h2>
+        <a href="#/comments/{{post.id}}"> Ver comentarios</a>
+</div>

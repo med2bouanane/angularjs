@@ -1,0 +1,46 @@
+﻿<table id="Heading" width="100%">
+        <tr>
+            <td>
+                <h1><label id="lblTitreGlobal"  data-i18n="lblTitreGlobal" ng-model="titreGlobal"></label></h1>
+            </td>
+        </tr>
+    </table>
+     <table style="width: 80%">
+        <tr>
+            <td colspan="3">
+               <label id="lblDescription" class="Traduction" data-i18n="lblDescription"></label>
+            <br />
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="padding-left:10px" colspan="3" >
+                <div class="textnotification">
+                    <div class="notification texterouge">
+                        <label id="lblNotification" class="Traduction" data-i18n="lblNotification"></label>
+                        <img id="imgNotification" src="Images/ok.gif"/>
+                    </div>
+                </div>
+            </td> 
+        </tr>
+        <tr id="trLoginEmail" runat="server" >
+            <td style="width:25%">
+                <input id="rbtIdentifiant" type="radio"  value="Identifiant" checked="checked" name="IdentifiantName" />
+                <label id="lblIdentifiant" for="rbtIdentifiant" class="Traduction" data-i18n="lblIdentifiant">Identifiant</label>
+                &nbsp;&nbsp;
+                <input id="rbtAdressEmail" type="radio" value="Email" name="IdentifiantName" />
+                <label id="lblAdressEmail" for="rbtAdressEmail" class="Traduction" data-i18n="lblAdressEmail">Email</label>
+                &nbsp; &nbsp; 
+            </td>
+            <td style="text-align:center; width:50%">
+                <input type="text" id="txtIdentifiant"  style="width:300px" ng-model="identifiant" />
+<!--                <asp:RequiredFieldValidator ID="rfvEmail"
+                        runat="server" Text="*" CssClass="texterouge" Display="Dynamic"  
+                    ControlToValidate="txtIdentificacion" meta:resourcekey="rfvEmailResource1"></asp:RequiredFieldValidator>-->
+<!--                    <asp:CustomValidator ID="cuvMotPasseAccesValidation" runat="server" ControlToValidate="txtIdentificacion"
+                     ClientValidationFunction="ValiderEmail" CssClass="texterouge" meta:resourcekey ="cuvMotPasseAccesValidationResource1">*</asp:CustomValidator> -->
+            </td>
+            <td>
+                <input id="btnValider" type="button" value="Validate" class="Traduction" data-i18n="btnValider"/>
+            </td>
+        </tr>
+    </table>

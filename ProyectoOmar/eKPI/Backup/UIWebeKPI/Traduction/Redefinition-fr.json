@@ -1,0 +1,16 @@
+﻿{
+  "lblIdentifiantLibelle": "Identifiant",
+  "lblAncienMotPass": "Ancien mot de passe",
+  "lblNouveauMotPass": "Nouveau mot de passe",
+  "lblConfirmationMotPass": "Confirmation",
+  "btnValider": "Valider",    
+  "msgErrorFormat": "Un ou plusieurs champs ne respecte(nt) pas le format requis",
+  "msgErrorEncodage": "Un ou plusieurs champs obligatoire(s) n’a/n’ont pas été encodé(s)",
+  "msgSucces": "Mot de passe changé avec succés",
+  "msgErrorCorrespendanceNouveauConfirmation": "Le nouveau mot de passe ne correspond pas à la confirmation",
+  "msgErrorNouveauAncienDifferent": "Le nouveau mot passe doit etre different à l'ancien",
+  "msgErrorAncienMotPassIncorrect": "Ancien mot de passe incorrect",
+  "msgErrorLienPerime": "Ce lien est perimé, vous devez recommencer la procedure"
+}
+
+  

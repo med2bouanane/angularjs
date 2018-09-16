@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Division" targetNamespace="http://tempuri.org/Division.xsd" xmlns:mstns="http://tempuri.org/Division.xsd" xmlns="http://tempuri.org/Division.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Division" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Division" msprop:Generator_UserDSName="Division">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Division" msprop:Generator_TableClassName="DivisionDataTable" msprop:Generator_TableVarName="tableDivision" msprop:Generator_TablePropName="_Division" msprop:Generator_RowDeletingName="DivisionRowDeleting" msprop:Generator_RowChangingName="DivisionRowChanging" msprop:Generator_RowEvHandlerName="DivisionRowChangeEventHandler" msprop:Generator_RowDeletedName="DivisionRowDeleted" msprop:Generator_UserTableName="Division" msprop:Generator_RowChangedName="DivisionRowChanged" msprop:Generator_RowEvArgName="DivisionRowChangeEvent" msprop:Generator_RowClassName="DivisionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdDivision" msprop:Generator_ColumnVarNameInTable="columnIdDivision" msprop:Generator_ColumnPropNameInRow="IdDivision" msprop:Generator_ColumnPropNameInTable="IdDivisionColumn" msprop:Generator_UserColumnName="IdDivision" type="xs:int" minOccurs="0" />
+              <xs:element name="IdOrganisationCommerciale" msprop:Generator_ColumnVarNameInTable="columnIdOrganisationCommerciale" msprop:Generator_ColumnPropNameInRow="IdOrganisationCommerciale" msprop:Generator_ColumnPropNameInTable="IdOrganisationCommercialeColumn" msprop:Generator_UserColumnName="IdOrganisationCommerciale" type="xs:int" minOccurs="0" />
+              <xs:element name="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_UserColumnName="Code" type="xs:string" minOccurs="0" />
+              <xs:element name="Actif" msprop:Generator_ColumnVarNameInTable="columnActif" msprop:Generator_ColumnPropNameInRow="Actif" msprop:Generator_ColumnPropNameInTable="ActifColumn" msprop:Generator_UserColumnName="Actif" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

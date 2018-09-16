@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HistoriqueBlocageClientDetail" targetNamespace="http://tempuri.org/HistoriqueBlocageClientDetail.xsd" xmlns:mstns="http://tempuri.org/HistoriqueBlocageClientDetail.xsd" xmlns="http://tempuri.org/HistoriqueBlocageClientDetail.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HistoriqueBlocageClientDetail" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HistoriqueBlocageClientDetail" msprop:Generator_UserDSName="HistoriqueBlocageClientDetail">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HistoriqueBlocageClientDetail" msprop:Generator_TableClassName="HistoriqueBlocageClientDetailDataTable" msprop:Generator_TableVarName="tableHistoriqueBlocageClientDetail" msprop:Generator_TablePropName="_HistoriqueBlocageClientDetail" msprop:Generator_RowDeletingName="HistoriqueBlocageClientDetailRowDeleting" msprop:Generator_RowChangingName="HistoriqueBlocageClientDetailRowChanging" msprop:Generator_RowEvHandlerName="HistoriqueBlocageClientDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="HistoriqueBlocageClientDetailRowDeleted" msprop:Generator_UserTableName="HistoriqueBlocageClientDetail" msprop:Generator_RowChangedName="HistoriqueBlocageClientDetailRowChanged" msprop:Generator_RowEvArgName="HistoriqueBlocageClientDetailRowChangeEvent" msprop:Generator_RowClassName="HistoriqueBlocageClientDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdHistoriqueBlocageClientDetail" msprop:Generator_ColumnVarNameInTable="columnIdHistoriqueBlocageClientDetail" msprop:Generator_ColumnPropNameInRow="IdHistoriqueBlocageClientDetail" msprop:Generator_ColumnPropNameInTable="IdHistoriqueBlocageClientDetailColumn" msprop:Generator_UserColumnName="IdHistoriqueBlocageClientDetail" type="xs:int" minOccurs="0" />
+              <xs:element name="IdHistoriqueBlocageClient" msprop:Generator_ColumnVarNameInTable="columnIdHistoriqueBlocageClient" msprop:Generator_ColumnPropNameInRow="IdHistoriqueBlocageClient" msprop:Generator_ColumnPropNameInTable="IdHistoriqueBlocageClientColumn" msprop:Generator_UserColumnName="IdHistoriqueBlocageClient" type="xs:int" minOccurs="0" />
+              <xs:element name="IdIncotermSAP" msprop:Generator_ColumnVarNameInTable="columnIdIncotermSAP" msprop:Generator_ColumnPropNameInRow="IdIncotermSAP" msprop:Generator_ColumnPropNameInTable="IdIncotermSAPColumn" msprop:Generator_UserColumnName="IdIncotermSAP" type="xs:int" minOccurs="0" />
+              <xs:element name="IdBlocageLivraison" msprop:Generator_ColumnVarNameInTable="columnIdBlocageLivraison" msprop:Generator_ColumnPropNameInRow="IdBlocageLivraison" msprop:Generator_ColumnPropNameInTable="IdBlocageLivraisonColumn" msprop:Generator_UserColumnName="IdBlocageLivraison" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

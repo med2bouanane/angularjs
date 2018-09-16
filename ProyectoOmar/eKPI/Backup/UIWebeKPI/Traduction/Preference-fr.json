@@ -1,0 +1,15 @@
+﻿{
+  "lblLangue": "Langue",
+  "ddlLangue":
+  {
+	"Francais": "Français",
+	"Anglais": "Anglais"
+  },
+  "lblPageAccueil": "Page d'accueil",
+  "btnValider": "Valider",
+  
+  "msgSucces": "Préférence modifiées avec succes",
+  "msgErreurGeneral": "Une erreur est suvenue."
+}
+
+  

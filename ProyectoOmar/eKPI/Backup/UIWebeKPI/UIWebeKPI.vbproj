@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{7DB581C1-A869-478F-858F-5AE4708A2D64}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UIWebeKPI</RootNamespace>
+    <AssemblyName>UIWebeKPI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>UIWebeKPI.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <PublishDatabases>true</PublishDatabases>
+    <DesktopBuildPackageLocation>obj\QualifProd\Package\UIWebeKPI.zip</DesktopBuildPackageLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>UIWebeKPI.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>UIWebeKPI.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisLogFile>bin\UIWebeKPI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QualifTest|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>UIWebeKPI.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisLogFile>bin\UIWebeKPI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BOCommunication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLL\BOCommunication.dll</HintPath>
+    </Reference>
+    <Reference Include="BOGapCommerce">
+      <HintPath>..\..\..\..\DLL\BOGapCommerce.dll</HintPath>
+    </Reference>
+    <Reference Include="BusyBoxDotNet, Version=0.2.0.36251, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLL\BusyBoxDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Email, Version=1.0.5389.19429, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLL\Email.dll</HintPath>
+    </Reference>
+    <Reference Include="Outils">
+      <HintPath>..\..\..\..\DLL\Outils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administration\AfficherHistoriqueBlocageClient.aspx" />
+    <Content Include="Administration\AfficherHistoriqueObjectifLivraison.aspx" />
+    <Content Include="Administration\ConfigurationBlocageClient.aspx" />
+    <Content Include="Administration\ConfigurationObjectif.aspx" />
+    <Content Include="Administration\EncodageRetardsProfonds.aspx" />
+    <Content Include="Administration\GestionInscription.aspx" />
+    <Content Include="Conditions.aspx" />
+    <Content Include="Conditions.html" />
+    <Content Include="Confidentialite.html" />
+    <Content Include="Confidentialite.aspx" />
+    <Content Include="Configuration.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Contact.html" />
+    <Content Include="ControlesUtilisateur\CheckListBox.ascx" />
+    <Content Include="ControlesUtilisateur\ValidatorSummaryControl.ascx" />
+    <Content Include="Controlleurs\ConditionsContoller.js" />
+    <Content Include="Controlleurs\ConfidentialiteController.js" />
+    <Content Include="Controlleurs\ContactController.js" />
+    <Content Include="Controlleurs\IndexContoller.js" />
+    <Content Include="Controlleurs\DefaultController.js" />
+    <Content Include="Controlleurs\GestionAccesController.js" />
+    <Content Include="Controlleurs\GestionProfilController.js" />
+    <Content Include="Controlleurs\GestionRouteController.js" />
+    <Content Include="Controlleurs\InscriptionController.js" />
+    <Content Include="Controlleurs\MotPassePerduController.js" />
+    <Content Include="Controlleurs\PreferencesController.js" />
+    <Content Include="Controlleurs\PrincipalController.js" />
+    <Content Include="Controlleurs\RedifinitionController.js" />
+    <Content Include="Controlleurs\SuggestionController.js" />
+    <Content Include="GestionProfil.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\bas_menu.gif" />
+    <Content Include="Images\CoinBlanc.gif" />
+    <Content Include="Images\CoinGris.gif" />
+    <Content Include="Images\eKPI.jpg" />
+    <Content Include="Images\Etapes\DebutEtapeGrisClair.gif" />
+    <Content Include="Images\Etapes\DebutEtapeGrise.gif" />
+    <Content Include="Images\Etapes\FinEtapeGrisClair.gif" />
+    <Content Include="Images\Etapes\FinEtapeGrisFonce.gif" />
+    <Content Include="Images\Etapes\TransitionEtapeGrisClair.gif" />
+    <Content Include="Images\faviconarcelormittal.png" />
+    <Content Include="Images\fleche.gif" />
+    <Content Include="Images\flechebas.gif" />
+    <Content Include="Images\FlecheBasVerte.gif" />
+    <Content Include="Images\FlecheVerte.gif" />
+    <Content Include="Images\fond_menu.gif" />
+    <Content Include="Images\header.gif" />
+    <Content Include="Images\header.jpg" />
+    <Content Include="Images\helpdesk.jpg" />
+    <Content Include="Images\LogoFiveStar.png" />
+    <Content Include="Images\nook.gif" />
+    <Content Include="Images\ok.gif" />
+    <Content Include="Index.aspx" />
+    <Content Include="Default.html" />
+    <Content Include="Inscription.aspx" />
+    <Content Include="Inscription.html" />
+    <Content Include="Livraison\Analyse.aspx" />
+    <Content Include="Livraison\Ponctualite.aspx" />
+    <Content Include="Livraison\Retard.aspx" />
+    <Content Include="Livraison\VueEnsemble.aspx" />
+    <Content Include="MiseJourProfil.aspx" />
+    <Content Include="MotPassePerdu.aspx" />
+    <Content Include="MotPassePerdu.html" />
+    <Content Include="Index.html" />
+    <Content Include="PageBase\ArretEnCours.aspx" />
+    <Content Include="PageBase\Erreur.aspx" />
+    <Content Include="Preferences.aspx" />
+    <Content Include="Preferences.html" />
+    <Content Include="Redefinition.aspx" />
+    <Content Include="Redefinition.html" />
+    <Content Include="Scripts\Accordeon.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-translate.min.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\CaseCocheHistorique.js" />
+    <Content Include="Scripts\ConfigurationBlocageClient.js" />
+    <Content Include="Scripts\ConfigurationObjectif.js" />
+    <Content Include="Scripts\Fonction.js" />
+    <Content Include="Scripts\highcharts.js" />
+    <Content Include="Scripts\i18next-1.7.4.js" />
+    <Content Include="Scripts\Inscription.js" />
+    <Content Include="Scripts\jquery-ui-1.8.12.custom.min.js" />
+    <Content Include="Scripts\jquery.colorbox-min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\Redifinition.js" />
+    <Content Include="Scripts\Test.js" />
+    <Content Include="Scripts\VueEnsemble.js" />
+    <Content Include="Styles\eKPI_new.css" />
+    <Content Include="Styles\eKPI.css" />
+    <Content Include="Styles\jquery-ui-1.8.14.custom.css" />
+    <Content Include="Styles\jquery.colorbox.css" />
+    <Content Include="Styles\reset.css" />
+    <Content Include="Styles\stock.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Suggestions.aspx" />
+    <Content Include="Suggestion.html" />
+    <Content Include="Test.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebServices\eKPI.asmx" />
+    <Content Include="WebServices\eKPIAcces.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\AfficherHistoriqueBlocageClient.aspx.designer.vb">
+      <DependentUpon>AfficherHistoriqueBlocageClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\AfficherHistoriqueBlocageClient.aspx.vb">
+      <DependentUpon>AfficherHistoriqueBlocageClient.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administration\AfficherHistoriqueObjectifLivraison.aspx.designer.vb">
+      <DependentUpon>AfficherHistoriqueObjectifLivraison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\AfficherHistoriqueObjectifLivraison.aspx.vb">
+      <DependentUpon>AfficherHistoriqueObjectifLivraison.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ConfigurationBlocageClient.aspx.designer.vb">
+      <DependentUpon>ConfigurationBlocageClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ConfigurationBlocageClient.aspx.vb">
+      <DependentUpon>ConfigurationBlocageClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\ConfigurationObjectif.aspx.designer.vb">
+      <DependentUpon>ConfigurationObjectif.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\ConfigurationObjectif.aspx.vb">
+      <DependentUpon>ConfigurationObjectif.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Administration\EncodageRetardsProfonds.aspx.designer.vb">
+      <DependentUpon>EncodageRetardsProfonds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\EncodageRetardsProfonds.aspx.vb">
+      <DependentUpon>EncodageRetardsProfonds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\GestionInscription.aspx.designer.vb">
+      <DependentUpon>GestionInscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\GestionInscription.aspx.vb">
+      <DependentUpon>GestionInscription.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="App_GlobalResources\Global.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Global.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Global.en.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Global.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Commun\eKPIMembershipProvider.vb" />
+    <Compile Include="Commun\eKPIRoleProvider.vb" />
+    <Compile Include="Commun\MasterPageBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Commun\PageBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Conditions.aspx.designer.vb">
+      <DependentUpon>Conditions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Conditions.aspx.vb">
+      <DependentUpon>Conditions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Confidentialite.aspx.designer.vb">
+      <DependentUpon>Confidentialite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Confidentialite.aspx.vb">
+      <DependentUpon>Confidentialite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration.aspx.designer.vb">
+      <DependentUpon>Configuration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration.aspx.vb">
+      <DependentUpon>Configuration.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ControlesUtilisateur\CheckListBox.ascx.designer.vb">
+      <DependentUpon>CheckListBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUtilisateur\CheckListBox.ascx.vb">
+      <DependentUpon>CheckListBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlesUtilisateur\ValidatorSummaryControl.ascx.designer.vb">
+      <DependentUpon>ValidatorSummaryControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUtilisateur\ValidatorSummaryControl.ascx.vb">
+      <DependentUpon>ValidatorSummaryControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.designer.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Inscription.aspx.designer.vb">
+      <DependentUpon>Inscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inscription.aspx.vb">
+      <DependentUpon>Inscription.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Livraison\Analyse.aspx.designer.vb">
+      <DependentUpon>Analyse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Livraison\Analyse.aspx.vb">
+      <DependentUpon>Analyse.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Livraison\Ponctualite.aspx.designer.vb">
+      <DependentUpon>Ponctualite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Livraison\Ponctualite.aspx.vb">
+      <DependentUpon>Ponctualite.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Livraison\Retard.aspx.designer.vb">
+      <DependentUpon>Retard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Livraison\Retard.aspx.vb">
+      <DependentUpon>Retard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Livraison\VueEnsemble.aspx.designer.vb">
+      <DependentUpon>VueEnsemble.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Livraison\VueEnsemble.aspx.vb">
+      <DependentUpon>VueEnsemble.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MiseJourProfil.aspx.designer.vb">
+      <DependentUpon>MiseJourProfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiseJourProfil.aspx.vb">
+      <DependentUpon>MiseJourProfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MotPassePerdu.aspx.designer.vb">
+      <DependentUpon>MotPassePerdu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MotPassePerdu.aspx.vb">
+      <DependentUpon>MotPassePerdu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PageBase\ArretEnCours.aspx.designer.vb">
+      <DependentUpon>ArretEnCours.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageBase\ArretEnCours.aspx.vb">
+      <DependentUpon>ArretEnCours.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PageBase\Erreur.aspx.designer.vb">
+      <DependentUpon>Erreur.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageBase\Erreur.aspx.vb">
+      <DependentUpon>Erreur.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Preferences.aspx.designer.vb">
+      <DependentUpon>Preferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Preferences.aspx.vb">
+      <DependentUpon>Preferences.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Redefinition.aspx.designer.vb">
+      <DependentUpon>Redefinition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Redefinition.aspx.vb">
+      <DependentUpon>Redefinition.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suggestions.aspx.designer.vb">
+      <DependentUpon>Suggestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suggestions.aspx.vb">
+      <DependentUpon>Suggestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.vb">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.vb">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebServices\eKPI.ashx.vb">
+      <DependentUpon>eKPI.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\eKPI.asmx.vb">
+      <DependentUpon>eKPI.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebServices\eKPIAcces.asmx.vb">
+      <DependentUpon>eKPIAcces.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Confidentialite.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Confidentialite.aspx.en.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\Global.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Global.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\Global.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Global.en.designer.vb</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="App_LocalResources\Configuration.aspx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="App_LocalResources\Configuration.aspx.en.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Contact.aspx.en.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Contact.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Suggestions.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Suggestions.en.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Index.aspx.resx" />
+    <Content Include="App_LocalResources\Index.aspx.en.resx" />
+    <Content Include="App_LocalResources\Site.Master.en.resx" />
+    <Content Include="App_LocalResources\Site.Master.resx" />
+    <Content Include="App_LocalResources\Inscription.aspx.en.resx" />
+    <Content Include="App_LocalResources\Inscription.aspx.resx" />
+    <Content Include="App_LocalResources\MotPassePerdu.aspx.en.resx" />
+    <Content Include="App_LocalResources\MotPassePerdu.aspx.resx" />
+    <Content Include="App_LocalResources\Redefinition.aspx.en.resx" />
+    <Content Include="App_LocalResources\Redefinition.aspx.resx" />
+    <Content Include="App_LocalResources\Preferences.aspx.en.resx" />
+    <Content Include="App_LocalResources\Preferences.aspx.resx" />
+    <Content Include="App_LocalResources\MiseJourProfil.aspx.resx" />
+    <Content Include="App_LocalResources\MiseJourProfil.aspx.en.resx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\eKPI\eKPI.skin" />
+    <None Include="Fonts\vrt2-webfont.eot" />
+    <None Include="Fonts\vrt2-webfont.ttf" />
+    <None Include="Fonts\vrt2-webfont.woff" />
+    <None Include="Traduction\en.json" />
+    <None Include="Traduction\fr.json" />
+    <None Include="Traduction\Inscription-en.json" />
+    <None Include="Traduction\Inscription-fr.json" />
+    <None Include="Traduction\MotPassePerdu-en.json" />
+    <None Include="Traduction\MotPassePerdu-fr.json" />
+    <None Include="Traduction\Preference-en.json" />
+    <None Include="Traduction\Preference-fr.json" />
+    <None Include="Traduction\Redefinition-en.json" />
+    <None Include="Traduction\Redefinition-fr.json" />
+    <None Include="Traduction\Suggestion-en.json" />
+    <None Include="Traduction\Suggestion-fr.json" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="Web.QualifTest.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Prod.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.QualifProd.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebServices\eKPI.ashx" />
+    <None Include="Traduction\Confidentialite-en.json" />
+    <None Include="Traduction\Confidentialite-fr.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ControlesUtilisateur\App_LocalResources\" />
+    <Folder Include="PageBase\Mobile\Images\" />
+    <Folder Include="PageBase\Mobile\Scripts\" />
+    <Folder Include="vues\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BOeKPI\BOeKPI.vbproj">
+      <Project>{6099E449-97C8-4B82-BADB-96E73DE3E3BE}</Project>
+      <Name>BOeKPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UIWebResources\UIWebResources.vbproj">
+      <Project>{DC65986D-2A71-40B3-A40C-4F32A02B0009}</Project>
+      <Name>UIWebResources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51680</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/UIWebeKPI</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

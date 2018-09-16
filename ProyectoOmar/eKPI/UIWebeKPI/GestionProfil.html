@@ -1,0 +1,107 @@
+﻿    <link rel="stylesheet" href="Styles/reset.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/stock.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/eKPI.css" type="text/css" media="screen" />
+<table id="tblHead" width="100%">
+        <tr>
+            <td>
+                <h1>{{TitreGlobal}}</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>{{TitreSecondaire}}</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                {{divNotification}}
+                </div> 
+            </td> 
+        </tr>
+    </table>
+<table id="tblMiseAjourProfil" runat="server" >
+        <tr>
+            <td style="width:200px; padding-top:2px"><!--pour tous-->
+                Login
+            </td>
+            <td>
+                <label class="zonetxtgris2">
+                    Login
+                </label>
+            </td>
+        </tr>
+        <tr>
+		    <td valign="top">
+                Titre
+            </td>
+		    <td valign="top">
+                <input type ="radio" id="rbtM" name="rdbTitre"/>
+                <label for="rbtM">Sir</label> 
+                &nbsp;&nbsp;
+                <input type ="radio" id="rbtMme" name="rdbTitre"/>
+                <label for="rbtMme">Mme</label>   
+                &nbsp;&nbsp;
+                <input type ="radio" id="rbtMlle" name="rdbTitre"/>
+                <label for="rbtMlle">Ms</label> 
+            </td>
+	    </tr>
+        <tr>
+			<td valign="top" >
+                Nom
+            </td>
+			<td valign="top">
+                <input type="text" id="txtNom" class="zonetxtoblig texteboxLength" 
+                    meta:resourcekey="txtNomResource1"/>
+                <asp:requiredfieldvalidator id="rfvNom" runat="server" 
+                            ControlToValidate="txtNom" CssClass="texterouge"  ErrorMessage="Fields marked with * are required"
+                            meta:resourcekey="rfvNomResource1" >*</asp:requiredfieldvalidator>
+           </td>
+		</tr>
+		<tr>
+			<td valign="top" style="padding-top:2px; width:150px">
+                First name                                  
+                </td>
+			<td valign="top">
+                <input type="text" id="txtPrenom" class="zonetxtoblig texteboxLength"/>
+                <asp:requiredfieldvalidator id="rfvPrenom" runat="server" 
+                            ControlToValidate="txtPrenom" CssClass="texterouge"  ErrorMessage="Fields marked with * are required"
+                            meta:resourcekey="rfvPrenomResource1" >*</asp:requiredfieldvalidator>
+            </td>
+		</tr>
+		<tr>
+			<td valign="top" style="padding-top:2px">
+                Occupation
+            </td>
+			<td valign="top">
+                <input type="text" id="txtFonction" class="texteboxLength"/>
+            </td>
+		</tr>
+        <tr>
+			<td valign="top" style="padding-top:2px; width:150px">
+                Email
+            </td>
+			<td valign="top">
+                <input type="text" id="txtEmail" runat="server" class="zonetxtoblig texteboxLength"/>
+                <!--<asp:requiredfieldvalidator id="rfvEmail" runat="server" 
+                            ControlToValidate="txtEmail" CssClass="texterouge" 
+                            meta:resourcekey="rfvEmailResource1" ErrorMessage="Fields marked with * are required">*</asp:requiredfieldvalidator>
+                <asp:regularexpressionvalidator id="revDestinataires" runat="server" 
+                            CssClass="texterouge" ControlToValidate="txtEmail"
+							ErrorMessage="One or more fields do not meet the required format"
+                            ValidationExpression="(\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*;)*(\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)$" 
+                            meta:resourcekey="revDestinatairesResource1" >*</asp:regularexpressionvalidator></td>-->
+		</tr>
+        <tr>
+			<td valign="top">
+                Phone</td>
+			<td valign="top">
+                <input type="text" id="txtTelephone" class="texteboxLength"/></td>
+		</tr>
+        <tr>
+            <td colspan="2" style="text-align: right; padding-right: 8px;">
+                <input type="button" ID="btnValider" runat="server" value="Validate"/>
+            </td>
+        </tr>
+    </table>

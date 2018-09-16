@@ -1,0 +1,39 @@
+﻿
+<div class="Titre">
+    <h1><label id="lblTitreGlobal" class="Traduction" data-i18n="lblTitreGlobal">TitreGlobal</label></h1><br />
+</div>
+<div class="Titre">
+    <label id="lblDescription" class="Traduction" data-i18n="lblDescription">Description</label><br />
+</div>
+<div class=" textnotification">
+    <label id="lblNotification" class="Traduction" data-i18n="lblNotification" ng-model="notification"></label>
+    <img id="imgNotification" src=""/>
+</div>
+       
+<div id="divLoginEmail ">
+    <div class="row">
+<!--                <asp:RequiredFieldValidator ID="rfvEmail"
+                runat="server" Text="*" CssClass="texterouge" Display="Dynamic"  
+            ControlToValidate="txtIdentificacion" meta:resourcekey="rfvEmailResource1"></asp:RequiredFieldValidator>-->
+<!--                    <asp:CustomValidator ID="cuvMotPasseAccesValidation" runat="server" ControlToValidate="txtIdentificacion"
+                ClientValidationFunction="ValiderEmail" CssClass="texterouge" meta:resourcekey ="cuvMotPasseAccesValidationResource1">*</asp:CustomValidator> -->
+
+
+        <div class="col-xs-2 col-sm-2 col-md-2">
+            <input id="rbtIdentifiant" type="radio"  value="0" checked="checked" name="IdentifiantName" ng-model="identifiantData.TypeIdentifiant" />
+            <label id="lblIdentifiant" for="rbtIdentifiant" class="Traduction" data-i18n="lblIdentifiant">Identifiant</label>
+        </div>
+        <div class="col-xs-1 col-sm-2 col-md-2">
+            <input id="rbtAdressEmail" type="radio" value="1" name="IdentifiantName" ng-model="identifiantData.TypeIdentifiant" />
+            <label id="lblAdressEmail" for="rbtAdressEmail" class="Traduction" data-i18n="lblAdressEmail">Email</label>
+        </div>
+        <div class="col-xs-10 col-sm-1 ">
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <input  type="text" id="txtIdentifiant" ng-model="identifiantData.identifiant" />
+        </div>
+        <div class="col-xs-1 col-sm-1">
+            <input id="btnValider" type="button" value="Validate" class="Traduction" data-i18n="btnValider" ng-click="RecupererMotPasse()"/>
+        </div>
+    </div>
+</div>

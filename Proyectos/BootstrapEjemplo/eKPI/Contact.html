@@ -1,0 +1,126 @@
+﻿
+<div class="row">
+    <div class="col-xs-6">
+        <h1>Contact</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-6">
+        <h2>Contact opérateur"</h2>
+    </div>
+</div>
+<div class="row" style="margin-left: 10px;" data-ng-repeat="user in users">
+    <div style="float: left;">
+        <img id="imgContact" alt="" src="{{user.image}}" height="150" width="120"
+             border="1" style="color: Black" runat="server"/>
+    </div>
+    <div style="float: left;margin-left: 10px;width:1000px">
+        <div class="row">
+            <div class="col-xs-12">
+                <span style="font-weight: bolder">user.name</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 ">
+                Téléphone
+            </div>
+            <div class="col-xs-1 ">
+                :{{user.phone}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                Fax
+            </div>
+            <div class="col-xs-1">
+                :{{user.fax}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                GSM
+            </div>
+            <div class="col-xs-1">
+                :{{user.gsm}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-md-2">
+                E-mail:
+            </div>
+            <div class="col-xs-1 col-md-10">
+                {{user.email}}
+            </div>
+        </div>
+
+    </div>
+    </br>
+    <div class="row">
+        <div class="col-xs-12">
+            <!--<h2>Contact technique</h2>-->
+        </div>
+        <div class="col-xs-4 col-sm-2 col-md-2">
+            <!--     <img id="img1" alt="" width="92px" height="92px" src="Images/helpdesk.jpg" border="1"
+                      style="color: Black;" />
+         -->
+        </div>
+        <div class="col-xs-6 col-sm-1 col-md-1">
+            <!--
+                    <asp:Label ID="lblHelpdeskMessage" runat="server" meta:resourcekey="lblHelpdeskMessageResource1">
+                        dsdafasfsafdas
+                    </asp:Label>
+                    <br/>
+                    <asp:Label ID="lblHelpDescEmailLibelle" runat="server" meta:resourcekey="lblHelpDescEmailLibelleResource1">Email</asp:Label>:
+                    <a style="color:Black" href="mailto:helpdesk.industeelweb@arcelormittal.com">helpdesk.industeelweb@arcelormittal.com</a>
+            -->
+        </div>
+    </div>
+
+
+
+</div>
+
+</br>
+<div class="row">
+    <div class="col-xs-12">
+        <h2>Contact technique</h2>
+    </div>
+    <div class="col-xs-4 col-sm-2 col-md-2">
+        <img id="img1" alt="" width="92px" height="92px" src="Images/helpdesk.jpg" border="1"
+             style="color: Black;" />
+
+    </div>
+    <div class="col-xs-6 col-sm-1 col-md-1">
+
+        <asp:Label ID="lblHelpdeskMessage" runat="server" meta:resourcekey="lblHelpdeskMessageResource1">
+            dsdafasfsafdas
+        </asp:Label>
+        <br/>
+        <asp:Label ID="lblHelpDescEmailLibelle" runat="server" meta:resourcekey="lblHelpDescEmailLibelleResource1">Email</asp:Label>:
+        <a style="color:Black" href="mailto:helpdesk.industeelweb@arcelormittal.com">helpdesk.industeelweb@arcelormittal.com</a>
+
+    </div>
+</div>
+    <!--
+    <div style="position: relative; bottom: -130px; left: -185px;">
+        <div>
+            <h2>Contact technique</h2>
+        </div>
+    </div>
+    <div style="position: relative; bottom: -150px; left: -185px;">
+        <img id="img1" alt="" width="92px" height="92px" src="Images/helpdesk.jpg" border="1"
+             style="color: Black;" />
+
+    </div>
+    <div>
+        <asp:Label ID="lblHelpdeskMessage" runat="server" meta:resourcekey="lblHelpdeskMessageResource1">
+            dsdafasfsafdas
+        </asp:Label>
+        <asp:Label ID="lblHelpDescEmailLibelle" runat="server" meta:resourcekey="lblHelpDescEmailLibelleResource1">Email</asp:Label>:
+        <a style="color:Black" href="mailto:helpdesk.industeelweb@arcelormittal.com">helpdesk.industeelweb@arcelormittal.com</a>
+    </div>
+</div>
+-->
+
+

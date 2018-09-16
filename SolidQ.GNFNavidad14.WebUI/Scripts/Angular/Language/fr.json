@@ -1,0 +1,10 @@
+﻿{
+    "REQUIRED": "Champs obligatoire",
+    "EMAILFORMAT": "Le format du champ e-mail n'est pas correct.",
+    "DUPLICATECONTACT": "Un contact associé à la même adresse e-mail a déjà été ajouté.",
+    "NONECONTACT": "Aucun contact n'a été ajouté.",
+    "LOGINERROR": "Identifiant ou mot de passe incorrect.",
+    "CONFIRMDELETE": "Êtes-vous sûr de vouloir supprimer le contact sélectionné ?",
+    "SENDINGERROR": "Vos vœux n'ont pas pu être envoyés.",
+    "CONFIRMDELETEALL": "Êtes-vous certain de vouloir supprimer tous les contacts ?"
+}

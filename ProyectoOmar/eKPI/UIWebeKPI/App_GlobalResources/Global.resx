@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1">this is my long string</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        [base64 mime encoded serialized .NET Framework object]
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        [base64 mime encoded string representing a byte array form of the .NET Framework object]
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TitreMessagePostBack" xml:space="preserve">
+    <value>Veuillez patienter</value>
+  </data>
+  <data name="MessagePostBack" xml:space="preserve">
+    <value>La tâche est en cours d'exécution. Veuillez attendre qu'elle soit terminée. Merci.</value>
+  </data>
+  <data name="TexteConditions" xml:space="preserve">
+    <value>&lt;p style=''&gt;&lt;span style='font-size:16px; color:#ff3700; font-weight:bolder;'&gt;Conditions d'utilisation&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Introduction&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;
+&lt;span style=''&gt;Industeel Belgium s.a. exploite ce site Web (le «site Web») pour fournir un accès en ligne aux informations et documents relatifs aux commandes des clients.&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Veuillez s'il vous plaît lire les termes et conditions énoncées dans le présent document (les «conditions d'utilisation») avant d'utiliser le Site Web.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Le site Web est disponible pour votre accès et d'utilisation à la seule condition que vous acceptez les Conditions d'utilisation. En accédant ou en utilisant ce site Web, vous et l'entité que vous êtes autorisé à exposer signifiez votre accord d'être lié par chacune des dispositions des présentes Conditions d'utilisation. Si vous n'acceptez pas toutes les conditions d'utilisation, veuillez ne pas accéder ou utiliser le site Web.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Cadre&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Ces conditions d'utilisation régissent votre utilisation du site Web et toutes les applications, logiciels et services disponibles via le site Web.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Dans la mesure où l'une de nos pages Web ou des applications accessibles par l'URL https://eServices.industeel.be,&lt;/span&gt;&lt;span style='font-family:"Arial","sans-serif"'&gt;
+&lt;/span&gt;&lt;span style=''&gt;sont régis par des pratiques différentes ou supplémentaires ou politiques, ces pratiques ou politiques seront accessibles sur cette page.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Modifications&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Industeel Belgium s.a. se réserve le droit de modifier ou de mettre à jour les conditions d'utilisation à sa seule discrétion, à tout moment et sans annonce préalable. Vous êtes responsable de vous informer des conditions d'utilisation en vigueur au moment de l'utilisation de ce site Web. Votre utilisation continue du site Web après l'affichage de modifications de ces Conditions d'utilisation signifie que vous acceptez ces changements.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Propriété intellectuelle&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Tous les droits de propriété intellectuelle liés au site Web et son contenu (y compris, mais sans s'y limiter: texte, images graphiques, audio, vidéo, code html, boutons, marques, logiciels, logos) sont la propriété exclusive de Industeel Belgium s.a. ou de ses sociétés affiliées, sauf indication contraire clairement indiquée ou dans toute autre manière perceptible droits de tierces parties.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Vous ne pouvez pas télécharger, afficher et imprimer une copie du site Web sur votre ordinateur personnel à des fins privées et personnelles et / ou à des fins autorisées par la loi applicable.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Vous pouvez télécharger, afficher et imprimer une copie de chaque document relatif à vos ordres.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Restrictions d'utilisation du site Web&lt;/span&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;En plus des autres restrictions autrement indiqués dans les présentes Conditions d'utilisation, vous convenez que :&lt;/span&gt;&lt;/p&gt;
+
+&lt;span style=''&gt; - Vous ne devez pas déguiser l'origine les informations transmises par l'intermédiaire du site Web&lt;/span&gt;&lt;br /&gt;
+&lt;span style=''&gt; - Vous ne devez pas placer des informations fausses ou trompeuses sur le site Web&lt;/span&gt;&lt;br /&gt;
+&lt;span style=''&gt; - Vous ne devez pas utiliser ou accéder à un service de manière non expressément autorisée par Industeel Belgium s.a.&lt;/span&gt;&lt;br /&gt;
+&lt;span style=''&gt; - Toutes les sections du site Web sont réservées aux clients de Industeel Belgium s.a, appelé membres ("[e-Services]")&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Si vous vous inscrivez pour devenir un "membre e-Services", vous devez remplir un questionnaire par la rubrique "s’inscrire" pour obtenir un login / mot de passe. Vous êtes responsable de maintenir la confidentialité de votre identifiant et mot de passe, et de restreindre l'accès à votre ordinateur. Vous acceptez la responsabilité de toutes les activités qui se produisent sous votre identification de membre et mot de passe. Vous acceptez la responsabilité de maintenir les informations de contact à jour en tout temps.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Exclusion de garanties&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Industeel Belgium s.a. a compilé et organisé le contenu de ce site Web au meilleur de ses connaissances et qu'il fournit sur base de «tel quel». Aucune garantie n'est donnée, qu'elle soit expresse ou implicite, quant à l'exhaustivité, l'exactitude, la fiabilité, la sécurité, la ponctualité, ou d'adéquation à un usage particulier, du contenu du site Web ou la non-existence d'un virus sur le site Web.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Aucune information obtenue par vous à partir du site Web est de créer des garanties non expressément déclaré par Industeel Belgium s.a. dans ces conditions d'utilisation. Si vous constatez une anomalie ou une erreur dans les données disponibles sur le site Web, vous êtes priés d'en informer Industeel Belgium s.a. sans délai.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Industeel Belgium s.a. reserves the right to modify or close the Web Site at
+its own discretion and without prior announcement.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Limitation des responsabilités&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Vous vous engagez à accéder et à utiliser le site Web à vos propres risques. Industeel Belgium s.a. ne peut être tenu pour responsable des 
+dommages directs ou indirects ou autres dommages de quelque nature que ce soit  (qu'il soit fondé sur un contrat, délictuelle, de garantie ou de toute 
+autre théorie juridique) résultant de l'accès ou de l'utilisation ou de l'incapacité à utiliser ce site Web, d'inexactitudes ou d'omissions dans 
+le présent site Web, de toute décision que vous pouvez faire sur la base des informations contenues dans le présent site Web, à partir de virus de ce 
+Site Web, ou la non-accessibilité de ce site Web, même si Industeel Belgium s.a. a été avisée de la possibilité de tels dommages. Si vous êtes insatisfait 
+du site Web, de ses services, de son contenu ou des conditions d'utilisation, votre seul et unique recours consiste à cesser d'utiliser le site Web.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Clause financière &lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Aucunes informations contenues dans le site Web sont réputées être soit des conseils de nature financière pour agir ou ne pas agir de quelque façon que ce soit, ni une incitation à investir ou à faire face à toute forme d'investissement, que ce soit cotée ou non cotée, en Belgique ArcelorMittal, Industeel s.a. ou aucune de leurs entités.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Le site Web n'a pas été soumis à la commission américaine des opérations de bourse ni à toute autre autorité compétente selon les besoins chaque fois qu'il ya une offre publique ou de produits et services financiers.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Conformité avec la loi&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Vous vous engagez à utiliser le site Web en stricte conformité avec toutes les lois applicables, décisions et règlements en vigueur et d'une manière qui n'est pas, à la seule discrétion d’Industeel Belgium s.a, incidences négatives sur la clientèle ou de réputation d'Industeel Belgium s.a. et ne prendre aucune mesure qui pourrait provoquer Industeel Belgium s.a. d'être en violation des lois, ordonnances ou règlements applicables à Industeel Belgium s.a.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Indemnité&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Vous acceptez en tout temps de dégager de toute responsabilité Industeel Belgium s.a., ses agents, sociétés affiliées et leurs administrateurs et employés respectifs contre toutes actions, procédures, coûts, réclamations, dommages, demandes, responsabilités et dépenses quelconques subies, engagées ou payées par Industeel Belgium s.a. directement ou indirectement, en ce qui concerne: (i) toute information ou contenu que vous collectez sur ou via ce site Web et (ii) votre utilisation ou mauvaise utilisation du contenu de ce site Web, y compris et sans limitation des actions en contrefaçon.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Politique de confidentialité&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;
+	&lt;span style=''&gt;1.
+		&lt;span style=''&gt;&lt;/span&gt;
+	&lt;/span&gt;
+	&lt;b&gt;
+		&lt;span style=''&gt;Les données personnelles&lt;/span&gt;
+	&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Informations non personnelles collectées automatiquement&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Lorsque vous visitez notre site, des informations non personnelles sont enregistrées par le fonctionnement normal des serveurs Internet d’Industeel Belgium s.a. afin de surveiller et d'améliorer votre expérience en ligne. Ces informations enregistrées peuvent inclure (sans s'y limiter) votre adresse IP, le nom de votre fournisseur de services Internet, le système d'exploitation et le type de navigateur que vous utilisez, la date et la durée de votre visite, le nom (s) de la visite Page (s), la quantité de données transférées.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Les renseignements personnels que vous choisissez de soumettre&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;En règle générale, vous n'êtes pas tenu de divulguer vos données personnelles comme une condition d'utilisation de ce site Web. Aucune information personnellement identifiable, comme votre nom, adresse ou adresse e-mail, sont automatiquement collectées lors de votre visite sur le site Web.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Toutefois, l'accès aux informations clients peut nous amener à vous demander vos coordonnées (comme votre nom, adresse postale et / ou e-mail) et les données profil (telles que vos préférences). Dans de tels cas, si vous ne fournissez pas les renseignements personnels obligatoires en ce qui concerne une activité particulière, vous ne serez pas en mesure de vous livrer à cette activité.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Si vous demandez des informations par le biais de ce site Web avec votre adresse e-mail et / ou votre nom et / ou adresse postale, vous acceptez que ces données seront utilisées dans le but de fournir les informations demandées et qu’Industeel Belgium s.a. peut utiliser ces données dans le futur pour fournir d'autres informations sur Industeel Belgium s.a. qui pourraient être d'intérêt pour vous.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Vous avez le droit de consulter vos données personnelles, afin de les  corriger, si nécessaire, et de retirer votre consentement à l'utilisation de vos données personnelles.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Les renseignements personnels identifiables ne sont jamais vendus ou louées à des tiers en dehors du groupe ArcelorMittal. Industeel Belgium s.a. l'utilisateur peut divulguer des renseignements dans des cas particuliers, lorsque nous avons des raisons de croire que la divulgation de ces informations est nécessaire pour identifier, contacter ou intenter une action en justice contre quelqu'un qui pourrait causer un préjudice ou atteinte (intentionnellement ou non) aux droits Industeel Belgium s.a.. ou d'un bien, d'autres utilisateurs du site Web, ou toute autre personne qui pourrait être lésé par de telles activités.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;
+	&lt;span style=''&gt;2.
+		&lt;span style=''&gt;&lt;/span&gt;
+	&lt;/span&gt;
+	&lt;b&gt;
+		&lt;span style=''&gt;Utilisation des cookies&lt;/span&gt;
+	&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Les cookies sont des informations qu'un site Web transfère sur le disque dur de l'ordinateur d'un individu pour des fins d'archivage. Les cookies rendent l'utilisation de nos Sites facilitée, entre autres, d'enregistrer vos mots de passe et vos préférences. Ces cookies sont réservés à l'usage seulement sur notre site, et ne transmet aucune information personnelle à un tiers. La plupart des navigateurs sont initialement configurés pour accepter les cookies, mais vous pouvez configurer votre navigateur pour qu'il refuse tous les cookies ou indiquer quand un cookie est envoyé. (Remarque: vous aurez besoin de consulter la zone d'aide de votre application de navigateur pour obtenir des instructions.) Si vous choisissez de désactiver les cookies de votre matériel ou de refuser d'accepter un cookie, certaines parties du Sites Web Industeel Belgium sa ne fonctionneront pas correctement ou peuvent être considérablement plus lente.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;
+	&lt;span style=''&gt;3.
+		&lt;span style=''&gt;&lt;/span&gt;
+	&lt;/span&gt;
+	&lt;b&gt;
+		&lt;span style=''&gt;Utilisation des adresses IP&lt;/span&gt;
+	&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Une adresse IP est un numéro qui est automatiquement assigné à votre ordinateur par votre fournisseur d'accès Internet lorsque vous naviguez sur le Web. Lorsque vous consultez des pages du site Web Industeel Belgium s.a., nos serveurs enregistrent votre adresse IP. Industeel Belgium s.a. recueille les adresses IP à des fins d'administration du système, vérifier l'utilisation de notre Site. Nous ne lions pas les adresses IP à une personne identifiable, ce qui signifie que votre session sera enregistrée, mais vous n'êtes plus anonyme. Nous pouvons exceptionnellement utiliser votre adresse IP en coopération avec votre fournisseur d'accès Internet afin de vous identifier, si nous estimons qu'il est nécessaire de faire respecter nos Conditions d'utilisation ou de protéger nos services, Sites, nos clients ou autres.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;
+	&lt;span style=''&gt;4.
+		&lt;span style=''&gt;&lt;/span&gt;
+	&lt;/span&gt;
+	&lt;b&gt;
+		&lt;span style=''&gt;Sécurité&lt;/span&gt;
+	&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;La sécurité des données personnelles est extrêmement importante pour nous. Une fois que nous recevons votre transmission, nous faisons nos meilleurs efforts pour assurer leur sécurité sur nos systèmes. Malheureusement, aucune transmission de données sur Internet ne peut être garantie à 100% sécurisé. En conséquence, alors que nous nous efforçons de protéger vos renseignements personnels, Industeel Belgium sa ne peut pas assurer ou garantir la sécurité des informations que vous nous transmettez.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Contact:&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Si vous avez des questions concernant notre politique de confidentialité, les pratiques de nos sites, 
+vous pouvez contacter Industeel Belgium s.a.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Les informations fournies par le biais de vos demandes courriel adressées à Industeel Belgium s.a.,  telle que votre adresse e-mail, seront uniquement 
+utilisées pour répondre à vos demandes de renseignements et ne seront jamais transmises à des tiers.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Général:&lt;/span&gt;&lt;/b&gt;&lt;span style=''&gt; &lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Vous ne pouvez céder les présentes Conditions d'Utilisation ou l'un de vos intérêts, vos droits ou obligations en vertu de ces Conditions d'utilisation. Si une quelconque disposition de ces Conditions d'utilisation est jugée invalide par un tribunal compétent, l'invalidité de cette disposition n'affectera pas la validité des autres dispositions des présentes Conditions d'utilisation, qui restera en vigueur et de plein effet. Aucune renonciation à l'une de ces conditions d'utilisation est considérée comme une renonciation supplémentaire ou permanente à cette condition ou à toute autre condition.&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Droit applicable :&lt;/span&gt;&lt;/b&gt;&lt;span style=''&gt; &lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;
+&lt;span style=''&gt;Dans le présent site que les modalités et conditions de son utilisation sont régis par le droit Belge, quel que soit le lieu d’utilisation. En cas de contestation éventuelle, et après l’échec de toute tentative de recherche d’une solution amiable, les tribunaux belges seront seuls compétents pour traiter ce litige.&lt;/span&gt;&lt;/p&gt;</value>
+  </data>
+</root>

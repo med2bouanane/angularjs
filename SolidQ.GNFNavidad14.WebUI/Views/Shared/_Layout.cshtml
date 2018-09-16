@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="app">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=8,chrome=1" />-->
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/bundles/ngDialog")
+</head>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+        
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/angularjs")
+    <script src="~/Scripts/ngDialog.js"></script>
+    @Scripts.Render("~/bundles/AngularController")
+    @Scripts.Render("~/bundles/libs")
+
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/none.js"></script>
+
+
+    <script src="~/Scripts/Angular/Libs/angular-translate-loader-url.min.js"></script>
+    @*<script src="https://rawgithub.com/PascalPrecht/bower-angular-translate-loader-static-files/master/angular-translate-loader-static-files.js"></script>*@
+
+    <script src="~/Scripts/Angular/Libs/test/angular-file-upload-shim.min.js"></script>
+    <script src="~/Scripts/Angular/Libs/test/angular-file-upload.min.js"></script>
+
+    <script src="http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js"></script>
+    		
+    @RenderSection("scripts", required: false)
+        <script>
+    window.onload = function () {
+
+        //$(".btn-default").click(function () {
+        //    var h = $("body").height();
+        //    sendMessage("size:" + h);
+        //});
+
+        $(".btn-default.send").click(function () {
+
+            var elems = [];
+
+            $(".validation-errors").each(function () {
+                if ($(this).attr("style") === "display: block;") {
+                    elems.push($(this));
+                }
+            });
+
+            $(".validation-summary-errors").each(function () {
+                if ($(this).attr("style") === "display: block;") {
+                    elems.push($(this));
+                }
+            });
+
+            if (elems.length > 0) {
+                sendMessage("top");
+            }
+        });
+        //.mousedown().mouseup()
+        //$("#outlook-send-button").click(function () {
+        //    var h = $("body").height(); //alert(h);
+        //    sendMessage("size:" + (h + 60));
+        //});
+        ///////////////////////////
+        function checkDocumentHeight(callback) {
+            var lastHeight = document.body.clientHeight, newHeight, timer;
+            (function run() {
+                newHeight = document.body.clientHeight;
+                if (lastHeight != newHeight)
+                    callback(lastHeight, newHeight);
+                lastHeight = newHeight;
+                timer = setTimeout(run, 200);
+            })();
+        }
+
+        function doSomthing(o, n) {
+
+            sendMessage("size:" + n);
+        }
+
+        checkDocumentHeight(doSomthing);
+
+        ////////////////////////////////
+
+        //$("#acceptLegalConditions .link-text").click(function () {
+        //    var h = $("body").height();
+        //    sendMessage("size:" + h);
+        //});
+
+        //$("#legalconditions-container .close-button").click(function () {
+        //    var h = $("body").height();
+        //    sendMessage("size:" + (h - 189));
+        //});
+
+        //$("#myTab a").on("shown.bs.tab",function () {
+        //    var h = $("body").height();
+        //    sendMessage("size:" + h);
+        //});
+
+        $("#confirmation-link").click(function (event) {
+            event.preventDefault();
+            sendMessage("navigate:" + $(this).attr("href"));
+        });
+
+        $("#send-more").click(function (event) {
+            event.preventDefault();
+            sendMessage("form");
+        });
+
+        function sendMessage(e) {
+            //window.parent.postMessage(e, 'http://wpgnfnavidad14des.azurewebsites.net/');
+            var url ='@Microsoft.WindowsAzure.CloudConfigurationManager.GetSetting("WordPressURL")';
+            window.parent.postMessage(e, url);
+        }
+
+        //////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////
+
+        function receiveMessage(e) {
+            var urlApp = '@Microsoft.WindowsAzure.CloudConfigurationManager.GetSetting("AppURL")';
+
+            if (e.data === "route") {
+                //Obtenemos la ruta actual
+                //var route = window.location.href.split("http://gnfnavidad14des.cloudapp.net")[1];
+                var route = window.location.href.split(urlApp)[1];
+
+                if (route && route !== "/") {
+                    sendMessage(route.split("/")[2] + "/" + route.split("/")[3]);
+                }
+                else {
+                    sendMessage("/");
+                }
+            }
+            else if (e.data === "size") {
+                var h = $("body").height();
+                sendMessage("size:" + h);
+            }
+        }
+
+        if (window.addEventListener) {
+            window.addEventListener('message', receiveMessage);
+        }
+        else { // IE8 or earlier
+            window.attachEvent('onmessage', receiveMessage);
+        }
+    };
+
+
+    $('#myTab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    });
+
+
+
+
+</script>
+</body>
+</html>

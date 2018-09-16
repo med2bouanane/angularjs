@@ -1,0 +1,137 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="UIWebeKPI.Site" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>e-KPI Industeel</title>
+    <link rel="Icon" type="image/png" href="~/Images/faviconarcelormittal.png" />
+    <link rel="stylesheet" href="Styles/reset.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/stock.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/eKPI.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/jquery-ui-1.8.14.custom.css" type="text/css" media="screen" />
+    <asp:ContentPlaceHolder ID="cphEnTete" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body >
+    <form id="SiteMaster" runat="server">
+        <div id="wrap">
+            <div id="divHeader" runat="server">
+                <header>
+                	<div id="transverse">
+				        <ul>
+                	        <li style="width:150px"><asp:Label ID="lblLangue" runat="server" Text="Language " 
+                                    meta:resourcekey="lblLangueResource1"></asp:Label>
+                                        <asp:DropDownList ID="ddlLangueEKPI" runat="server" AutoPostBack="True" 
+                                    meta:resourcekey="ddlLangueEKPIResource1"></asp:DropDownList>
+					        </li>
+					        <li style="width:150px"><asp:hyperlink id="lnkConfiguration" runat="server" 
+                                    NavigateUrl="~/Configuration.aspx" meta:resourcekey="lnkConfigurationResource1">Configuration requise</asp:hyperlink></li>
+					        <li style="width:80px"><asp:hyperlink id="lnkContact" runat="server" 
+                                    NavigateUrl="~/Contact.aspx" meta:resourcekey="lnkContactResource1">Contact</asp:hyperlink></li>
+                            <li style="width:100px"><asp:hyperlink id="lnkSuggestion" runat="server" 
+                                    NavigateUrl="~/Suggestions.aspx" meta:resourcekey="lnkSuggestionResource1">Suggestions</asp:hyperlink></li>
+                            <li style="width:150px"><asp:hyperlink id="hlkConfidentialite" runat="server" 
+                                    NavigateUrl="~/Confidentialite.aspx" 
+                                    meta:resourcekey="hlkConfidentialiteResource1">Confidentialité et sécurité</asp:hyperlink></li>
+				        </ul>
+			        </div>
+                    <div id="login">
+                            <asp:LoginView ID="liveKPI" runat="server">
+                                <AnonymousTemplate>
+                                        <asp:Login ID="lgneKPI" runat="server" 
+                                            MembershipProvider="eKPIMembershipProvider" 
+                                            FailureText="Incorrect login or password" EnableTheming="True" 
+                                            OnLoggedIn="OnLoggedIn" meta:resourcekey="lgneKPIResource1">
+                                        <LayoutTemplate>
+                                            <table id="Identification">
+                                                <tr valign="middle">
+                                                    <td>
+                                                        <asp:Label ID="lblIdentifiant"  CssClass="header" runat="server" 
+                                                            AssociatedControlID="UserName" style="vertical-align:middle;" 
+                                                            meta:resourcekey="lblIdentifiantResource1">Identifiant</asp:Label>
+                                                        <asp:TextBox ID="UserName" runat="server" CssClass="txtHeader" 
+                                                            meta:resourcekey="UserNameResource1"></asp:TextBox>
+                                                        <asp:RequiredFieldValidator ID="rfvIdentifiant" runat="server" 
+                                                            ControlToValidate="UserName" ErrorMessage="Un nom d'utilisateur est requis." 
+                                                            ToolTip="Un nom d'utilisateur est requis." CssClass="texterouge" 
+                                                            ValidationGroup="ValidationIdentification" 
+                                                            meta:resourcekey="rfvIdentifiantResource1">*</asp:RequiredFieldValidator>
+                                                        <asp:Label ID="lblMotPasse" runat="server" AssociatedControlID="Password" 
+                                                            style="vertical-align:middle;" meta:resourcekey="lblMotPasseResource1">Mot de passe</asp:Label>
+                                                        <asp:TextBox ID="Password" runat="server" TextMode="Password" 
+                                                            CssClass="txtHeader" meta:resourcekey="PasswordResource1"></asp:TextBox>
+                                                        <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" CssClass="texterouge" 
+                                                            ControlToValidate="Password" ErrorMessage="Un mot de passe est requis." 
+                                                            ToolTip="Un mot de passe est requis." 
+                                                            ValidationGroup="ValidationIdentification" 
+                                                            meta:resourcekey="PasswordRequiredResource1">*</asp:RequiredFieldValidator>
+                                                        <asp:Button ID="btnIdentifier" runat="server" CommandName="Login" Width="70px" 
+                                                            Text="OK" ValidationGroup="ValidationIdentification" 
+                                                            CssClass="btn btnHeaderLogin" meta:resourcekey="btnIdentifierResource1" 
+                                                            /><br />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <asp:Label ID="FailureText" CssClass="texterouge" runat="server" 
+                                                            style="_Position: absolute; _right:20px" meta:resourcekey="FailureTextResource1" 
+                                                            ></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <asp:HyperLink id="lnkInscription" runat="server" 
+                                                            Text="S'inscrire" visible="False" Font-Bold="True" meta:resourcekey="lnkInscriptionResource1"
+                                                            ></asp:HyperLink>
+                                                        <span id="spnSeparateur" runat="server" visible="False">&nbsp;|&nbsp;</span>
+                                                        <asp:HyperLink id="lnkMotPasse" runat="server" Text=" Mot de passe perdu ?"  
+                                                            NavigateUrl="~/MotPassePerdu.aspx" meta:resourcekey="lnkMotPasseResource1"
+                                                            ></asp:HyperLink>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                            
+                                        </LayoutTemplate>
+                                    </asp:Login>
+                                    </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    <div id="identification">
+                                        <asp:literal runat="server" ID="litWelcome" Text="Bienvenue" 
+                                            meta:resourcekey="litWelcomeResource1"></asp:literal> <span class="bold">
+                                        <asp:LoginName ID="HeadLoginName" runat="server" 
+                                            meta:resourcekey="HeadLoginNameResource1" /></span>! <br /><br />[ 
+                                        <asp:LoginStatus ID="hlseKPI" runat="server" LogoutAction="Redirect" 
+                                            LogoutText="Se déconnecter" LogoutPageUrl="~/index.aspx"  
+                                            OnLoggedOut="OnLoggedOut" meta:resourcekey="hlseKPIResource1" /> ]
+                                    </div>
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+			            </div>
+
+                    <div id="titre">
+				        <span style="color:#BCBDC0">e-KPI</span>&nbsp;<span runat="server" id="lblTitreIndusteel" style="color:#FF3700">Industeel</span>
+			        </div>
+			        <div id="home"><a id="lnkAccueil" runat="server"></a></div>
+                </header>
+            </div>
+            <section>
+                <div id="divMenu" runat="server">
+			    <nav>
+				    <div class="inside">
+                        <asp:Menu ID="mnueKPI" runat="server" Orientation="Vertical" 
+                            DisappearAfter="100" StaticMenuStyle-VerticalPadding="10" 
+                            meta:resourcekey="mnueKPIResource1"></asp:Menu>
+				    </div>
+			    </nav>
+                </div>
+                <article>
+                    <div class="FondBlanc">
+				        <asp:ContentPlaceHolder ID="cphContenu" runat="server"/>				    
+                    </div>
+                </article>
+		    </section>
+            <footer>
+				<div class="fin" id="divFondBlanc" runat="server">                
+			    </div>
+		    </footer>
+        </div>
+    </form>
+</body>
+</html>

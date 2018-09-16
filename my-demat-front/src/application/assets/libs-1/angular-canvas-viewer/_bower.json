@@ -1,0 +1,42 @@
+{
+  "name": "angular-raphael-viewer",
+  "authors": [
+    "Fabrice Crohas <fcrohas@gmail.com>"
+  ],
+  "description": "Image viewer using raphaeljs",
+  "main": "module.js",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "raphael",
+    "image",
+    "viewer"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/fcrohas/angular-raphael-viewer",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "raphael": "~2.1.4",
+    "bootstrap": "~3.3.6",
+    "json-formatter": "~0.4.2"
+  },
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "e9490a925db7b3179198223b162633a9666d0c03"
+  },
+  "_source": "git@SVLVDMUTFUL02:angular-ui-group/angular-canvas-viewer.git",
+  "_target": "*",
+  "_originalSource": "git@SVLVDMUTFUL02:angular-ui-group/angular-canvas-viewer.git"
+}

@@ -1,0 +1,46 @@
+﻿{
+  "lblTitreGlobal": "Inscription",
+  "lblNotification": "",
+  "lblUtilisateur": "Utilisateur",
+  "lblCompteExistant": "Oui",
+  "lblCompteNoExistant": "Non",    
+  "lblIdentifiantExistant": "Identifiant",
+  "lblMotPassExistant": "Mot de passe",
+  "lblDescription": "Introduisez ici vos informations de profils. Ces informations sont destinées uniquement à être utilisées par ArcelorMittal Industeel
+                              dans le cadre de l’amélioration de la relation client. Ces informations ne seront pas transmises à une tierce partie.",
+  "lblTitre": "Titre",
+  "lblM": "M",
+  "lblMme": "Mme",
+  "lblMlle": "Mlle",
+  "lblNom": "Nom",
+  "lblPrenom": "Prénom",
+  "lblFonction": "Fonction",
+  "lblEmail": "Email",
+  "lblTelephone": "Téléphone",
+  "lblLangue": "Langue",
+  "ddlLangue":
+  {
+	"Francais": "Français",
+	"Anglais": "Anglais"
+  },
+  "lblIdentifiant": "Identifiant",
+  "lblMotPasse": "Mot de passe",
+  "lblConfirmerMotPasseAcces":"Confirmation", 
+  "brnPrecedant": "Precedant",
+  "btnSuivant": "Suivant",
+  "btnFinish": "Finir",
+  "lblEtape1": "Informations de profil",
+  "lblEtape2": "Informations d'accès",
+  "msgErrorFormat": "Un ou plusieurs champs ne respecte(nt) pas le format requis",
+  "msgErrorEncodage": "Un ou plusieurs champs obligatoire(s) n’a/n’ont pas été encodé(s)",
+  "msgSucces": "Votre Inscription a bien été envoyée",
+  "msgErreurComptePossedeDroitAcces": "Le compte Web possède déjà le droit d'accès au portail",
+  "msgErreurDemandeAccesExistante": "Un compte WEB attaché à cet email existe déjà, cliquer <a href="#" onClick="ActiverVueOUI()"" >ici</a> pour demander d'accès.",
+  "msgErreurMotPasseAccesValidation": "Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et 6 caractères de longueur",
+  "msgErreurMotPasseInvalide": "Les mots de passe ne correspondent pas",
+  "msgErreurEmailExistant": "Une demande d'accès en cours de validation existe déjà.",
+  "msgErreurIdentifiantMotPasseIncorrect": "L’identifiant et/ou mot de passe incorrect",
+  "msgErreurGeneral": "Une erreur est suvenue."
+}
+
+  

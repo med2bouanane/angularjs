@@ -1,0 +1,10 @@
+﻿{
+    "REQUIRED": "Pflichtfeld",
+    "EMAILFORMAT": "Das Format der E-Mail-Adresse ist ungültig.",
+    "DUPLICATECONTACT": "Ein Kontakt mit derselben E-Mail-Adresse wurde bereits hinzugefügt.",
+    "NONECONTACT": "Es wurde kein Kontakt hinzugefügt.",
+    "LOGINERROR": "Benutzername oder Passwort falsch.",
+    "CONFIRMDELETE": "Soll der ausgewählte Kontakt wirklich gelöscht werden?",
+    "SENDINGERROR": "Der Glückwunsch konnte nicht verschickt werden.",
+    "CONFIRMDELETEALL": "Möchten Sie wirklich alle Kontakte löschen?"
+}

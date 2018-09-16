@@ -1,0 +1,30 @@
+<div id="page-wrapper">
+    <br/><br/><br/><br/><br/>
+    <div class="row">
+        <div class="col-sm-offset-3 col-sm-6">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title pull-left"><i class="glyphicon glyphicon-warning-sign"></i> Error
+                        {{errorCtrl.code}}</h3>
+                    <a class="btn btn-primary pull-right" href="#/home"><i class="glyphicon glyphicon-home"></i></a>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <h4>{{errorCtrl.message}}</h4>
+                    <h5><b>{{errorCtrl.error}}</b></h5>
+
+                    <span ng-if="errorCtrl.errorObject">
+                        <h6>1 => <b>{{errorCtrl.errorObject.code}}</b> : {{errorCtrl.errorObject.message}}</h6>
+                    </span>
+                    <a class="btn btn-primary pull-right" href="#/home">RETOUR PAGE D'ACCUEIL</a>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!--/.panel .panel-danger-->
+        </div>
+        <!--/.ol-sm-offset-3 .col-sm-6-->
+    </div>
+    <!--/.row-->
+</div>
+<!--/.page-wrapper-->

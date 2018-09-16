@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- Dozzer mapper -->
+    <bean id="dozerMapper" class="org.dozer.DozerBeanMapper">
+        <description>Dozer Mapper with mapping files and custom converters</description>
+        <property name="mappingFiles">
+            <list>
+                <value>desgeeks-dozer-config.xml</value>
+            </list> </property>
+        <property name="customConvertersWithId">
+            <map>
+                <entry key="booleanConverterId" value-ref="booleanConverter" />
+            </map> </property> </bean>
+    <!-- custom converter -->
+    <bean id="booleanConverter" class="fr.mtg.unit.presentation.converter.BooleanConverter">
+        <description>Converter to convert Boolean to String (TRUE <=> "YES", FALSE <=> "NO")</description>
+    </bean>
+</beans>

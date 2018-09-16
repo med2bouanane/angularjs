@@ -1,0 +1,2217 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+UIWebeKPI
+</name>
+</assembly>
+<members>
+<member name="F:UIWebeKPI.RetardsProfonds.lblTitreGlobal">
+	<summary>
+lblTitreGlobal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.RetardsProfonds.lblTitreSecondaire">
+	<summary>
+lblTitreSecondaire control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.RetardsProfonds.lblSite">
+	<summary>
+lblSite control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.RetardsProfonds.btnAjouter">
+	<summary>
+btnAjouter control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.RetardsProfonds.btnEditer">
+	<summary>
+btnEditer control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.RetardsProfonds.btnEliminer">
+	<summary>
+btnEliminer control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.RetardsProfonds.gvwAccuse">
+	<summary>
+gvwAccuse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Confidentialite.lblTitreGlobal">
+	<summary>
+lblTitreGlobal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Confidentialite.lblTextConfidencialite">
+	<summary>
+lblTextConfidencialite control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MotPassePerdu.lblTitreGlobal">
+	<summary>
+lblTitreGlobal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MotPassePerdu.lblTexteExplicatif">
+	<summary>
+lblTexteExplicatif control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MotPassePerdu.wucInscription">
+	<summary>
+wucInscription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MotPassePerdu.trLoginEmail">
+	<summary>
+trLoginEmail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MotPassePerdu.rbtIdentifiant">
+	<summary>
+rbtIdentifiant control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MotPassePerdu.rbtAdressEmail">
+	<summary>
+rbtAdressEmail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MotPassePerdu.txtIdentificacion">
+	<summary>
+txtIdentificacion control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MotPassePerdu.rfvEmail">
+	<summary>
+rfvEmail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MotPassePerdu.cuvMotPasseAccesValidation">
+	<summary>
+cuvMotPasseAccesValidation control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MotPassePerdu.btnValider">
+	<summary>
+btnValider control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblTitreGlobal">
+	<summary>
+lblTitreGlobal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.trSteps">
+	<summary>
+trSteps control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.steps">
+	<summary>
+steps control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.tdDebutEtape1">
+	<summary>
+tdDebutEtape1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.tdEtape1">
+	<summary>
+tdEtape1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblEtape1">
+	<summary>
+lblEtape1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.tdDebutEtape2">
+	<summary>
+tdDebutEtape2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.tdEtape2">
+	<summary>
+tdEtape2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblEtape2">
+	<summary>
+lblEtape2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.tdFinEtape2">
+	<summary>
+tdFinEtape2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.wucInscription">
+	<summary>
+wucInscription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.hdnCurrentStep">
+	<summary>
+hdnCurrentStep control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.wzdInscription">
+	<summary>
+wzdInscription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.WizardStep1">
+	<summary>
+WizardStep1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.tblTypeCompte">
+	<summary>
+tblTypeCompte control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblTypeUtilisateur">
+	<summary>
+lblTypeUtilisateur control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.rbtCompteExistant">
+	<summary>
+rbtCompteExistant control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.rbtCompteNoExistant">
+	<summary>
+rbtCompteNoExistant control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.tblVueConecte">
+	<summary>
+tblVueConecte control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblIdentifiantExiste">
+	<summary>
+lblIdentifiantExiste control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.txtIdentifiant">
+	<summary>
+txtIdentifiant control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.cuvIdentifiant">
+	<summary>
+cuvIdentifiant control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblMotPassExistant">
+	<summary>
+lblMotPassExistant control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.txtMotPasse">
+	<summary>
+txtMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.cuvMotPasse">
+	<summary>
+cuvMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblDescription">
+	<summary>
+lblDescription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.tblVueNoConecte">
+	<summary>
+tblVueNoConecte control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblTitre">
+	<summary>
+lblTitre control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.rbtM">
+	<summary>
+rbtM control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.rbtMme">
+	<summary>
+rbtMme control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.rbtMlle">
+	<summary>
+rbtMlle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblNom">
+	<summary>
+lblNom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.txtNom">
+	<summary>
+txtNom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.cuvNom">
+	<summary>
+cuvNom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblPrenom">
+	<summary>
+lblPrenom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.txtPrenom">
+	<summary>
+txtPrenom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.cuvPrenom">
+	<summary>
+cuvPrenom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblFonction">
+	<summary>
+lblFonction control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.txtFonction">
+	<summary>
+txtFonction control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblEmail">
+	<summary>
+lblEmail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.txtEmail">
+	<summary>
+txtEmail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.cuvMail">
+	<summary>
+cuvMail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.cuvDestinataires">
+	<summary>
+cuvDestinataires control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblPhone">
+	<summary>
+lblPhone control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.txtTelephone">
+	<summary>
+txtTelephone control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblLangue">
+	<summary>
+lblLangue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.ddlLangueUtilisateur">
+	<summary>
+ddlLangueUtilisateur control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.WizardStep2">
+	<summary>
+WizardStep2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblIdentifiant">
+	<summary>
+lblIdentifiant control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.txtIdentifiantAcces">
+	<summary>
+txtIdentifiantAcces control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblMotPasse">
+	<summary>
+lblMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.txtMotPasseAcces">
+	<summary>
+txtMotPasseAcces control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.cuvMotPasseAcces">
+	<summary>
+cuvMotPasseAcces control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.cuvMotPasseAccesValidation">
+	<summary>
+cuvMotPasseAccesValidation control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.lblConfirmerMotPasseAcces">
+	<summary>
+lblConfirmerMotPasseAcces control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.txtConfirmerMotPasseAcces">
+	<summary>
+txtConfirmerMotPasseAcces control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.cuvConfirmerMotPasseAccess">
+	<summary>
+cuvConfirmerMotPasseAccess control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.cuvNouveauMotPasse">
+	<summary>
+cuvNouveauMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Inscription.WizardStep3">
+	<summary>
+WizardStep3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:UIWebeKPI.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:UIWebeKPI.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:UIWebeKPI.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:UIWebeKPI.CheckListBox.cblCollection">
+	<summary>
+cblCollection control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ArretEnCours.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Preferences.lblTitreGlobal">
+	<summary>
+lblTitreGlobal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Preferences.lblTitre">
+	<summary>
+lblTitre control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Preferences.wcuNotification">
+	<summary>
+wcuNotification control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Preferences.tblPreference">
+	<summary>
+tblPreference control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Preferences.lblLangue">
+	<summary>
+lblLangue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Preferences.ddlLangue">
+	<summary>
+ddlLangue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Preferences.lblPageAccueil">
+	<summary>
+lblPageAccueil control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Preferences.ddlPageAccueil">
+	<summary>
+ddlPageAccueil control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Preferences.btnValider">
+	<summary>
+btnValider control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.tblEntete">
+	<summary>
+tblEntete control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.lblTitreGlobal">
+	<summary>
+lblTitreGlobal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.wcuNotification">
+	<summary>
+wcuNotification control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.tblVueNoConecte">
+	<summary>
+tblVueNoConecte control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.lblTitre">
+	<summary>
+lblTitre control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.rbtM">
+	<summary>
+rbtM control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.rbtMme">
+	<summary>
+rbtMme control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.rbtMlle">
+	<summary>
+rbtMlle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.lblNom">
+	<summary>
+lblNom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.txtNom">
+	<summary>
+txtNom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.rfvNom">
+	<summary>
+rfvNom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.lblPrenom">
+	<summary>
+lblPrenom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.txtPrenom">
+	<summary>
+txtPrenom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.lblFonction">
+	<summary>
+lblFonction control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.txtFonction">
+	<summary>
+txtFonction control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.lblEmail">
+	<summary>
+lblEmail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.txtEmail">
+	<summary>
+txtEmail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.rfvEmail">
+	<summary>
+rfvEmail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.revDestinataires">
+	<summary>
+revDestinataires control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.lblPhone">
+	<summary>
+lblPhone control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.txtTelephone">
+	<summary>
+txtTelephone control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.lblLanguage">
+	<summary>
+lblLanguage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.ddlLangue">
+	<summary>
+ddlLangue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.tblVueConecte">
+	<summary>
+tblVueConecte control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.lblSubject">
+	<summary>
+lblSubject control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.txtSujet">
+	<summary>
+txtSujet control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.rfvSujet">
+	<summary>
+rfvSujet control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.lblMessage">
+	<summary>
+lblMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.txtMessage">
+	<summary>
+txtMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Suggestions.btnEnvoyer">
+	<summary>
+btnEnvoyer control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:UIWebeKPI.My.MyWebExtension.Application">
+	<summary>
+ Returns information about the current application.
+ </summary>
+</member><member name="P:UIWebeKPI.My.MyWebExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:UIWebeKPI.My.MyWebExtension.User">
+	<summary>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:UIWebeKPI.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:UIWebeKPI.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:UIWebeKPI.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="P:UIWebeKPI.My.MyWebExtension.WebServices">
+	<summary>
+ Provides access to WebServices added to this project.
+ </summary>
+</member><member name="T:UIWebeKPI.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:UIWebeKPI.Erreur.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.cphEnTete">
+	<summary>
+cphEnTete control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.SiteMaster">
+	<summary>
+SiteMaster control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.divHeader">
+	<summary>
+divHeader control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.lblLangue">
+	<summary>
+lblLangue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.ddlLangueEKPI">
+	<summary>
+ddlLangueEKPI control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.lnkConfiguration">
+	<summary>
+lnkConfiguration control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.lnkContact">
+	<summary>
+lnkContact control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.lnkSuggestion">
+	<summary>
+lnkSuggestion control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.hlkConfidentialite">
+	<summary>
+hlkConfidentialite control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.liveKPI">
+	<summary>
+liveKPI control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.lblTitreIndusteel">
+	<summary>
+lblTitreIndusteel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.lnkAccueil">
+	<summary>
+lnkAccueil control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.divMenu">
+	<summary>
+divMenu control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.mnueKPI">
+	<summary>
+mnueKPI control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.cphContenu">
+	<summary>
+cphContenu control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Site.divFondBlanc">
+	<summary>
+divFondBlanc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueBlocageClient.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueBlocageClient.lblInformationHistorique">
+	<summary>
+lblInformationHistorique control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueBlocageClient.lblDescription">
+	<summary>
+lblDescription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueBlocageClient.txtDescription">
+	<summary>
+txtDescription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueBlocageClient.Panel2">
+	<summary>
+Panel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueBlocageClient.rptIncoterm">
+	<summary>
+rptIncoterm control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueBlocageClient.Panel1">
+	<summary>
+Panel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueBlocageClient.rptBlocageLivraison">
+	<summary>
+rptBlocageLivraison control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Configuration.lblSousTitre">
+	<summary>
+lblSousTitre control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Configuration.lblTextConfidencialite">
+	<summary>
+lblTextConfidencialite control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.lblTitreGlobal">
+	<summary>
+lblTitreGlobal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.lblTitreSecondaire">
+	<summary>
+lblTitreSecondaire control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.wcuNotification">
+	<summary>
+wcuNotification control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.tblNouveauMotPasse">
+	<summary>
+tblNouveauMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.lblLoginEmailLibelle">
+	<summary>
+lblLoginEmailLibelle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.lblLogin">
+	<summary>
+lblLogin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.lblAncienMotPasse">
+	<summary>
+lblAncienMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.txtAncienMotPasse">
+	<summary>
+txtAncienMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.rfvAncienMotPasse">
+	<summary>
+rfvAncienMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.lblNouveauMotPasse">
+	<summary>
+lblNouveauMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.txtNouveauMotPasse">
+	<summary>
+txtNouveauMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.cpvNouveauMotPasse">
+	<summary>
+cpvNouveauMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.rfvNouveauMotPasse">
+	<summary>
+rfvNouveauMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.revMotPasse">
+	<summary>
+revMotPasse control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.lblNouveauMotPasseConfirmation">
+	<summary>
+lblNouveauMotPasseConfirmation control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.txtNouveauMotPasseConfirmation">
+	<summary>
+txtNouveauMotPasseConfirmation control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.rfvNouveauMotPasseConfirmation">
+	<summary>
+rfvNouveauMotPasseConfirmation control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.cevConfirmacion">
+	<summary>
+cevConfirmacion control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Redefinition.btnValider">
+	<summary>
+btnValider control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.lblTitreGlobal">
+	<summary>
+lblTitreGlobal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.lblTitreSecondaire">
+	<summary>
+lblTitreSecondaire control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.lblVersionActuelle">
+	<summary>
+lblVersionActuelle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.lblDescription">
+	<summary>
+lblDescription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.txtDescription">
+	<summary>
+txtDescription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.lblCommandeStandartMoinsDeuxPlusZero">
+	<summary>
+lblCommandeStandartMoinsDeuxPlusZero control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.txtCommandeStandardMoinsDeuxPlusZero">
+	<summary>
+txtCommandeStandardMoinsDeuxPlusZero control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.rfvCommandeStandardMoinsDeuxPlusZero">
+	<summary>
+rfvCommandeStandardMoinsDeuxPlusZero control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.lblCommandePackMoinsZeroPlusZero">
+	<summary>
+lblCommandePackMoinsZeroPlusZero control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.txtCommandePackMoinsZeroPlusZero">
+	<summary>
+txtCommandePackMoinsZeroPlusZero control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.rfvCommandePackMoinsZeroPlusZero">
+	<summary>
+rfvCommandePackMoinsZeroPlusZero control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.lblCommandeStandartMoinsDeuxPlusDeux">
+	<summary>
+lblCommandeStandartMoinsDeuxPlusDeux control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.txtCommandeStandardMoinsDeuxPlusDeux">
+	<summary>
+txtCommandeStandardMoinsDeuxPlusDeux control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.rfvCommandeStandardMoinsDeuxPlusDeux">
+	<summary>
+rfvCommandeStandardMoinsDeuxPlusDeux control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.lblCommandePackMoinsZeroPlusUn">
+	<summary>
+lblCommandePackMoinsZeroPlusUn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.txtCommandePackMoinsZeroPlusUn">
+	<summary>
+txtCommandePackMoinsZeroPlusUn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.rfvCommandePackMoinsZeroPlusUn">
+	<summary>
+rfvCommandePackMoinsZeroPlusUn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.btnValider">
+	<summary>
+btnValider control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.lblHistorique">
+	<summary>
+lblHistorique control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationObjectif.gvwConfigurationObjectifLivraison">
+	<summary>
+gvwConfigurationObjectifLivraison control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Index.lblTitre">
+	<summary>
+lblTitre control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Index.lblSiteWeb">
+	<summary>
+lblSiteWeb control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Index.lblDescription">
+	<summary>
+lblDescription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Index.lblDate">
+	<summary>
+lblDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Index.lblFournisseurPrefere">
+	<summary>
+lblFournisseurPrefere control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:UIWebeKPI.Index.Master">
+	<summary>
+Master property.
+</summary>
+	<remarks>
+Auto-generated property.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueObjectifLivraison.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueObjectifLivraison.lblDescription">
+	<summary>
+lblDescription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueObjectifLivraison.txtDescription">
+	<summary>
+txtDescription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueObjectifLivraison.lblCommandeStandartMoinsDeuxPlusZero">
+	<summary>
+lblCommandeStandartMoinsDeuxPlusZero control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueObjectifLivraison.txtCommandeStandardMoinsDeuxPlusZero">
+	<summary>
+txtCommandeStandardMoinsDeuxPlusZero control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueObjectifLivraison.lblCommandePackMoinsZeroPlusZero">
+	<summary>
+lblCommandePackMoinsZeroPlusZero control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueObjectifLivraison.txtCommandePackMoinsZeroPlusZero">
+	<summary>
+txtCommandePackMoinsZeroPlusZero control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueObjectifLivraison.lblCommandeStandartMoinsDeuxPlusDeux">
+	<summary>
+lblCommandeStandartMoinsDeuxPlusDeux control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueObjectifLivraison.txtCommandeStandardMoinsDeuxPlusDeux">
+	<summary>
+txtCommandeStandardMoinsDeuxPlusDeux control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueObjectifLivraison.lblCommandePackMoinsZeroPlusUn">
+	<summary>
+lblCommandePackMoinsZeroPlusUn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueObjectifLivraison.txtCommandePackMoinsZeroPlusUn">
+	<summary>
+txtCommandePackMoinsZeroPlusUn control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.AfficherHistoriqueObjectifLivraison.btnValider">
+	<summary>
+btnValider control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:UIWebeKPI.Resources._Global.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:UIWebeKPI.Resources._Global.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:UIWebeKPI.Resources._Global.MessagePostBack">
+	<summary>
+  Looks up a localized string similar to La tâche est en cours d'exécution. Veuillez attendre qu'elle soit terminée. Merci..
+</summary>
+</member><member name="P:UIWebeKPI.Resources._Global.TexteConditions">
+	<summary>
+  Looks up a localized string similar to &lt;p style=''&gt;&lt;span style='font-size:16px; color:#ff3700; font-weight:bolder;'&gt;Conditions d'utilisation&lt;/span&gt;&lt;/p&gt;
+
+&lt;br /&gt;&lt;p style=''&gt;&lt;b&gt;&lt;span style=''&gt;Introduction&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p style=''&gt;
+&lt;span style=''&gt;Industeel Belgium s.a. exploite ce site Web (le «site Web») pour fournir un accès en ligne aux informations et documents relatifs aux commandes des clients.&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p style=''&gt;&lt;span style=''&gt;Veuillez s'il vous plaît lire les termes et conditions énoncées dans le présent document (les «condi [rest of string was truncated]";.
+</summary>
+</member><member name="P:UIWebeKPI.Resources._Global.TitreMessagePostBack">
+	<summary>
+  Looks up a localized string similar to Veuillez patienter.
+</summary>
+</member><member name="T:UIWebeKPI.Resources._Global">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:UIWebeKPI.Conditions.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Conditions.lblConditions">
+	<summary>
+lblConditions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Contact.lblTitreGlobal">
+	<summary>
+lblTitreGlobal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Contact.lblTitreOperateur">
+	<summary>
+lblTitreOperateur control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Contact.dlsOperateur">
+	<summary>
+dlsOperateur control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Contact.lblTitreHelpdesk">
+	<summary>
+lblTitreHelpdesk control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Contact.lblHelpdeskMessage">
+	<summary>
+lblHelpdeskMessage control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Contact.lblHelpDescEmailLibelle">
+	<summary>
+lblHelpDescEmailLibelle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ValidatorSummaryControl.vsuNotification">
+	<summary>
+vsuNotification control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ValidatorSummaryControl.lblNotification">
+	<summary>
+lblNotification control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ValidatorSummaryControl.imgNotification">
+	<summary>
+imgNotification control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Test.txtNombre1">
+	<summary>
+txtNombre1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Test.txtNombre2">
+	<summary>
+txtNombre2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.Test.txtResultat">
+	<summary>
+txtResultat control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationBlocageClient.lblTitreGlobal">
+	<summary>
+lblTitreGlobal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationBlocageClient.lblTitreSecondaire">
+	<summary>
+lblTitreSecondaire control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationBlocageClient.lblVersionActuelle">
+	<summary>
+lblVersionActuelle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationBlocageClient.lblDescription">
+	<summary>
+lblDescription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationBlocageClient.txtDescription">
+	<summary>
+txtDescription control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationBlocageClient.Panel2">
+	<summary>
+Panel2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationBlocageClient.rptIncoterm">
+	<summary>
+rptIncoterm control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationBlocageClient.Panel1">
+	<summary>
+Panel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationBlocageClient.rptBlocageLivraison">
+	<summary>
+rptBlocageLivraison control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationBlocageClient.btnValider">
+	<summary>
+btnValider control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationBlocageClient.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.ConfigurationBlocageClient.gvwHistoriqueBlocageClient">
+	<summary>
+gvwHistoriqueBlocageClient control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.VueEnsemble.lblTitreGlobal">
+	<summary>
+lblTitreGlobal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.VueEnsemble.lblTitreSecondaire">
+	<summary>
+lblTitreSecondaire control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.VueEnsemble.lblSite">
+	<summary>
+lblSite control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.VueEnsemble.rblSite">
+	<summary>
+rblSite control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.VueEnsemble.lblTypeCommande">
+	<summary>
+lblTypeCommande control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.VueEnsemble.rblTypeCommande">
+	<summary>
+rblTypeCommande control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.VueEnsemble.lblBlocageClient">
+	<summary>
+lblBlocageClient control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.VueEnsemble.rblBlocageClient">
+	<summary>
+rblBlocageClient control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.VueEnsemble.lblIndicateur">
+	<summary>
+lblIndicateur control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.VueEnsemble.rblIndicateurStandart">
+	<summary>
+rblIndicateurStandart control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.VueEnsemble.rblIndicateursStock">
+	<summary>
+rblIndicateursStock control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.VueEnsemble.hdnInfoGraphique">
+	<summary>
+hdnInfoGraphique control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.lblTitreGlobal">
+	<summary>
+lblTitreGlobal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.lblTitreSecondaire">
+	<summary>
+lblTitreSecondaire control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.wcuNotification">
+	<summary>
+wcuNotification control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.tblMiseAjourProfil">
+	<summary>
+tblMiseAjourProfil control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.lblLoginEmailLibelle">
+	<summary>
+lblLoginEmailLibelle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.lblLogin">
+	<summary>
+lblLogin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.lblTitre">
+	<summary>
+lblTitre control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.rbtM">
+	<summary>
+rbtM control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.rbtMme">
+	<summary>
+rbtMme control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.rbtMlle">
+	<summary>
+rbtMlle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.lblNom">
+	<summary>
+lblNom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.txtNom">
+	<summary>
+txtNom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.rfvNom">
+	<summary>
+rfvNom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.lblPrenom">
+	<summary>
+lblPrenom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.txtPrenom">
+	<summary>
+txtPrenom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.rfvPrenom">
+	<summary>
+rfvPrenom control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.lblFonction">
+	<summary>
+lblFonction control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.txtFonction">
+	<summary>
+txtFonction control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.lblEmail">
+	<summary>
+lblEmail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.txtEmail">
+	<summary>
+txtEmail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.rfvEmail">
+	<summary>
+rfvEmail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.revDestinataires">
+	<summary>
+revDestinataires control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.lblPhone">
+	<summary>
+lblPhone control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.txtTelephone">
+	<summary>
+txtTelephone control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:UIWebeKPI.MiseJourProfil.btnValider">
+	<summary>
+btnValider control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+</members>
+</doc>

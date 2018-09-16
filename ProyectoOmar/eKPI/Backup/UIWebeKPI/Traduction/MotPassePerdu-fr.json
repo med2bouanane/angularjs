@@ -1,0 +1,17 @@
+﻿{
+  "lblDescription": "Vous pouvez entrer votre identifiant ou votre e-mail ci-dessous pour réinitialiser votre mot de passe, un e-mail sera envoyé à cette adresse.<br />Vous y trouverez un lien vous permettant d'introduire un nouveau mot de passe.",
+  "lblNotification": "",
+  "lblIdentifiant": "Identifiant",
+  "lblAdressEmail": "Email",
+  "btnValider": "Valider",
+  
+  "msgErrorFormat": "Un ou plusieurs champs ne respecte(nt) pas le format requis",
+  "msgErrorEncodage": "Un ou plusieurs champs obligatoire(s) n’a/n’ont pas été encodé(s)",
+  "msgSucces": "Vérifier vos emails et cliquer sur le lien afin de poursuivre la procedure",
+  "msgErreurEmailMultiple": "Plusieurs comptes WEB correspondent à cet email, veuillez faire votre demande via votre compte WEB",
+  "msgErreurEmailNonTrouve": "Votre email n’a pas été trouvé, veuillez le vérifier et réessayer s’il vous plait",
+  "msgErreurIdentifiantNonTrouve": "Votre identifiant n’a pas été trouvé, veuillez le vérifier et réessayer s’il vous plait",
+  "msgErreurGeneral": "Une erreur est suvenue."
+}
+
+  

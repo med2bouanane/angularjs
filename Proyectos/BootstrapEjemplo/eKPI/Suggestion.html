@@ -1,0 +1,112 @@
+﻿<div class="Page">
+    <div class="row">
+        <div class="col-xs-6">
+            <h1><label id="lblTitreGlobal" class="Traduction" data-i18n="lblTitreGlobal">lblTitreGlobalSuggestion</label></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <span id="lblNotification" class="texterouge Traduction" ng-bind="notification">sds</span>
+            <img id="imgNotification" src=""/>
+        </div>
+    </div>
+    <div id="Page" ng-hide="StatusSucces()">
+    <div ng-hide="VueUtilisateurConnecte()">
+    <div class="row">
+        <div class="col-xs-2">
+            <span class="Traduction" data-i18n="lblTitre">'lblTitre'</span>
+        </div>
+
+        <div class="col-xs-1">
+            <input id="rbtM" type="radio"  value="M" checked="checked" name="rdbTitre" />
+            <label id="lblM" for="rbtM" class="Traduction" data-i18n="lblM">'lblM'</label>
+        </div>
+        <div class="col-xs-1">
+            <input id="rbtMme" type="radio" value="Mme" name="rdbTitre" />
+            <label id="lblMme" for="rbtMme" class="Traduction" data-i18n="lblMme">'rbtMme'</label>
+        </div>
+        <div class="col-xs-1">
+            <input id="rbtMlle" type="radio" value="Ms" name="rdbTitre" />
+            <label id="lblMlle" for="rbtMlle" class="Traduction" data-i18n="lblMlle">'rbtMlle'</label>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2">
+            <span id="lblNom" class="Traduction" data-i18n="lblNom">'lblNom'</span>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtNom" class="zonetxtoblig texteboxLength" ng-model="DonneeSuggestion.nom"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2">
+            <span id="lblPrenom" class="Traduction" data-i18n="lblPrenom">'lblPrenom'</span>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtPrenom" class="texteboxLength" ng-model="DonneeSuggestion.prenom"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <span id="lblFonction" class="Traduction" data-i18n="lblFonction">'lblFonction'</span>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtFonction" class="texteboxLength" ng-model="DonneeSuggestion.fonction"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <span id="lblEmail" class="Traduction" data-i18n="lblEmail">'lblEmail'</span>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtEmail" class="zonetxtoblig texteboxLength" ng-model="DonneeSuggestion.email"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <span id="lblPhone"  class="Traduction" data-i18n="lblPhone">'lblPhone'</span>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtTelephone" class="texteboxLength" ng-model="DonneeSuggestion.telephone"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <span id="lblLangue" class="Traduction" data-i18n="lblLangue">'lblLangue'</span>
+        </div>
+        <div class="col-sm-1">
+            <select id="ddlLangue" class="texteboxLength"  ng-model="DonneeSuggestion.langue">
+                 <option ng-repeat="langue in LangueCollection" value="{{langue.CodeLangue}}" >{{langue.Libelle}}</option>
+            </select>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <span id="lblSujet" class="Traduction" data-i18n="lblSujet">'lblSujet'</span>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtSujet" maxlength ="2147483647" class="zonetxtoblig texteboxLength" ng-model="DonneeSuggestion.sujet"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 col-md-2">
+            <span id="lblMessage" class="Traduction" data-i18n="lblMessage">'lblMessage'</span>
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10">
+            <textarea id="txtMessageTextArea" rows="5"   ng-model="DonneeSuggestion.message" class="textAreaSuggestion"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-10 col-sm-2 col-md-1">
+            <input id="btnEnvoyer" type="submit" value="btnEnvoyer" class="Traduction" data-i18n="btnEnvoyer"  ng-click="EnvoyerSuggestion()"/>
+        </div>
+    </div>
+ </div>
+ </div>
+
+
+ 

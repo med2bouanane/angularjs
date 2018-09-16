@@ -1,0 +1,50 @@
+﻿<table width="100%" id="tblEntete" runat="server">
+		<tr>
+			<td>
+                <h1><label id="lblTitreGlobal"  ng-model="lblTitreGlobal"></label></h1>
+            </td>
+		</tr>
+        <tr>
+			<td>
+                <h2><label id="lblTitreSecondaire"  ng-model="titreSecondaire"></label></h2>
+            </td>
+		</tr>
+		<tr>
+        <td >
+            <div class="notification texterouge">
+                <label id="lblNotification" class="Traduction" data-i18n="lblNotification"></label>
+                <img id="imgNotification" src="Images/ok.gif"/>
+            </div>
+        </td>
+        </tr>
+</table>
+<table id="tblPreference" >
+        <tr>
+            <td>
+                <label id="lblLangue" class="Traduction" data-i18n="lblLangue">Langue</label>
+            </td>
+            <td>
+            <select id ="ddlLangue" class="Traduction" data-i18n="ddlLangue">
+	            <option selected="selected" value="en">Anglais</option>
+	            <option value="fr">Français</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label id="lblPageAccueil" class="Traduction" data-i18n="lblPageAccueil">Page d'accueil</label>
+            </td>
+            <td>
+            <select id ="ddlPageAccueil">
+            </select>            
+            </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr>
+            <td align="right" colspan="2">
+                <input id="btnValider" type="button" value="Valider" class="Traduction" data-i18n="btnValider"/>
+            </td>
+        </tr>
+   </table>
+</body>
+</html>

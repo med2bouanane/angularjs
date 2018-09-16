@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="app" ng-controller="appCtnl as vm">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+	<title>Document</title>
+
+	<!--[if lte IE 8]>
+      <script>
+        document.createElement('ng-include');
+        document.createElement('ng-pluralize');
+        document.createElement('ng-view');
+
+        // Optionally these for CSS
+        document.createElement('ng:include');
+        document.createElement('ng:pluralize');
+        document.createElement('ng:view');
+      </script>
+    <![endif]-->
+</head>
+<body>
+
+		<div >
+ <button ng-click="vm.chiliSpicy()">Chili</button>
+ <button ng-click="vm.jalapenoSpicy()">Jalapeño</button>
+ <p>The food is {{vm.spice}} spicy!</p>
+</div>
+    <hr/>
+
+<label>Nombre: </label> 
+    <input type="text" placeholder="Introduce Nombre" ng-model="nombre" />
+    <hr/>
+    <h1>Hola {{nombre}}!</h1>    
+</div>
+
+		<hr/>
+	<select ng-model="vm.camposelect">
+		<option value="uno">1</option>
+		<option value="dos">2</option>
+	</select>
+
+<
+	<input type="button" ng-click="vm.campotexto='Mohamed'" value="Pulsame" />
+
+	<script type="text/javascript">
+
+		var app = angular.module("app",[]);
+
+		app.controller("appCtnl",function(){
+			this.camposelect = "uno";
+			this.spice = 'very';
+
+    this.chiliSpicy = function() {
+        this.spice = 'chili';
+    };
+
+    this.jalapenoSpicy = function() {
+        this.spice = 'jalapeño';
+    };
+		});	
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+    <!-- agrego la referencia a require.js y con data-main
+     le digo que quiero que cargue cuando termine require.js -->
+	<script data-main="scripts/main.config" src="scripts/libs/require.js"></script>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min"></script>
+
+    <script>
+        Ctr = function($scope){
+            $scope.valorNuevo='';
+            $scope.cambio = {valor:$scope.valorNuevo};
+        };
+    </script>-->
+</head>
+<body>
+
+	<div id="titulo" ng-controller="Controlador as ctr">
+		<h1>Probando require</h1>
+
+		<p>Nombre:
+			<input type="text" data-bind="value:Nombre">
+			<span data-bind="text:Nombre"></span>
+		</p>
+
+		<p>Apellido:
+			<input type="text" data-bind="value:Apellido">
+			<span data-bind="text:Apellido">
+				
+			</span>
+		</p>
+
+        <p>Segundo Apellido:
+            <input type="text" ng-model="apellido">
+			<span>
+				HOLA {{apellido}}
+			</span>
+        </p>
+
+
+        <p>Datos:
+            <input type="text" ng-model="valorNuevo">
+			<span>
+				Valor {{ctr.valorNuevo}}
+			</span>
+            <h1>{{ctr.cambio.valor}}</h1>
+        </p>
+
+	</div>
+	
+</body>
+</html>

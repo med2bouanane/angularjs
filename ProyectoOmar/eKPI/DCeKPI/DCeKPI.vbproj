@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{1FB4C3EA-20E1-454B-AD84-3514CAEA3CCF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DCeKPI</RootNamespace>
+    <AssemblyName>DCeKPI</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DCeKPI.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DCeKPI.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QualifTest|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\QualifTest\</OutputPath>
+    <DocumentationFile>DCeKPI.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisLogFile>bin\Release\DCeKPI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Qualif-Prod|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Qualif-Prod\</OutputPath>
+    <DocumentationFile>DCeKPI.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisLogFile>bin\Release\DCeKPI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Prod\</OutputPath>
+    <DocumentationFile>DCeKPI.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisLogFile>bin\Release\DCeKPI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QualifProd|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\QualifProd\</OutputPath>
+    <DocumentationFile>DCeKPI.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisLogFile>bin\Release\DCeKPI.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autorisation.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Autorisation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Blocage\HistoriqueBlocageClient.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HistoriqueBlocageClient.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Blocage\HistoriqueBlocageClientDetail.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HistoriqueBlocageClientDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Blocage\IncotermSAP.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncotermSAP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Commande\Accuse.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Accuse.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Blocage\BlocageLivraison.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BlocageLivraison.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Commande\Bordereau.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bordereau.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Commande\Commande.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Commande.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Commande\Division.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Division.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Commande\DocumentAcheminement.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocumentAcheminement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Commande\OrganisationCommerciale.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrganisationCommerciale.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Commande\Tole.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tole.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Commande\TypeCommande.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypeCommande.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RetardProfond\ConfigurationRetardProfond.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigurationRetardProfond.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\ConfigurationObjectifLivraison.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigurationObjectifLivraison.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MenuLibelle.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MenuLibelle.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Role.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Role.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UtilisateurMenu.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UtilisateurMenu.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Autorisation.xsc">
+      <DependentUpon>Autorisation.xsd</DependentUpon>
+    </None>
+    <None Include="Autorisation.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Autorisation.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Autorisation.xss">
+      <DependentUpon>Autorisation.xsd</DependentUpon>
+    </None>
+    <None Include="Blocage\HistoriqueBlocageClient.xsc">
+      <DependentUpon>HistoriqueBlocageClient.xsd</DependentUpon>
+    </None>
+    <None Include="Blocage\HistoriqueBlocageClient.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HistoriqueBlocageClient.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Blocage\HistoriqueBlocageClient.xss">
+      <DependentUpon>HistoriqueBlocageClient.xsd</DependentUpon>
+    </None>
+    <None Include="Blocage\HistoriqueBlocageClientDetail.xsc">
+      <DependentUpon>HistoriqueBlocageClientDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Blocage\HistoriqueBlocageClientDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HistoriqueBlocageClientDetail.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Blocage\HistoriqueBlocageClientDetail.xss">
+      <DependentUpon>HistoriqueBlocageClientDetail.xsd</DependentUpon>
+    </None>
+    <None Include="Blocage\IncotermSAP.xsc">
+      <DependentUpon>IncotermSAP.xsd</DependentUpon>
+    </None>
+    <None Include="Blocage\IncotermSAP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IncotermSAP.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Blocage\IncotermSAP.xss">
+      <DependentUpon>IncotermSAP.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\Accuse.xsc">
+      <DependentUpon>Accuse.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\Accuse.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Accuse.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Commande\Accuse.xss">
+      <DependentUpon>Accuse.xsd</DependentUpon>
+    </None>
+    <None Include="Blocage\BlocageLivraison.xsc">
+      <DependentUpon>BlocageLivraison.xsd</DependentUpon>
+    </None>
+    <None Include="Blocage\BlocageLivraison.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BlocageLivraison.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Blocage\BlocageLivraison.xss">
+      <DependentUpon>BlocageLivraison.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\Bordereau.xsc">
+      <DependentUpon>Bordereau.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\Bordereau.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bordereau.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Commande\Bordereau.xss">
+      <DependentUpon>Bordereau.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\Commande.xsc">
+      <DependentUpon>Commande.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\Commande.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Commande.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Commande\Commande.xss">
+      <DependentUpon>Commande.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\Division.xsc">
+      <DependentUpon>Division.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\Division.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Division.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Commande\Division.xss">
+      <DependentUpon>Division.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\DocumentAcheminement.xsc">
+      <DependentUpon>DocumentAcheminement.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\DocumentAcheminement.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DocumentAcheminement.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Commande\DocumentAcheminement.xss">
+      <DependentUpon>DocumentAcheminement.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\OrganisationCommerciale.xsc">
+      <DependentUpon>OrganisationCommerciale.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\OrganisationCommerciale.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrganisationCommerciale.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Commande\OrganisationCommerciale.xss">
+      <DependentUpon>OrganisationCommerciale.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\Tole.xsc">
+      <DependentUpon>Tole.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\Tole.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tole.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Commande\Tole.xss">
+      <DependentUpon>Tole.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\TypeCommande.xsc">
+      <DependentUpon>TypeCommande.xsd</DependentUpon>
+    </None>
+    <None Include="Commande\TypeCommande.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypeCommande.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Commande\TypeCommande.xss">
+      <DependentUpon>TypeCommande.xsd</DependentUpon>
+    </None>
+    <None Include="RetardProfond\ConfigurationRetardProfond.xsc">
+      <DependentUpon>ConfigurationRetardProfond.xsd</DependentUpon>
+    </None>
+    <None Include="RetardProfond\ConfigurationRetardProfond.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfigurationRetardProfond.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="RetardProfond\ConfigurationRetardProfond.xss">
+      <DependentUpon>ConfigurationRetardProfond.xsd</DependentUpon>
+    </None>
+    <None Include="Configuration\ConfigurationObjectifLivraison.xsc">
+      <DependentUpon>ConfigurationObjectifLivraison.xsd</DependentUpon>
+    </None>
+    <None Include="Configuration\ConfigurationObjectifLivraison.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfigurationObjectifLivraison.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Configuration\ConfigurationObjectifLivraison.xss">
+      <DependentUpon>ConfigurationObjectifLivraison.xsd</DependentUpon>
+    </None>
+    <None Include="Menu.xsc">
+      <DependentUpon>Menu.xsd</DependentUpon>
+    </None>
+    <None Include="Menu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Menu.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Menu.xss">
+      <DependentUpon>Menu.xsd</DependentUpon>
+    </None>
+    <None Include="MenuLibelle.xsc">
+      <DependentUpon>MenuLibelle.xsd</DependentUpon>
+    </None>
+    <None Include="MenuLibelle.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MenuLibelle.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="MenuLibelle.xss">
+      <DependentUpon>MenuLibelle.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Role.xsc">
+      <DependentUpon>Role.xsd</DependentUpon>
+    </None>
+    <None Include="Role.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Role.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Role.xss">
+      <DependentUpon>Role.xsd</DependentUpon>
+    </None>
+    <None Include="UtilisateurMenu.xsc">
+      <DependentUpon>UtilisateurMenu.xsd</DependentUpon>
+    </None>
+    <None Include="UtilisateurMenu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UtilisateurMenu.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="UtilisateurMenu.xss">
+      <DependentUpon>UtilisateurMenu.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

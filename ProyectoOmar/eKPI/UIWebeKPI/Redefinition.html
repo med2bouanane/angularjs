@@ -1,0 +1,73 @@
+﻿<div>
+    <table class="tableMargin"  >   
+        <tr>
+            <td>
+	            <table width="100%" id="tblEntete" runat="server">
+				    <tr>
+					    <td>
+                            <h1><label id="lblTitreGlobal" ng-model="lblTitreGlobal"></label></h1>
+                        </td>
+				    </tr>
+                    <tr>
+					    <td>
+                            <h2><label id="lblTitreSecondaire"  ng-model="titreSecondaire"></label></h2>
+                        </td>
+				    </tr>
+				    <tr>
+                    <td >
+                        <div class="notification texterouge">
+                            <label id="lblNotification" class="Traduction" data-i18n="lblNotification"></label>
+                            <img id="imgNotification" src="Images/ok.gif"/>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                 <table id="tblNouveauMotPasse">
+        <tr>
+            <td >
+                <label id="lblIdentifiantLibelle" class="Traduction" data-i18n="lblIdentifiantLibelle">Identifiant:</label>
+            </td>
+            <td>
+                <input id="lblLogin" type="text" readonly="readonly"   class="zonetxtgris2"  ng-model="login"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label id="lblAncienMotPass" class="Traduction" data-i18n="lblAncienMotPass">Ancien mot de passe:</label>
+            </td>
+            <td>
+                <input id="txtAncienMotPasse"  type="password" class="zonetxtoblig" maxlength="50" ng-model="AncienMotPasse"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label id="lblNouveauMotPass" class="Traduction" data-i18n="lblNouveauMotPass">Nouveau mot de passe:</label>
+            </td>
+            <td>
+                <input id="txtNouveauMotPasse"  type="password" class="zonetxtoblig" maxlength="50" ng-model="nouveauMotPasse"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label id="lblConfirmationMotPass" class="Traduction" data-i18n="lblConfirmationMotPass">Confiramation mot de passe:</label>
+            </td>
+            <td>
+                <input id="txtNouveauMotPasseConfirmation" type="password" class="zonetxtoblig" maxlength="50" ng-model="nouveauMotPasseConfirmation" />
+            </td>
+        </tr>
+        <tr>
+        <td>
+        </td>
+            <td>
+                <input id="btnValider" type="submit" value="Valider" ng-click="ValiderMotPasse()" />
+            </td>
+        </tr>
+    </table>
+            </td>
+        </tr>
+    </table>
+</div>

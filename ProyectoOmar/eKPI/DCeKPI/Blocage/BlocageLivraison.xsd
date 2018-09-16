@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BlocageLivraison" targetNamespace="http://tempuri.org/BlocageLivraison.xsd" xmlns:mstns="http://tempuri.org/BlocageLivraison.xsd" xmlns="http://tempuri.org/BlocageLivraison.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="certificatConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="certificatConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DCeKPI.My.MySettings.GlobalReference.Default.certificatConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BlocageLivraison" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BlocageLivraison" msprop:Generator_UserDSName="BlocageLivraison">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BlocageLivraison" msprop:Generator_TableClassName="BlocageLivraisonDataTable" msprop:Generator_TableVarName="tableBlocageLivraison" msprop:Generator_TablePropName="_BlocageLivraison" msprop:Generator_RowDeletingName="BlocageLivraisonRowDeleting" msprop:Generator_RowChangingName="BlocageLivraisonRowChanging" msprop:Generator_RowEvHandlerName="BlocageLivraisonRowChangeEventHandler" msprop:Generator_RowDeletedName="BlocageLivraisonRowDeleted" msprop:Generator_UserTableName="BlocageLivraison" msprop:Generator_RowChangedName="BlocageLivraisonRowChanged" msprop:Generator_RowEvArgName="BlocageLivraisonRowChangeEvent" msprop:Generator_RowClassName="BlocageLivraisonRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdBlocageLivraison" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdBlocageLivraison" msprop:Generator_ColumnPropNameInRow="IdBlocageLivraison" msprop:Generator_ColumnPropNameInTable="IdBlocageLivraisonColumn" msprop:Generator_UserColumnName="IdBlocageLivraison" type="xs:int" />
+              <xs:element name="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_UserColumnName="Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Actif" msprop:Generator_ColumnVarNameInTable="columnActif" msprop:Generator_ColumnPropNameInRow="Actif" msprop:Generator_ColumnPropNameInTable="ActifColumn" msprop:Generator_UserColumnName="Actif" type="xs:boolean" />
+              <xs:element name="BlocageClient" msprop:Generator_ColumnVarNameInTable="columnBlocageClient" msprop:Generator_ColumnPropNameInRow="BlocageClient" msprop:Generator_ColumnPropNameInTable="BlocageClientColumn" msprop:Generator_UserColumnName="BlocageClient" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BlocageLivraison" />
+      <xs:field xpath="mstns:IdBlocageLivraison" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

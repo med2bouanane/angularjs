@@ -1,0 +1,10 @@
+﻿{
+    "REQUIRED": "Cîmp obligatoriu",
+    "EMAILFORMAT": "Formatul cîmpului e-mail nu este corect.",
+    "DUPLICATECONTACT": "Un contact cu acelaşi e-mail a fost deja adăugat.",
+    "NONECONTACT": "Nu a fost adăugat nici un contact.",
+    "LOGINERROR": "Utilizator sau parolă incorecte.",
+    "CONFIRMDELETE": "Sigur doriţi să eliminaţi contactul selectat?",
+    "SENDINGERROR": "Felicitarea nu a putut fi expediată.",
+    "CONFIRMDELETEALL": "Sunteți sigur că doriți să eliminați toate contactele?"
+}

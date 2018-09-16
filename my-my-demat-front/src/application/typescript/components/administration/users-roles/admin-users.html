@@ -1,0 +1,510 @@
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header"><i class="fa fa-users" aria-hidden="true"></i> Gestion des utilisateurs / rôles</h2>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+
+    <uib-tabset active="active">
+        <uib-tab index="0" select="adminUsersCtrl.loadAllUsers()">
+            <uib-tab-heading>
+                <i class="fa fa-users" aria-hidden="true"></i> Utilisateurs
+            </uib-tab-heading>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12" ng-show="adminUsersCtrl.users.length">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"
+                                                                             aria-hidden="true"></i></span>
+                        <input type="text" ng-model="searchUser" class="form-control" placeholder="CHERCHER"
+                               aria-describedby="basic-addon1">
+                        <span class="input-group-btn"> <button class="btn btn-success" type="button"
+                                                               ng-click="adminUsersCtrl.openPopinAdd = true"
+                                                               id="basic-addon1"><i class="fa fa-plus-circle"
+                                                                                    aria-hidden="true"></i> AJOUTER</button></span>
+                    </div>
+                    <!-- /.input-group -->
+                    <br/>
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                        <tr class="warning">
+                            <th>Civilité</th>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Login</th>
+                            <th>Statut</th>
+                            <th>Téléphone</th>
+                            <th>Email</th>
+                            <th class="text-center">Date de création</th>
+                            <th class="text-center">Dernière modification</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="user in adminUsersCtrl.users | filter : searchUser | limitTo : adminUsersCtrl.itemsPerPage : (adminUsersCtrl.currentPage-1)*adminUsersCtrl.itemsPerPage">
+                            <td>{{user.honorific}}</td>
+                            <td>{{user.lastName}}</td>
+                            <td>{{user.firstName}}</td>
+                            <td>{{user.login}}</td>
+                            <td>{{user.enabled}}</td>
+                            <td>{{user.phone}}</td>
+                            <td>{{user.email}}</td>
+                            <td class="text-center">{{user.createDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                            <td class="text-center">{{user.updateDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                            <td class="text-center">
+                                <button type="submit" class="btn btn-sm btn-success fa fa-pencil-square-o"
+                                        title="Modifier" ng-click="adminUsersCtrl.prepareUpdateUser(user)"></button>
+                                <button type="submit" class="btn btn-sm btn-danger fa fa-trash-o" title="Supprimer"
+                                        ng-click="adminUsersCtrl.prepareDeleteUser(user)"></button>
+                                <button type="submit" class="btn btn-sm btn-warning fa fa-key"
+                                        title="Réinitiliser le mot de passe"
+                                        ng-click="adminUsersCtrl.prepareGenerateNewPassword(user)"></button>
+                                <button type="submit" class="btn btn-sm btn-primary fa fa-link" title="Gérer les rôles"
+                                        ng-click="adminUsersCtrl.openUserRolesAffectation(user)"></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!-- /.table -->
+                    <div class="main-pagination" ng-show="adminUsersCtrl.users && adminUsersCtrl.users.length">
+                        <uib-pagination total-items="adminUsersCtrl.users.length" ng-model="adminUsersCtrl.currentPage"
+                                        max-size="adminUsersCtrl.maxSize"
+                                        class="pagination-sm" rotate="false" first-text="Premier" last-text="Dernier"
+                                        previous-text="Précédent"
+                                        next-text="Suivant" items-per-page="adminUsersCtrl.itemsPerPage">
+                        </uib-pagination>
+                    </div>
+                    <!-- /.main-pagination -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+            <!-- Modal to update an user -->
+            <div modal-show modal-visible="adminUsersCtrl.openPopinAdd" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Ajouter un
+                                utilisateur</h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="civility" class="col-sm-3 control-label">Civilité :</label>
+                                    <div class="col-sm-9">
+                                        <select ng-model="adminUsersCtrl.userAdd.honorific"
+                                                ng-options="label for label in ['M','Mme','Mlle']" class="form-control"
+                                                id="civility" required></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="col-sm-3 control-label">Nom :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.userAdd.lastName"
+                                               class="form-control" id="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstName" class="col-sm-3 control-label">Prénom :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.userAdd.firstName"
+                                               class="form-control" id="firstName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phoneNumber" class="col-sm-3 control-label">Téléphone :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.userAdd.phone" class="form-control"
+                                               id="phoneNumber">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-3 control-label">E-mail :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.userAdd.email" class="form-control"
+                                               id="email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="login" class="col-sm-3 control-label">Login :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.userAdd.login" class="form-control"
+                                               id="login" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="active" class="col-sm-3 control-label">Active :</label>
+                                    <div class="col-sm-9">
+                                        <input id="active" ng-model="adminUsersCtrl.userAdd.enabled" type="checkbox">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminUsersCtrl.isUserFilled(adminUsersCtrl.userAdd)"
+                                        ng-click="adminUsersCtrl.createUser()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to update an user -->
+            <div modal-show modal-visible="adminUsersCtrl.openPopinEdit" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier utilisateur
+                            </h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="civility" class="col-sm-3 control-label">Civilité :</label>
+                                    <div class="col-sm-9">
+                                        <select ng-model="adminUsersCtrl.userEdit.honorific"
+                                                ng-options="label for label in ['M','Mme','Mlle']" class="form-control"
+                                                id="civility" required></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="col-sm-3 control-label">Nom :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.userEdit.lastName"
+                                               class="form-control" id="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstName" class="col-sm-3 control-label">Prénom :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.userEdit.firstName"
+                                               class="form-control" id="firstName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phoneNumber" class="col-sm-3 control-label">Téléphone :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.userEdit.phone" class="form-control"
+                                               id="phoneNumber">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-sm-3 control-label">E-mail :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.userEdit.email" class="form-control"
+                                               id="email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="login" class="col-sm-3 control-label">Login :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.userEdit.login" class="form-control"
+                                               id="login" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="active" class="col-sm-3 control-label">Active :</label>
+                                    <div class="col-sm-9">
+                                        <input id="active" ng-model="adminUsersCtrl.userEdit.enabled" type="checkbox">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminUsersCtrl.isUserFilled(adminUsersCtrl.userEdit)"
+                                        ng-click="adminUsersCtrl.updateUser()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to delete an user -->
+            <div modal-show modal-visible="adminUsersCtrl.openPopinConfirm" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Confirmation</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Êtes-vous sûr de vouloir supprimer définitivement l'utilisateur : <strong>{{adminUsersCtrl.userEdit.civility}}
+                                {{adminUsersCtrl.userEdit.firstName}} {{adminUsersCtrl.userEdit.lastName}}</strong></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-success" ng-click="adminUsersCtrl.confirmDeleteUser()">
+                                Valider
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal role affectation -->
+            <div modal-show modal-visible="adminUsersCtrl.openPopinRoleAffectation" class="modal fade"
+                 data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Affectation
+                                des rôles pour {{adminUsersCtrl.userRolesAffectation.user.civility}}.
+                                {{adminUsersCtrl.userRolesAffectation.user.lastName}}
+                                {{adminUsersCtrl.userRolesAffectation.user.firstName}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">Liste de rôles Existants</div>
+                                        <div class="panel-body">
+                                            <ul ui-sortable="adminUsersCtrl.sortableOptions"
+                                                class="list-group connectedList ul-noStyle"
+                                                ng-model="adminUsersCtrl.userRolesAffectation.unaffectedRoles">
+                                                <li class="list-group-item list-group-item-warning"
+                                                    ng-repeat="role in adminUsersCtrl.userRolesAffectation.unaffectedRoles">
+                                                    {{role.label}}<i class="fa fa-hand-paper-o pull-right"
+                                                                     aria-hidden="true"></i></li>
+                                                <li ng-show="adminUsersCtrl.userRolesAffectation.unaffectedRoles.length==0">
+                                                    &nbsp;
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.col-lg-6 -->
+                                <div class="col-lg-6">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">Liste de rôles de l'utilisateur</div>
+                                        <div class="panel-body">
+                                            <ul ui-sortable="adminUsersCtrl.sortableOptions"
+                                                class="list-group connectedList ul-noStyle"
+                                                ng-model="adminUsersCtrl.userRolesAffectation.affectedRoles">
+                                                <li class="list-group-item list-group-item-success"
+                                                    ng-repeat="role in adminUsersCtrl.userRolesAffectation.affectedRoles">
+                                                    {{role.label}} <i class="fa fa-hand-paper-o pull-right"
+                                                                      aria-hidden="true"></i></li>
+                                                <li ng-show="adminUsersCtrl.userRolesAffectation.affectedRoles.length==0">
+                                                    &nbsp;
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--/.col-lg-6-->
+                                </div>
+                                <!-- /.col-lg-6 -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                            <button type="button" class="btn btn-success" ng-click="adminUsersCtrl.validateUserRoles()">
+                                Valider
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to Generate an user -->
+            <div modal-show modal-visible="adminUsersCtrl.openPopinConfirmGeneratePassword" class="modal fade"
+                 data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Confirmation</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Êtes-vous sûr de vouloir réinitialiser le mot de passe de l'utilisateur : <strong>{{adminUsersCtrl.userEdit.civility}}
+                                {{adminUsersCtrl.userEdit.firstName}} {{adminUsersCtrl.userEdit.lastName}}</strong></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-success"
+                                    ng-click="adminUsersCtrl.confirmGenerateNewPassword()">Valider
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab index="1" select="adminUsersCtrl.loadAllRoles()">
+            <uib-tab-heading>
+                <i class="fa fa-suitcase" aria-hidden="true"></i> Rôle
+            </uib-tab-heading>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+                <input type="text" ng-model="searchRole" class="form-control" placeholder="CHERCHER"
+                       aria-describedby="basic-addon1">
+                <span class="input-group-btn"><button class="btn btn-success" type="button"
+                                                      ng-click="adminUsersCtrl.openPopinRoleAdd = true"
+                                                      id="basic-addon1"><i class="fa fa-plus-circle"
+                                                                           aria-hidden="true"></i> AJOUTER</button></span>
+            </div>
+            <!-- /.input-group -->
+            <br/>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr class="warning">
+                    <th>Label</th>
+                    <th>Code</th>
+                    <th class="text-center">Date de création</th>
+                    <th class="text-center">Dernière modification</th>
+                    <th class="text-center">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="role in adminUsersCtrl.roles | filter : searchRole | limitTo : adminUsersCtrl.itemsPerPage : (adminUsersCtrl.currentPage-1)*adminUsersCtrl.itemsPerPage">
+                    <td>{{role.label}}</td>
+                    <td>{{role.code}}</td>
+                    <td class="text-center">{{role.createDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                    <td class="text-center">{{role.updateDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                    <td class="text-center">
+                        <button type="submit" class="btn btn-sm btn-success fa fa-pencil-square-o" title="Modifier"
+                                ng-click="adminUsersCtrl.prepareUpdateRole(role)"></button>
+                        <button type="submit" class="btn btn-sm btn-danger fa fa-trash-o" title="Supprimer"
+                                ng-click="adminUsersCtrl.prepareDeleteRole(role)"></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- /.table -->
+            <div class="main-pagination" ng-show="adminUsersCtrl.roles && adminUsersCtrl.roles.length">
+                <uib-pagination total-items="adminUsersCtrl.roles.length" ng-model="adminUsersCtrl.currentPage"
+                                max-size="adminUsersCtrl.maxSize"
+                                class="pagination-sm" rotate="false" first-text="Premier" last-text="Dernier"
+                                previous-text="Précédent" next-text="Suivant"
+                                items-per-page="adminUsersCtrl.itemsPerPage">
+                </uib-pagination>
+            </div>
+            <!-- /.main-pagination -->
+
+            <!-- Modal to create a role -->
+            <div modal-show modal-visible="adminUsersCtrl.openPopinRoleAdd" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Ajouter un rôle</h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="label" class="col-sm-3 control-label">Libellé :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.roleAdd.label" class="form-control"
+                                               id="label" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="code" class="col-sm-3 control-label">Code :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.roleAdd.code" class="form-control"
+                                               id="code" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminUsersCtrl.isRoleFilled(adminUsersCtrl.roleAdd)"
+                                        ng-click="adminUsersCtrl.createRole()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to update a role -->
+            <div modal-show modal-visible="adminUsersCtrl.openPopinRoleEdit" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier un rôle
+                            </h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="label" class="col-sm-3 control-label">Libellé :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.roleEdit.label" class="form-control"
+                                               id="label" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="code" class="col-sm-3 control-label">Code :</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" ng-model="adminUsersCtrl.roleEdit.code" class="form-control"
+                                               id="code" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminUsersCtrl.isRoleFilled(adminUsersCtrl.roleEdit)"
+                                        ng-click="adminUsersCtrl.updateRole()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to delete a role -->
+            <div modal-show modal-visible="adminUsersCtrl.openPopinRoleConfirm" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Confirmation</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Êtes-vous sûr de vouloir supprimer ce rôle :
+                                <strong>{{adminUsersCtrl.roleEdit.label}}</strong></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger" ng-click="adminUsersCtrl.roleEdit=undefined"
+                                    data-dismiss="modal">Annuler
+                            </button>
+                            <button type="submit" class="btn btn-success" ng-click="adminUsersCtrl.confirmDeleteRole()">
+                                Valider
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>
+<!-- /#page-wrapper -->

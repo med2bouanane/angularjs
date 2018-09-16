@@ -1,0 +1,15 @@
+﻿{
+  "lblDescription": "You can enter your address here to redefine your password, an email will be sent to this address.<br/>You can find a link in this email which allows you to set a new password.",
+  "lblNotification": "",
+  "lblIdentifiant": "Login",
+  "lblAdressEmail": "Email",
+  "btnValider": "Validate",
+  
+  "msgErrorFormat": "One or more fields do not meet the required format",
+  "msgErrorEncodage": "Fields marked with * are required",
+  "msgSucces": "Please check your e-mails and follow the link to complete the procedure",
+  "msgErreurEmailMultiple": "Your login has been found several times in our database, please contact the web team helpdesk",
+  "msgErreurEmailNonTrouve": "Your login was not found in our database, please check it and retry",
+  "msgErreurIdentifiantNonTrouve": "Your login was not found in our database, please check it and retry",
+  "msgErreurGeneral": "An erreur est suvenue at server side.""
+}

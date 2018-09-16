@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<h1>Hola</h1>
+<h4>
+    import org.dozer.DozerConverter;
+
+    public class BooleanConverter extends DozerConverter&lt;Boolean, String&gt; {
+
+    public BooleanConverter() {
+    super(Boolean.class, String.class);
+    }
+
+    @Override
+    public Boolean convertFrom(String paramB, Boolean paramA) {
+    if (&quot;YES&quot;.equalsIgnoreCase(paramB)) {
+    return Boolean.TRUE;
+    }
+    return Boolean.FALSE;
+    }
+
+    @Override
+    public String convertTo(Boolean paramA, String paramB) {
+    if (paramA != null &amp;&amp; paramA.equals(Boolean.TRUE)) {
+    return &quot;YES&quot;;
+    }
+    return &quot;NO&quot;;
+    }
+    }
+</h4>
+</body>
+</html>

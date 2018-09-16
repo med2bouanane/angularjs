@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<fieldset>
+    <legend>
+        DOUBLE TABLE
+    </legend>
+<table>
+    <tr>
+
+        <td align="center">
+
+                    <table>
+                        <tr>
+                            <td align="center">
+                                <!-- fielset des filters -->
+                                <fieldset>
+                                    <legend>
+                                        FILTER 1
+                                    </legend>
+                                    <table id="partsViewMFilterTable" align="center" cellspacing="1">
+                                        <td></td>
+                                        <td>Reference:</td><td><input type="text" id="getPartsViewList_partReference" name="partReference" maxlength="10">
+                                    </td>
+                                        <td>Label:</td><td><input type="text" id="getPartsViewList_label" name="label" maxlength="10">
+                                    </td>
+                                        <td>Vehicle:</td><td><input type="text" id="getPartsViewList_vehicleFamily" name="vehicleFamily" maxlength="10">
+                                    </td>
+
+                                        <td></td>
+                                        <td></td>
+                                    </table>
+                                </fieldset> <!-- fin fielset des filters -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <div id="partsView" style="height: 400px;width: 650px;background-color: rosybrown"
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+        </td>
+
+    <!-- ligne de boutons haut/bas -->
+
+        <td align="center">
+                <table>
+                    <tr>
+                        <td>
+                            <table align="center">
+                                <tr>
+                                    <td><input type="button" value="haut"/></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" value="bas"/></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+        </td>
+
+    <!-- fin de display the first table only if ... -->
+
+        <td>
+
+                    <table>
+                        <tr>
+                            <td align="center">
+                                <!-- fieldset filters -->
+                                <fieldset>
+                                    <legend>
+                                        FILTER 2
+                                    </legend>
+                                    <table id="selectedPartsSynchroneLongMFilterTable" align="center" cellspacing="1">
+                                        <tr>
+                                            <td></td>
+                                            <td>Reference:<input type="text" id="getPartsSynchroneLongList_partReference" name="partReference"
+                                                                                                   maxlength="10">
+                                            </td>
+                                            <td>Label:<input type="text" id="getPartsSynchroneLongList_label" name="label" maxlength="10">
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                                <!-- fin fieldset filters -->
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td align="center">
+                                <div id="partsSynchroneLong" style="height: 400px;width: 650px;background-color: #228b22"></div><!-- ?hypothesisId=<s:property value="beanId" /> -->
+                            </td>
+                        </tr>
+                    </table>
+        </td>
+    </tr>
+
+
+</table>
+
+
+
+</fieldset>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿{
+  "lblTitreGlobal": "Registration",
+  "lblNotification": "",
+  "lblUtilisateur": "User",
+  "lblCompteExistant": "Yes",
+  "lblCompteNoExistant": "No",    
+  "lblIdentifiantExistant": "Login",
+  "lblMotPassExistant": "Password",
+  "lblDescription": "Insert here your profile. This information is intended only to be used by ArcelorMittal Industeel. This information will not be passed to any third party.",
+  "lblTitre": "Title",
+  "lblM": "Mr",
+  "lblMme": "Mme",
+  "lblMlle": "Ms",
+  "lblNom": "Name",
+  "lblPrenom": "First name",
+  "lblFonction": "Occupation",
+  "lblEmail": "Email",
+  "lblTelephone": "Phone",
+  "lblLangue": "Language",
+  "ddlLangue":
+  {
+	"Francais": "Frensh",
+	"Anglais": "English"
+  },
+  "lblIdentifiant": "Login",
+  "lblMotPasse": "Password",
+  "lblConfirmerMotPasseAcces":"Confirmation", 
+  "brnPrecedant": "Previous",
+  "btnSuivant": "Next",
+  "btnFinish": "Finish",
+  "lblEtape1": "Profile Information",
+  "lblEtape2": "Informations d'accès",
+  "msgErrorFormat": "One or more fields do not meet the required format",
+  "msgErrorEncodage": "Fields marked with * are required",
+  "msgSucces": "Your registration has been sent",
+  "msgErreurComptePossedeDroitAcces": "This Web account already has access to the portal",
+  "msgErreurDemandeAccesExistante": "This email address already exists, you can not sign up for a second time. <br /> Please wait until your registration has been validated if this is not the case or contact the helpdesk.",
+  "msgErreurMotPasseAccesValidation": "The password must contain at least one uppercase letter, a lowercase letter, a number and 6 characters in length",
+  "msgErreurMotPasseInvalide": "Thèse passwords don't match.",
+  "msgErreurEmailExistant": "Une demande d'accès en cours de validation existe déjà.",
+  "msgErreurIdentifiantMotPasseIncorrect": "Login or password invalid",
+  "msgErreurGeneral": "Une erreur est suvenue."
+}
+
+  

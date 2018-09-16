@@ -1,0 +1,1059 @@
+<div id="page-wrapper">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header"><i class="fa fa-list-alt" aria-hidden="true"></i> Administration des Listes</h2>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+
+    <uib-tabset active="active">
+        <uib-tab index="0" select="adminListsCtrl.loadLists()">
+            <uib-tab-heading>
+                <i class="fa fa-list-ul" aria-hidden="true"></i> Listes déroulantes
+            </uib-tab-heading>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"
+                                                                             aria-hidden="true"></i></span>
+                        <input type="text" ng-model="searchList" class="form-control" placeholder="CHERCHER"
+                               aria-describedby="basic-addon1">
+                        <span class="input-group-btn"><button class="btn btn-success" type="button"
+                                                              ng-click="adminListsCtrl.openPopinAdd = true"
+                                                              id="basic-addon1"><i class="fa fa-plus-circle"
+                                                                                   aria-hidden="true"></i> AJOUTER</button></span></span>
+                    </div>
+                    <br>
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                        <tr class="warning">
+                            <th>Libellé</th>
+                            <th class="text-center">Date de création</th>
+                            <th class="text-center">Dernière modification</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="list in adminListsCtrl.lists | filter : searchList | limitTo : adminListsCtrl.itemsPerPage : (adminListsCtrl.currentPage-1)*adminListsCtrl.itemsPerPage">
+                            <td>{{list.label}}</td>
+                            <td class="text-center">{{list.createDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                            <td class="text-center">{{list.updateDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                            <td class="text-center">
+                                <button type="submit" class="btn btn-sm btn-warning fa fa-list-ul"
+                                        title="Gérer les items"
+                                        ng-click="adminListsCtrl.manageListItems(list)"></button>
+                                <button type="submit" class="btn btn-sm btn-success fa fa-pencil-square-o"
+                                        title="Modifier" ng-click="adminListsCtrl.prepareUpdateList(list)"></button>
+                                <button type="submit" class="btn btn-sm btn-danger fa fa-trash-o" title="Supprimer"
+                                        ng-click="adminListsCtrl.prepareDeleteList(list)"></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="main-pagination" ng-show="adminListsCtrl.lists && adminListsCtrl.lists.length">
+                        <uib-pagination total-items="adminListsCtrl.lists.length" ng-model="adminListsCtrl.currentPage"
+                                        max-size="adminListsCtrl.maxSize"
+                                        class="pagination-sm" rotate="false" first-text="Premier" last-text="Dernier"
+                                        previous-text="Précédent"
+                                        next-text="Suivant" items-per-page="adminListsCtrl.itemsPerPage">
+                        </uib-pagination>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+            <!-- Modal to create a list -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinAdd" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Ajouter une liste
+                            </h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="label" class="col-sm-2 control-label">Libellé :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" ng-model="adminListsCtrl.listAdd.label" class="form-control"
+                                               id="label" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal"
+                                        ng-click="adminListsCtrl.listAdd = undefined;">Annuler
+                                </button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminListsCtrl.listAdd.label"
+                                        ng-click="adminListsCtrl.createList()">Ajouter
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to update a list -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinEdit" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier la liste
+                            </h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="label" class="col-sm-2 control-label">Libellé :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" ng-model="adminListsCtrl.listEdit.label" class="form-control"
+                                               id="label" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminListsCtrl.listEdit.label"
+                                        ng-click="adminListsCtrl.updateList()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to delete a list -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinConfirm" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Confirmation</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Êtes-vous sûr de vouloir supprimer définitivement la list : <strong>{{adminListsCtrl.listEdit.label}}</strong>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-success" ng-click="adminListsCtrl.confirmDeleteList()">
+                                Valider
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal items list -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinConfirmEditListItem" class="modal fade"
+                 data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog modal-lg">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" ng-click="itemSearch=undefined">
+                                &times;
+                            </button>
+                            <h4 class="modal-title"><strong>Gestion des items de la liste :</strong>
+                                {{adminListsCtrl.listEdit.label}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="panel-heading">
+                                <div class="input-group">
+                                    <input type="text" ng-model="itemSearch" class="form-control" placeholder="CHERCHER"
+                                           aria-describedby="basic-addon1">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"
+                                                                                         aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <table class="table table-bordered table-striped table-hover">
+                                <thead>
+                                <tr class="warning">
+                                    <th class="col-sm-4">Libellé</th>
+                                    <th class="col-sm-4">Code</th>
+                                    <th class="col-sm-1">Défaut</th>
+                                    <th class="col-sm-2 text-center">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="item in adminListsCtrl.listEdit.items | filter : itemSearch"
+                                    ng-class="{'has-error is-focused' : !item.label}">
+                                    <td><input type="text" ng-model="item.label" class="form-control"
+                                               ng-disabled="!item.isEdit"
+                                               required></td>
+                                    <td><input type="text" ng-model="item.code" class="form-control"
+                                               ng-disabled="!item.isEdit"
+                                               required></td>
+                                    <td class="text-center"><input type="checkbox" ng-model="item.defaultItem"
+                                                                   ng-disabled="!item.isEdit"
+                                                                   ng-click="adminListsCtrl.setDefaultListItem($index)">
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-warning fa fa-pencil" type="submit" ng-if="!item.isEdit"
+                                                ng-disabled="adminListsCtrl.editItemPopinListItem"
+                                                ng-click="item.isEdit = true ; adminListsCtrl.editItemPopinListItem = true"></button>
+                                        <button class="btn btn-success fa fa-check" type="submit" ng-if="item.isEdit"
+                                                ng-disabled="!item.label"
+                                                ng-click="item.isEdit = false ; adminListsCtrl.editItemPopinListItem = false"></button>
+                                        <button class="btn btn-danger fa fa-trash" type="submit" ng-if="!item.isEdit"
+                                                ng-disabled="adminListsCtrl.editItemPopinListItem"
+                                                ng-click="adminListsCtrl.deleteItemFromList($index)"></button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <table class="table table-bordered table-striped table-hover">
+                                <tfoot>
+                                <tr>
+                                    <td class="col-sm-4">
+                                        <input class="form-control" type="text" ng-model="newItem.label"
+                                               placeholder="Ajouter un nouveau libellé">
+                                    </td>
+                                    <td class="col-sm-4">
+                                        <input class="form-control" type="text" ng-model="newItem.code"
+                                               placeholder="Ajouter un nouveau code">
+                                    </td>
+                                    <td class="col-sm-1 text-center">
+                                        <input type="checkbox" ng-model="newItem.defaultItem"
+                                               ng-init="newItem.defaultItem=false">
+                                    </td>
+                                    <td class="col-sm-2 text-center">
+                                        <button ng-disabled="!newItem.label || !newItem.code"
+                                                ng-click="adminListsCtrl.addItemToList(newItem)"
+                                                class="btn btn-success fa fa-plus"></button>
+                                    </td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                    ng-click="itemSearch=undefined">Annuler
+                            </button>
+                            <button type="button" class="btn btn-success"
+                                    ng-disabled="adminListsCtrl.editItemPopinListItem"
+                                    ng-click="adminListsCtrl.validateListItems(); itemSearch=undefined">Valider
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab index="1" select="adminListsCtrl.loadEnvTypes()">
+            <uib-tab-heading>
+                <i class="fa fa-envelope-o" aria-hidden="true"></i> Types d'enveloppe
+            </uib-tab-heading>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"
+                                                                             aria-hidden="true"></i></span>
+                        <input type="text" ng-model="searchEnvType" class="form-control" placeholder="CHERCHER"
+                               aria-describedby="basic-addon1">
+                        <span class="input-group-btn"><button class="btn btn-success" type="button"
+                                                              ng-click="adminListsCtrl.openPopinEnvtypeAdd = true"
+                                                              id="basic-addon1"><i class="fa fa-plus-circle"
+                                                                                   aria-hidden="true"></i> AJOUTER</button></span></span>
+                    </div>
+                    <br>
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                        <tr class="warning">
+                            <th>Libellé</th>
+                            <th>Code</th>
+                            <th class="text-center">Date de création</th>
+                            <th class="text-center">Dernière modification</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="envType in adminListsCtrl.envTypes | filter : searchEnvType | limitTo : adminListsCtrl.itemsPerPage : (adminListsCtrl.currentPage-1)*adminListsCtrl.itemsPerPage">
+                            <td>{{envType.label}}</td>
+                            <td>{{envType.code}}</td>
+                            <td class="text-center">{{envType.createDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                            <td class="text-center">{{envType.updateDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                            <td class="text-center">
+                                <button type="submit" class="btn btn-sm btn-success fa fa-pencil-square-o"
+                                        title="Modifier"
+                                        ng-click="adminListsCtrl.prepareUpdateEnvType(envType)"></button>
+                                <button type="submit" class="btn btn-sm btn-danger fa fa-trash-o" title="Supprimer"
+                                        ng-click="adminListsCtrl.prepareDeleteEnvType(envType)"></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="main-pagination">
+                        <uib-pagination total-items="adminListsCtrl.envTypes.length"
+                                        ng-model="adminListsCtrl.currentPage" max-size="adminListsCtrl.maxSize"
+                                        class="pagination-sm" rotate="false" first-text="Premier" last-text="Dernier"
+                                        previous-text="Précédent"
+                                        next-text="Suivant" items-per-page="adminListsCtrl.itemsPerPage">
+                        </uib-pagination>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <!-- Modal to delete a envelope type -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinEnvtypeConfirm" class="modal fade"
+                 data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Confirmation</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Êtes-vous sûr de vouloir supprimer définitivement le type d'enveloppe : <strong>{{adminListsCtrl.envtypeEdit.label}}</strong>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-success"
+                                    ng-click="adminListsCtrl.confirmDeleteEnvType()">Valider
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to update a envelope type -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinEnvtypeEdit" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier le type
+                                d'enveloppe</h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <form role="form_create" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Libellé :</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="adminListsCtrl.envtypeEdit.label"
+                                                   class="form-control" id="label" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Code :</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="adminListsCtrl.envtypeEdit.code"
+                                                   class="form-control" id="code" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Type de document :</label>
+                                        <div class="col-sm-10">
+                                            <select id="type" ng-model="adminListsCtrl.envtypeEdit.docType.id"
+                                                    class="form-control"
+                                                    ng-options="doctype.id as doctype.label for doctype in adminListsCtrl.doctyes"
+                                                    required></select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminListsCtrl.envtypeEdit.label||!adminListsCtrl.envtypeEdit.code"
+                                        ng-click="adminListsCtrl.updateEnvType()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to create a envelope type -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinEnvtypeAdd" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Ajouter un type
+                                d'enveloppe </h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <form role="form_create" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Libellé :</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="adminListsCtrl.envtypeAdd.label"
+                                                   class="form-control" id="label" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Code :</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="adminListsCtrl.envtypeAdd.code"
+                                                   class="form-control" id="code" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Type de document :</label>
+                                        <div class="col-sm-10">
+                                            <select id="type" ng-model="adminListsCtrl.envtypeAdd.docType.id"
+                                                    class="form-control"
+                                                    ng-options="doctype.id as doctype.label for doctype in adminListsCtrl.doctyes"
+                                                    required></select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger"
+                                        ng-click="adminListsCtrl.envtypeAdd =undefined" data-dismiss="modal">Annuler
+                                </button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminListsCtrl.envtypeAdd.label||!adminListsCtrl.envtypeAdd.code"
+                                        ng-click="adminListsCtrl.createEnvtype()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab index="2" select="adminListsCtrl.loadDocTypes()">
+            <uib-tab-heading>
+                <i class="fa fa-file-o" aria-hidden="true"></i> Types de document
+            </uib-tab-heading>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"
+                                                                             aria-hidden="true"></i></span>
+                        <input type="text" ng-model="searchDocType" class="form-control" placeholder="CHERCHER"
+                               aria-describedby="basic-addon1">
+                        <span class="input-group-btn"><button class="btn btn-success" type="button"
+                                                              ng-click="adminListsCtrl.openPopinDoctypeAdd = true"
+                                                              id="basic-addon1"><i class="fa fa-plus-circle"
+                                                                                   aria-hidden="true"></i> AJOUTER</button></span></span>
+                    </div>
+                    <br>
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                        <tr class="warning">
+                            <th>Libellé</th>
+                            <th>Code</th>
+                            <th class="text-center">Date de création</th>
+                            <th class="text-center">Dernière modification</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="docType in adminListsCtrl.doctyes | filter : searchDocType | limitTo: adminListsCtrl.itemsPerPage : (adminListsCtrl.currentPage-1)*adminListsCtrl.itemsPerPage">
+                            <td>{{docType.label}}</td>
+                            <td>{{docType.code}}</td>
+                            <td class="text-center">{{docType.createDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                            <td class="text-center">{{docType.updateDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                            <td class="text-center">
+                                <button type="submit" class="btn btn-sm btn-success fa fa-pencil-square-o"
+                                        title="Modifier"
+                                        ng-click="adminListsCtrl.prepareUpdateDocType(docType)"></button>
+                                <button type="submit" class="btn btn-sm btn-danger fa fa-trash-o" title="Supprimer"
+                                        ng-click="adminListsCtrl.prepareDeleteDocType(docType)"></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="main-pagination">
+                        <uib-pagination total-items="adminListsCtrl.doctyes.length"
+                                        ng-model="adminListsCtrl.currentPage" max-size="adminListsCtrl.maxSize"
+                                        class="pagination-sm" rotate="false" first-text="Premier" last-text="Dernier"
+                                        previous-text="Précédent"
+                                        next-text="Suivant" items-per-page="adminListsCtrl.itemsPerPage">
+                        </uib-pagination>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+            <!-- Modal to delete a docType -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinDoctypeConfirm" class="modal fade"
+                 data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Confirmation</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Êtes-vous sûr de vouloir supprimer définitivement le type de document : <strong>{{adminListsCtrl.doctypeEdit.label}}</strong>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-success"
+                                    ng-click="adminListsCtrl.confirmDeleteDocType()">Valider
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to update a docType -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinDoctypeEdit" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier le type de
+                                document </h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <form role="form_create" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Libellé :</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="adminListsCtrl.doctypeEdit.label"
+                                                   class="form-control" id="label" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Code :</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="adminListsCtrl.doctypeEdit.code"
+                                                   class="form-control" id="code" required>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminListsCtrl.doctypeEdit.label||!adminListsCtrl.doctypeEdit.code"
+                                        ng-click="adminListsCtrl.updateDocType()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to create a docType -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinDoctypeAdd" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Ajouter un type de
+                                document </h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <form role="form_create" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Libellé :</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="adminListsCtrl.doctypeAdd.label"
+                                                   class="form-control" id="label" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Code :</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="adminListsCtrl.doctypeAdd.code"
+                                                   class="form-control" id="code" required>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal"
+                                        ng-click="adminListsCtrl.doctypeAdd=undefined">Annuler
+                                </button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminListsCtrl.doctypeAdd.label||!adminListsCtrl.doctypeAdd.code"
+                                        ng-click="adminListsCtrl.createDocType()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab index="3" select="adminListsCtrl.loadRejectTypes()">
+            <uib-tab-heading>
+                <i class="fa fa-envelope-o" aria-hidden="true"></i> Types de rejet
+            </uib-tab-heading>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"
+                                                                             aria-hidden="true"></i></span>
+                        <input type="text" ng-model="searchRejectType" class="form-control" placeholder="CHERCHER"
+                               aria-describedby="basic-addon1">
+                        <span class="input-group-btn"><button class="btn btn-success" type="button"
+                                                              ng-click="adminListsCtrl.openPopinRejectTypeAdd = true"
+                                                              id="basic-addon1"><i class="fa fa-plus-circle"
+                                                                                   aria-hidden="true"></i> AJOUTER</button></span></span>
+                    </div>
+                    <br>
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                        <tr class="warning">
+                            <th>Libellé</th>
+                            <th>Code</th>
+                            <th>Rejet applicable sur</th>
+                            <th class="text-center">Date de création</th>
+                            <th class="text-center">Dernière modification</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="rejectType in adminListsCtrl.rejectTypes | filter : searchRejectType | limitTo : adminListsCtrl.itemsPerPage : (adminListsCtrl.currentPage-1)*adminListsCtrl.itemsPerPage">
+                            <td>{{rejectType.label}}</td>
+                            <td>{{rejectType.code}}</td>
+                            <td>{{rejectType.structuralEntityType.label}}</td>
+                            <td class="text-center">{{rejectType.createDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                            <td class="text-center">{{rejectType.updateDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                            <td class="text-center">
+                                <button type="submit" class="btn btn-sm btn-success fa fa-pencil-square-o"
+                                        title="Modifier"
+                                        ng-click="adminListsCtrl.prepareUpdateRejectType(rejectType)"></button>
+                                <button type="submit" class="btn btn-sm btn-danger fa fa-trash-o" title="Supprimer"
+                                        ng-click="adminListsCtrl.prepareDeleteRejectType(rejectType)"></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="main-pagination">
+                        <uib-pagination total-items="adminListsCtrl.rejectTypes.length"
+                                        ng-model="adminListsCtrl.currentPage" max-size="adminListsCtrl.maxSize"
+                                        class="pagination-sm" rotate="false" first-text="Premier" last-text="Dernier"
+                                        previous-text="Précédent"
+                                        next-text="Suivant" items-per-page="adminListsCtrl.itemsPerPage">
+                        </uib-pagination>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <!-- Modal to delete a reject type -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinRejectTypeConfirm" class="modal fade"
+                 data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Confirmation</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Êtes-vous sûr de vouloir supprimer définitivement le type de rejet : <strong>{{adminListsCtrl.rejectTypeEdit.label}}</strong>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-success"
+                                    ng-click="adminListsCtrl.confirmDeleteRejectType()">Valider
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to create a reject type -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinRejectTypeAdd" class="modal fade"
+                 data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Ajouter un type de
+                                rejet </h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <form role="form_rejecType_create" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Libellé :</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="adminListsCtrl.rejectTypeAdd.label"
+                                                   class="form-control" id="label" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Code :</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="adminListsCtrl.rejectTypeAdd.code"
+                                                   class="form-control" id="code" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Rejet applicable sur :</label>
+                                        <div class="col-sm-10">
+                                            <select ng-model="adminListsCtrl.rejectTypeAdd.structuralEntityType"
+                                                    ng-options="structuralEntityType as structuralEntityType.label for structuralEntityType in adminListsCtrl.structuralEntityTypes"
+                                                    class="form-control"
+                                                    id="structuralEntityType" required></select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger"
+                                        ng-click="adminListsCtrl.rejectTypeAdd = undefined" data-dismiss="modal">Annuler
+                                </button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminListsCtrl.rejectTypeAdd.label||!adminListsCtrl.rejectTypeAdd.code"
+                                        ng-click="adminListsCtrl.createRejectType()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to update a reject type -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinRejectTypeEdit" class="modal fade"
+                 data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier le type de
+                                rejet</h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <form role="form_rejecType_update" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Libellé :</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="adminListsCtrl.rejectTypeEdit.label"
+                                                   class="form-control" id="label" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Code :</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="adminListsCtrl.rejectTypeEdit.code"
+                                                   class="form-control" id="code" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="label" class="col-sm-2 control-label">Rejet applicable sur :</label>
+                                        <div class="col-sm-10">
+                                            <select ng-model="adminListsCtrl.rejectTypeEdit.structuralEntityType"
+                                                    ng-options="structuralEntityType as structuralEntityType.label for structuralEntityType in adminListsCtrl.structuralEntityTypes"
+                                                    class="form-control"
+                                                    id="structuralEntityType" required></select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminListsCtrl.rejectTypeEdit.label||!adminListsCtrl.rejectTypeEdit.code"
+                                        ng-click="adminListsCtrl.updateRejectType()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </uib-tab>
+        <uib-tab index="4" select="adminListsCtrl.loadCategories()">
+            <uib-tab-heading>
+                <i class="fa fa-envelope-o" aria-hidden="true"></i> Catégories
+            </uib-tab-heading>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"
+                                                                             aria-hidden="true"></i></span>
+                        <input type="text" ng-model="searchCategory" class="form-control" placeholder="CHERCHER"
+                               aria-describedby="basic-addon1">
+                        <span class="input-group-btn"><button class="btn btn-success" type="button"
+                                                              ng-click="adminListsCtrl.openPopinCategoryAdd = true"
+                                                              id="basic-addon1"><i class="fa fa-plus-circle"
+                                                                                   aria-hidden="true"></i> AJOUTER</button></span></span>
+                    </div>
+                    <br>
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                        <tr class="warning">
+                            <th>Libellé</th>
+                            <th>Type</th>
+                            <th class="text-center">Date de création</th>
+                            <th class="text-center">Dernière modification</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="category in adminListsCtrl.categories | filter : searchCategory | limitTo : adminListsCtrl.itemsPerPage : (adminListsCtrl.currentPage-1)*adminListsCtrl.itemsPerPage">
+                            <td>{{category.label}}</td>
+                            <td>{{category.type}}</td>
+                            <td class="text-center">{{category.createDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                            <td class="text-center">{{category.updateDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                            <td class="text-center">
+                                <button type="submit" class="btn btn-sm btn-success fa fa-pencil-square-o"
+                                        title="Modifier"
+                                        ng-click="adminListsCtrl.prepareUpdateCategory(category)"></button>
+                                <button type="submit" class="btn btn-sm btn-danger fa fa-trash-o" title="Supprimer"
+                                        ng-click="adminListsCtrl.prepareDeleteCategory(category)"></button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="main-pagination">
+                        <uib-pagination total-items="adminListsCtrl.rejectTypes.length"
+                                        ng-model="adminListsCtrl.currentPage" max-size="adminListsCtrl.maxSize"
+                                        class="pagination-sm" rotate="false" first-text="Premier" last-text="Dernier"
+                                        previous-text="Précédent"
+                                        next-text="Suivant" items-per-page="adminListsCtrl.itemsPerPage">
+                        </uib-pagination>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <!-- Modal to delete a category -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinCategoryConfirm" class="modal fade"
+                 data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Confirmation</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Êtes-vous sûr de vouloir supprimer définitivement la categorie : <strong>{{adminListsCtrl.categoryEdit.label}}</strong>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-success"
+                                    ng-click="adminListsCtrl.confirmDeleteCategory()">Valider
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to create a category -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinCategoryAdd" class="modal fade" data-keyboard="false"
+                 data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Ajouter une
+                                categorie </h4>
+                        </div>
+                        <form role="form_category_create" class="form-horizontal">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="label" class="col-sm-2 control-label">Libellé :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" ng-model="adminListsCtrl.categoryAdd.label"
+                                               class="form-control" id="label" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="type" class="col-sm-2 control-label">Type :</label>
+                                    <div class="col-sm-10">
+                                        <select ng-model="adminListsCtrl.categoryAdd.type"
+                                                ng-options="type for type in adminListsCtrl.getCategoryTypeValues()"
+                                                class="form-control"
+                                                id="type" required></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color" class="col-sm-2 control-label">Couleur :</label>
+                                    <div class="col-sm-10">
+                                        <select ng-model="adminListsCtrl.categoryAdd.color" class="form-control"
+                                                id="color">
+                                            <option class="text-{{label}}" value="{{label}}"
+                                                    ng-repeat="label in adminListsCtrl.getCategoryColorValues()">
+                                                {{label}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="icon" class="col-sm-2 control-label">Icône :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" ng-model="adminListsCtrl.categoryAdd.icon"
+                                               class="form-control" id="icon">
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-if="adminListsCtrl.categoryAdd.type === 'table'">
+                                    <label for="nbColumns" class="col-sm-2 control-label">Colonne :</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" ng-model="adminListsCtrl.categoryAdd.nbColumns"
+                                               class="form-control" id="nbColumns">
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-if="adminListsCtrl.categoryAdd.type === 'table'">
+                                    <label for="nbRows" class="col-sm-2 control-label">Ligne :</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" ng-model="adminListsCtrl.categoryAdd.nbRows"
+                                               class="form-control" id="nbRows">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="open" class="col-sm-2 control-label">Ouvert :</label>
+                                    <div class="col-sm-10">
+                                        <input type="checkbox" ng-model="adminListsCtrl.categoryAdd.open"
+                                               class="form-control" id="open">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="enabled" class="col-sm-2 control-label">Active :</label>
+                                    <div class="col-sm-10">
+                                        <input type="checkbox" ng-model="adminListsCtrl.categoryAdd.enabled"
+                                               class="form-control" id="enabled">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger"
+                                        ng-click="adminListsCtrl.categoryAdd = undefined" data-dismiss="modal">Annuler
+                                </button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminListsCtrl.isCategoryFilled(adminListsCtrl.categoryAdd)"
+                                        ng-click="adminListsCtrl.createCategory()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to update a category -->
+            <div modal-show modal-visible="adminListsCtrl.openPopinCategoryEdit" class="modal fade"
+                 data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier la
+                                categorie</h4>
+                        </div>
+                        <form role="form_category_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="label" class="col-sm-2 control-label">Libellé :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" ng-model="adminListsCtrl.categoryEdit.label"
+                                               class="form-control" id="label" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="type" class="col-sm-2 control-label">Type :</label>
+                                    <div class="col-sm-10">
+                                        <select ng-model="adminListsCtrl.categoryEdit.type"
+                                                ng-options="type for type in adminListsCtrl.getCategoryTypeValues()"
+                                                class="form-control" id="type" required></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color" class="col-sm-2 control-label">Couleur :</label>
+                                    <div class="col-sm-10">
+                                        <select ng-model="adminListsCtrl.categoryEdit.color" class="form-control"
+                                                id="color">
+                                            <option class="text-{{label}}" value="{{label}}"
+                                                    ng-repeat="label in adminListsCtrl.getCategoryColorValues()">
+                                                {{label}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="icon" class="col-sm-2 control-label">Icône :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" ng-model="adminListsCtrl.categoryEdit.icon"
+                                               class="form-control" id="icon">
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-if="adminListsCtrl.categoryEdit.type === 'table'">
+                                    <label for="nbColumns" class="col-sm-2 control-label">Colonne :</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" ng-model="adminListsCtrl.categoryEdit.nbColumns"
+                                               class="form-control" id="nbColumns">
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-if="adminListsCtrl.categoryEdit.type === 'table'">
+                                    <label for="nbRows" class="col-sm-2 control-label">Ligne :</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" ng-model="adminListsCtrl.categoryEdit.nbRows"
+                                               class="form-control" id="nbRows">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="open" class="col-sm-2 control-label">Ouvert :</label>
+                                    <div class="col-sm-10">
+                                        <input type="checkbox" ng-model="adminListsCtrl.categoryEdit.open"
+                                               class="form-control" id="open">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="enabled" class="col-sm-2 control-label">Active :</label>
+                                    <div class="col-sm-10">
+                                        <input type="checkbox" ng-model="adminListsCtrl.categoryEdit.enabled"
+                                               class="form-control" id="enabled">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-success"
+                                        ng-disabled="!adminListsCtrl.isCategoryFilled(adminListsCtrl.categoryEdit)"
+                                        ng-click="adminListsCtrl.updateCategory()">Valider
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>
+<!-- /#page-wrapper -->

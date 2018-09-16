@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OrganisationCommerciale" targetNamespace="http://tempuri.org/OrganisationCommerciale.xsd" xmlns:mstns="http://tempuri.org/OrganisationCommerciale.xsd" xmlns="http://tempuri.org/OrganisationCommerciale.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrganisationCommerciale" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OrganisationCommerciale" msprop:Generator_UserDSName="OrganisationCommerciale">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrganisationCommerciale" msprop:Generator_TableClassName="OrganisationCommercialeDataTable" msprop:Generator_TableVarName="tableOrganisationCommerciale" msprop:Generator_TablePropName="_OrganisationCommerciale" msprop:Generator_RowDeletingName="OrganisationCommercialeRowDeleting" msprop:Generator_RowChangingName="OrganisationCommercialeRowChanging" msprop:Generator_RowEvHandlerName="OrganisationCommercialeRowChangeEventHandler" msprop:Generator_RowDeletedName="OrganisationCommercialeRowDeleted" msprop:Generator_UserTableName="OrganisationCommerciale" msprop:Generator_RowChangedName="OrganisationCommercialeRowChanged" msprop:Generator_RowEvArgName="OrganisationCommercialeRowChangeEvent" msprop:Generator_RowClassName="OrganisationCommercialeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDOrganisationCommerciale" msprop:Generator_ColumnVarNameInTable="columnIDOrganisationCommerciale" msprop:Generator_ColumnPropNameInRow="IDOrganisationCommerciale" msprop:Generator_ColumnPropNameInTable="IDOrganisationCommercialeColumn" msprop:Generator_UserColumnName="IDOrganisationCommerciale" type="xs:int" minOccurs="0" />
+              <xs:element name="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_UserColumnName="Code" type="xs:string" minOccurs="0" />
+              <xs:element name="IdSociete" msprop:Generator_ColumnVarNameInTable="columnIdSociete" msprop:Generator_ColumnPropNameInRow="IdSociete" msprop:Generator_ColumnPropNameInTable="IdSocieteColumn" msprop:Generator_UserColumnName="IdSociete" type="xs:int" minOccurs="0" />
+              <xs:element name="IdSite" msprop:Generator_ColumnVarNameInTable="columnIdSite" msprop:Generator_ColumnPropNameInRow="IdSite" msprop:Generator_ColumnPropNameInTable="IdSiteColumn" msprop:Generator_UserColumnName="IdSite" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

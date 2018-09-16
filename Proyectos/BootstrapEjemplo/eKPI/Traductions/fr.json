@@ -1,0 +1,23 @@
+﻿{
+  "lblTitreGlobal": "Suggestion",
+  "lblNotification": "",
+  "lblTitre": "Titre",
+  "lblM": "M",
+  "lblMme": "Mme",    
+  "lblMlle": "Mlle",
+  "lblNom": "Nom",
+  "lblPrenom": "Prénom",
+  "lblFonction": "Fonction",
+  "lblEmail": "Email",
+  "lblPhone": "Téléphone",
+  "lblLangue": "Langue",
+  "lblSujet": "Sujet",
+  "lblMessage": "Message",
+  "btnEnvoyer": "Envoyer Message",
+  "msgErrorFormat": "Un ou plusieurs champs ne respecte(nt) pas le format requis",
+  "msgErrorEncodage": "Un ou plusieurs champs obligatoire(s) n’a/n’ont pas été encodé(s)",
+  "msgSucces": "Votre suggestion a bien été envoyée",
+  "msgErreurGeneral": "Une erreur est suvenue."
+}
+
+  

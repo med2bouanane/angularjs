@@ -1,0 +1,16 @@
+{
+	"lblTitreGlobal": "Livraison",
+	"lblTitreSecondaire": "Analyse",
+	"lblFiltres": "testssssssssssssssssssssssssssssss",
+	"lblPeriode": "Période",
+	"lblCommande": "Commande"
+	"lblClientDonneurOrdre": "Donneur d'ordre",
+	"lblSegment": "Segment",
+	"lblTypeCommande": "Type commande",
+	"lblAgence": "Agence",
+	"lblReferenceClient": "Référence client",
+	"lblNuance": "Nuance",
+	"lblResultats": "Résultats",
+	"lblCommandeStandart": "Standard",
+	"btnRechercher":"Rechercher"
+}

@@ -1,0 +1,328 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DCeKPI
+</name>
+</assembly>
+<members>
+<member name="T:DCeKPI.IncotermSAP.IncotermSAPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.IncotermSAP.IncotermSAPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.IncotermSAP.IncotermSAPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.IncotermSAP">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.UtilisateurMenu.UtilisateurMenuDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.UtilisateurMenu.UtilisateurMenuRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.UtilisateurMenu.UtilisateurMenuRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.UtilisateurMenu">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.Menu.MenuDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.Menu.MenuRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.Menu.MenuRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.Menu">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.HistoriqueBlocageClient.HistoriqueBlocageClientDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.HistoriqueBlocageClient.HistoriqueBlocageClientRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.HistoriqueBlocageClient.HistoriqueBlocageClientRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.HistoriqueBlocageClient">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.HistoriqueBlocageClientDetail.HistoriqueBlocageClientDetailDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.HistoriqueBlocageClientDetail.HistoriqueBlocageClientDetailRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.HistoriqueBlocageClientDetail.HistoriqueBlocageClientDetailRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.HistoriqueBlocageClientDetail">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.Accuse.AccuseDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.Accuse.AccuseRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.Accuse.AccuseRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.Accuse">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.BlocageLivraison.BlocageLivraisonDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.BlocageLivraison.BlocageLivraisonRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.BlocageLivraison.BlocageLivraisonRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.BlocageLivraison">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.Bordereau.BordereauDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.Bordereau.BordereauRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.Bordereau.BordereauRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.Bordereau">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.MenuLibelle.MenuLibelleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.MenuLibelle.MenuLibelleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.MenuLibelle.MenuLibelleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.MenuLibelle">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.Role.RoleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.Role.RoleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.Role.RoleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.Role">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.ConfigurationRetardProfond.ConfigurationRetardProfondDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.ConfigurationRetardProfond.ConfigurationRetardProfondRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.ConfigurationRetardProfond.ConfigurationRetardProfondRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.ConfigurationRetardProfond">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.ConfigurationObjectifLivraison.ConfigurationObjectifLivraisonDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.ConfigurationObjectifLivraison.ConfigurationObjectifLivraisonRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.ConfigurationObjectifLivraison.ConfigurationObjectifLivraisonRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.ConfigurationObjectifLivraison">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.OrganisationCommerciale.OrganisationCommercialeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.OrganisationCommerciale.OrganisationCommercialeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.OrganisationCommerciale.OrganisationCommercialeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.OrganisationCommerciale">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.Tole.ToleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.Tole.ToleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.Tole.ToleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.Tole">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.Division.DivisionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.Division.DivisionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.Division.DivisionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.Division">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.TypeCommande.TypeCommandeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.TypeCommande.TypeCommandeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.TypeCommande.TypeCommandeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.TypeCommande">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.Autorisation.AutorisationDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.Autorisation.AutorisationRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.Autorisation.AutorisationRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.Autorisation">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.Commande.CommandeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.Commande.CommandeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.Commande.CommandeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.Commande">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DCeKPI.DocumentAcheminement.DocumentAcheminementDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DCeKPI.DocumentAcheminement.DocumentAcheminementRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DCeKPI.DocumentAcheminement.DocumentAcheminementRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DCeKPI.DocumentAcheminement">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="P:DCeKPI.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:DCeKPI.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:DCeKPI.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,95 @@
+<div id="page-wrapper">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header"><i class="fa fa-user" aria-hidden="true"></i> Profil de l'utilisateur</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a ng-href="#/home">
+                        <i class="fa fa-dashboard fa-fw"></i> Tableau de bord
+                    </a>
+                </li>
+                <li class="active">
+                    <i class="fa fa-user"></i> Profil de l'utilisateur
+                </li>
+            </ol>
+            <!-- /.breadcrumb -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-info">
+                <div class="panel-body">
+                    <span><i class="fa fa-user-circle-o"></i> {{account.civility}} {{account.firstName}} {{account.lastName}}</span><br/>
+                    <span><i class="fa fa-phone" aria-hidden="true"></i> {{account.phone}}</span><br/>
+                    <span><i class="fa fa-at" aria-hidden="true"></i> {{account.email}}</span><br/><br/>
+                    <span><i class="fa fa-graduation-cap"></i> <strong>Rôles :</strong> {{account.authoritiesAsString}}</span>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-lock" aria-hidden="true"></i> Changement de mot de passe
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <form role="form_update" class="form-horizontal">
+
+                        <div class="form-group">
+                            <label for="oldPassword" class="col-sm-4 control-label">Ancien mot de passe :</label>
+                            <div class="col-sm-8">
+                                <input type="password" ng-model="userCtrl.oldPassword" class="form-control" id="oldPassword" required>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error is-focused' : userCtrl.passWordNotIdentique}">
+                            <label for="newPassword" class="col-sm-4 control-label">Nouveau mot de passe :</label>
+                            <div class="col-sm-8">
+                                <input type="password" ng-model="userCtrl.newPassword" class="form-control" id="newPassword" required>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error is-focused' : userCtrl.passWordNotIdentique}">
+                            <label for="confirmPassword" class="col-sm-4 control-label">Confirmer le mot de passe :</label>
+                            <div class="col-sm-8">
+                                <input type="password" ng-model="userCtrl.confirmPassword" class="form-control" id="confirmPassword" required>
+                                <span ng-show="userCtrl.passWordNotIdentique" class="help-block">Les deux mots de passe saisis ne sont pas identiques.</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.panel-body -->
+                <div class="panel-footer text-right">
+                    <button type="button" class="btn btn-danger" ng-click="userCtrl.resetFormChangePwd()">Annuler</button>
+                    <button type="button" class="btn btn-success" ng-disabled="!userCtrl.isFormChangePwdFilled()" ng-click="userCtrl.prepareChangePassword()">Valider</button>
+                </div>
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-6 -->
+    </div>
+    <!-- /.row -->
+    <!-- Modal to Change Password by user -->
+    <div modal-show modal-visible="userCtrl.openPopinConfirmChangePassword" class="modal fade" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Êtes-vous sûr de vouloir changer de mot de passe ? </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-success" ng-click="userCtrl.changePassword()">Valider</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#page-wrapper -->

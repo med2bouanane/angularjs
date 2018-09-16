@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.SendConfirm;// "Confirmación del envío";
+}
+<div class="container-message">
+    @if (ViewBag.Result == "Success")
+    {
+        <div class="op-message success">
+            <h2>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.VerifySenderAddress.VerifySenderAddress.TitleSendOk</h2>
+            <p>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.VerifySenderAddress.VerifySenderAddress.ContentSendOk</p>
+            <p class="p-bold">@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.VerifySenderAddress.VerifySenderAddress.FooterSendOk</p>
+            <div class="buttons-center">@Html.ActionLink(SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.SendMore, "Create", "Contact", null, new { @class = "btn btn-default" })</div>
+        </div>
+    }
+    else
+    {
+        <div class="op-message error">
+            <h2>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.VerifySenderAddress.VerifySenderAddress.TitleSendFail</h2>
+            <p>@SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.VerifySenderAddress.VerifySenderAddress.ContentSendFail</p>
+            <div class="buttons-center">@Html.ActionLink(SolidQ.GNFNavidad14.Multilanguage.Resources.Contact.Create.Create.BackButton, "Create", "Contact", null, new { @class = "btn btn-default" })</div>
+        </div>
+    }
+
+</div>
+
+
+

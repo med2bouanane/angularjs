@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Tole" targetNamespace="http://tempuri.org/Tole.xsd" xmlns:mstns="http://tempuri.org/Tole.xsd" xmlns="http://tempuri.org/Tole.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Tole" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Tole" msprop:Generator_UserDSName="Tole">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Tole" msprop:Generator_TableClassName="ToleDataTable" msprop:Generator_TableVarName="tableTole" msprop:Generator_TablePropName="_Tole" msprop:Generator_RowDeletingName="ToleRowDeleting" msprop:Generator_RowChangingName="ToleRowChanging" msprop:Generator_RowEvHandlerName="ToleRowChangeEventHandler" msprop:Generator_RowDeletedName="ToleRowDeleted" msprop:Generator_UserTableName="Tole" msprop:Generator_RowChangedName="ToleRowChanged" msprop:Generator_RowEvArgName="ToleRowChangeEvent" msprop:Generator_RowClassName="ToleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumTol" msprop:Generator_ColumnVarNameInTable="columnNumTol" msprop:Generator_ColumnPropNameInRow="NumTol" msprop:Generator_ColumnPropNameInTable="NumTolColumn" msprop:Generator_UserColumnName="NumTol" type="xs:string" minOccurs="0" />
+              <xs:element name="IdBackOffice" msprop:Generator_ColumnVarNameInTable="columnIdBackOffice" msprop:Generator_ColumnPropNameInRow="IdBackOffice" msprop:Generator_ColumnPropNameInTable="IdBackOfficeColumn" msprop:Generator_UserColumnName="IdBackOffice" type="xs:int" minOccurs="0" />
+              <xs:element name="NumCom" msprop:Generator_ColumnVarNameInTable="columnNumCom" msprop:Generator_ColumnPropNameInRow="NumCom" msprop:Generator_ColumnPropNameInTable="NumComColumn" msprop:Generator_UserColumnName="NumCom" type="xs:string" minOccurs="0" />
+              <xs:element name="NumCoul" msprop:Generator_ColumnVarNameInTable="columnNumCoul" msprop:Generator_ColumnPropNameInRow="NumCoul" msprop:Generator_ColumnPropNameInTable="NumCoulColumn" msprop:Generator_UserColumnName="NumCoul" type="xs:string" minOccurs="0" />
+              <xs:element name="IdDossier" msprop:Generator_ColumnVarNameInTable="columnIdDossier" msprop:Generator_ColumnPropNameInRow="IdDossier" msprop:Generator_ColumnPropNameInTable="IdDossierColumn" msprop:Generator_UserColumnName="IdDossier" type="xs:int" minOccurs="0" />
+              <xs:element name="NumBordSAP" msprop:Generator_ColumnVarNameInTable="columnNumBordSAP" msprop:Generator_ColumnPropNameInRow="NumBordSAP" msprop:Generator_ColumnPropNameInTable="NumBordSAPColumn" msprop:Generator_UserColumnName="NumBordSAP" type="xs:int" minOccurs="0" />
+              <xs:element name="NumCoil" msprop:Generator_ColumnVarNameInTable="columnNumCoil" msprop:Generator_ColumnPropNameInRow="NumCoil" msprop:Generator_ColumnPropNameInTable="NumCoilColumn" msprop:Generator_UserColumnName="NumCoil" type="xs:int" minOccurs="0" />
+              <xs:element name="IdDocumentAcheminement" msprop:Generator_ColumnVarNameInTable="columnIdDocumentAcheminement" msprop:Generator_ColumnPropNameInRow="IdDocumentAcheminement" msprop:Generator_ColumnPropNameInTable="IdDocumentAcheminementColumn" msprop:Generator_UserColumnName="IdDocumentAcheminement" type="xs:int" minOccurs="0" />
+              <xs:element name="IdPaquet" msprop:Generator_ColumnVarNameInTable="columnIdPaquet" msprop:Generator_ColumnPropNameInRow="IdPaquet" msprop:Generator_ColumnPropNameInTable="IdPaquetColumn" msprop:Generator_UserColumnName="IdPaquet" type="xs:int" minOccurs="0" />
+              <xs:element name="DateReceptionClientLivre" msprop:Generator_ColumnVarNameInTable="columnDateReceptionClientLivre" msprop:Generator_ColumnPropNameInRow="DateReceptionClientLivre" msprop:Generator_ColumnPropNameInTable="DateReceptionClientLivreColumn" msprop:Generator_UserColumnName="DateReceptionClientLivre" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ReferenceTransitaire" msprop:Generator_ColumnVarNameInTable="columnReferenceTransitaire" msprop:Generator_ColumnPropNameInRow="ReferenceTransitaire" msprop:Generator_ColumnPropNameInTable="ReferenceTransitaireColumn" msprop:Generator_UserColumnName="ReferenceTransitaire" type="xs:string" minOccurs="0" />
+              <xs:element name="IDInstruction" msprop:Generator_ColumnVarNameInTable="columnIDInstruction" msprop:Generator_ColumnPropNameInRow="IDInstruction" msprop:Generator_ColumnPropNameInTable="IDInstructionColumn" msprop:Generator_UserColumnName="IDInstruction" type="xs:int" minOccurs="0" />
+              <xs:element name="PoidsFacture" msprop:Generator_ColumnVarNameInTable="columnPoidsFacture" msprop:Generator_ColumnPropNameInRow="PoidsFacture" msprop:Generator_ColumnPropNameInTable="PoidsFactureColumn" msprop:Generator_UserColumnName="PoidsFacture" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

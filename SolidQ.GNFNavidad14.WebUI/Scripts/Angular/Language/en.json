@@ -1,0 +1,10 @@
+﻿{
+    "REQUIRED": "Required field",
+    "EMAILFORMAT": "Incorrect email address format.",
+    "DUPLICATECONTACT": "A contact with the same email address has already been added.",
+    "NONECONTACT": "No contacts have been added.",
+    "LOGINERROR": "Incorrect username or password.",
+    "CONFIRMDELETE": "Are you sure that you want to delete the selected contact?",
+    "SENDINGERROR": "It has not been possible to send the message.",
+    "CONFIRMDELETEALL": "Are you sure you want to delete all your contacts?"
+}

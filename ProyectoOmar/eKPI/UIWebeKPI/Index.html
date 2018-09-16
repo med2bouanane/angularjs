@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <link rel="Icon" type="image/png" href="~/Images/faviconarcelormittal.png" />
+    <link rel="stylesheet" href="Styles/reset.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/eKPI.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/stock.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/jquery-ui-1.8.14.custom.css" type="text/css" media="screen" />
+    <title></title>
+</head>
+<body >
+    <div class="largeurSite"> 
+        <header>
+            <div id="transverse">
+				<ul>
+                	<li style="width:150px">
+                        Language
+                            <select id="ddlLangue">
+	                            <option selected="selected" value="en">Anglais</option>
+	                            <option value="fr">Français</option>
+                            </select>
+					</li>
+					<li ><a id="lnkConfiguration" href="#Configuration">Configuration supported</a></li>
+					<li ><a id="lnkContact" href="#Contact">Contact</a></li>
+                    <li ><a id="lnkSuggestion" href="#Suggestion">Suggestions</a></li>
+                    <li ><a id="lnkConfidentialite" href="#Confidentialite">Confidentialité et sécurité</a></li>
+				</ul>
+			</div>
+            <div id="login" >
+                    <table id="Identification">
+                        <tr>
+                            <td>
+                            <ul>
+                                <div>
+                                    Identifiant
+                                    <input type="text" class="txtHeader"/>
+                                    Mot de passe
+                                    <input type="password" class="txtHeader"/>  
+                                    <input type="button" class="btn btnHeaderLogin" value="OK"/>
+                                </div> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                <label id="FailureText" class="texterouge" style="_Position: absolute; _right:20px"></label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a id="lnkInscription" href="#Inscription">S'inscrire</a>
+                                    <span id="spnSeparateur"  visible="False">&nbsp;|&nbsp;</span>
+                                    <a id="lnkMotPasse" href="#MotPassePerdu">Mot de passe perdu ?</a>
+                                </div>
+                            </td>  
+                        </tr>
+                    </table>
+            </div>
+            <div id="identification"  >
+                    Bienvenue<br /><br />
+                    <a id="A6" href="#index">[Se déconnecter]</a>
+                </div>
+            <div id="titre">
+				<span style="color:#BCBDC0">e-KPI</span>&nbsp;<span  id="lblTitreIndusteel" style="color:#FF3700">Industeel</span>
+			</div>
+			<div id="home"><a id="lnkAccueil" ></a></div>
+        </header>
+        <section>
+            <nav id="divMenu" >
+
+            </nav>
+        <article>
+            <div class="FondBlanc" ng-view >
+
+            </div>
+        </article>
+	    </section>
+<footer>
+	<div class="fin" id="divFondBlanc">   
+            
+	</div>
+</footer>
+</div>
+
+<script src="Scripts/jquery.min.js"></script>
+<script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js" ></script>
+<script src="https://code.angularjs.org/1.2.27/angular-route.min.js"></script>
+<script src="https://code.angularjs.org/1.2.27/angular-route.min.js"></script>
+<script src="Scripts/angular-translate.min.js" type="text/javascript"></script>
+<script src="Scripts/i18next-1.7.4.js" type="text/javascript"></script>
+<script src="Scripts/jquery-ui-1.8.12.custom.min.js"></script>q
+<script src="Controlleurs/PrincipalController.js"></script>
+<script src="Controlleurs/GestionRouteController.js"></script>
+<script src="Controlleurs/ConfidentialiteController.js"></script>
+<script src="Controlleurs/SuggestionController.js"></script>
+<script type="text/javascript" src="Scripts/Inscription.js"></script>
+<script src="https://rawgithub.com/PascalPrecht/bower-angular-translate-loader-static-files/master/angular-translate-loader-static-files.js"></script>
+</body>
+</html>

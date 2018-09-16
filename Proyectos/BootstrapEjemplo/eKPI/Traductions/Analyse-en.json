@@ -1,0 +1,16 @@
+{
+	"lblTitreGlobal": "Delivery",
+	"lblTitreSecondaire": "Analyze",
+	"lblFiltres": "Filters",
+	"lblPeriode": "Date",
+	"lblCommande": "Order"
+	"lblClientDonneurOrdre": "Ordering customer",
+	"lblSegment": "Segment",
+	"lblTypeCommande": "order type",
+	"lblAgence": "Agency",
+	"lblReferenceClient": "Customer reference",
+	"lblNuance": "Grade",
+	"lblResultats": "Results",
+	"lblCommandeStandart": "Standart",
+	"btnRechercher":"Search"
+}

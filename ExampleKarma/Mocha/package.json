@@ -1,0 +1,20 @@
+{
+  "name": "Mocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "promise": "^7.1.1",
+    "request": "^2.79.0",
+    "sinon": "^1.17.7",
+    "sinon-as-promised": "^4.0.2"
+  }
+}

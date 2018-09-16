@@ -1,0 +1,183 @@
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header"><i class="fa fa-cogs" aria-hidden="true"></i> Référentiel</h2>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <uib-tabset active="active">
+    	<uib-tab index="0" select="referencialCtrl.loadRefQueries()">
+            <uib-tab-heading>
+                <i class="fa fa-mixcloud" aria-hidden="true"></i> Requêtes référentiel
+            </uib-tab-heading>
+            <br/>
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+                        <input type="text" ng-model="search" class="form-control" placeholder="CHERCHER" aria-describedby="basic-addon1">
+                        <span class="input-group-btn"> <button class="btn btn-success" type="button" ng-click="referencialCtrl.openPopinAdd = true"id="basic-addon1"><i class="fa fa-plus-circle" aria-hidden="true"></i> AJOUTER</button></span>
+                    </div>
+                    <br>
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr class="warning">
+                                <th>Id</th>
+                                <th>Libellé</th>
+                                <th>Index</th>
+                                <th>Type</th>
+                                <th>Type de réferentiel</th>
+                                <th class="text-center">Date de création</th>
+                                <th class="text-center">Dernière modification</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="clickable-row" ng-repeat="refQuery in referencialCtrl.referentialQueries.slice(((referencialCtrl.currentPage-1)*referencialCtrl.itemsPerPage), ((referencialCtrl.currentPage)*referencialCtrl.itemsPerPage)) | filter : search">
+                                <td>{{refQuery.id}}</td>
+                                <td>{{refQuery.label}}</td>
+                                <td>{{refQuery.index}}</td>
+                                <td>{{refQuery.type}}</td>
+                                <td>{{refQuery.referencialType.type}}</td>
+                                <td class="text-center">{{refQuery.createDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                                <td class="text-center">{{refQuery.updateDate | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                                <td class="text-center">
+                                    <button title="Modifier" type="submit" class="btn btn-sm btn-success fa fa-pencil-square-o" ng-click="referencialCtrl.prepareUpdateRefQuery(refQuery)"></button>
+                                    <button title="Supprimer" type="submit" class="btn btn-sm btn-danger fa fa-trash-o" ng-click="referencialCtrl.prepareDeleteRefQuery(refQuery)"></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="main-pagination" ng-show="referencialCtrl.referentialQueries && referencialCtrl.referentialQueries.length!=0">
+                        <uib-pagination total-items="referencialCtrl.referentialQueries.length" ng-model="referencialCtrl.currentPage"
+                            max-size="referencialCtrl.maxSize" class="pagination-sm" rotate="false" first-text="Premier"
+                            last-text="Dernier" previous-text="Précédent" next-text="Suivant" items-per-page="referencialCtrl.itemsPerPage">
+                        </uib-pagination>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+            <!-- Modal to update a referential -->
+            <div modal-show modal-visible="referencialCtrl.openPopinAdd" class="modal fade" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"> <i class="fa fa-pencil" aria-hidden="true"></i> Ajouter une requête</h4>
+                        </div>
+                        <form role="form_create" class="form-horizontal">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="label" class="col-sm-2 control-label">Libellé:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" ng-model="referencialCtrl.referencialQueryAdd.label" class="form-control" id="label" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="index" class="col-sm-2 control-label">index:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" ng-model="referencialCtrl.referencialQueryAdd.index" class="form-control" id="index" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="type" class="col-sm-2 control-label">Type:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" ng-model="referencialCtrl.referencialQueryAdd.type" class="form-control" id="type" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="type" class="col-sm-2 control-label">Type de référentiel:</label>
+                                    <div class="col-sm-10">
+                                        <select id="selectReferentialType" class="form-control" ng-model="referencialCtrl.referencialQueryAdd.referencialType"
+                                        	ng-options="query as query.label for query in referencialCtrl.referencialTypeQueries"
+                                            required>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" ng-click="referencialCtrl.referencialQueryAdd = undefined" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-success" ng-disabled="!referencialCtrl.isRefQueryFilled(referencialCtrl.referencialQueryAdd)"
+                                    ng-click="referencialCtrl.createReferencialQuery()">Valider</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to update a referential -->
+            <div modal-show modal-visible="referencialCtrl.openPopinEdit" class="modal fade" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"> <i class="fa fa-pencil" aria-hidden="true"></i> Modifier la requête</h4>
+                        </div>
+                        <form role="form_update" class="form-horizontal">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="label" class="col-sm-2 control-label">Libellé:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" ng-model="referencialCtrl.referencialQueryEdit.label" class="form-control" id="label" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="index" class="col-sm-2 control-label">index:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" ng-model="referencialCtrl.referencialQueryEdit.index" class="form-control" id="index" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="type" class="col-sm-2 control-label">Type:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" ng-model="referencialCtrl.referencialQueryEdit.type" class="form-control" id="type" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="type" class="col-sm-2 control-label">Type de référentiel:</label>
+                                    <div class="col-sm-10">
+                                        <select id="selectReferentialType" class="form-control" ng-model="referencialCtrl.referencialQueryEdit.referencialType.id"
+                                        	ng-options="query.id as query.label for query in referencialCtrl.referencialTypeQueries"
+                                            required>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger" ng-click="referencialCtrl.referencialQueryEdit = undefined" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-success" ng-disabled="!referencialCtrl.isRefQueryFilled(referencialCtrl.referencialQueryEdit)"
+                                    ng-click="referencialCtrl.updateRefQuery()">Valider</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to delete referential -->
+            <div modal-show modal-visible="referencialCtrl.openPopinConfirm" class="modal fade" data-keyboard="false" data-backdrop="static">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Confirmation</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Êtes-vous sûr de vouloir supprimer définitivement la requête : <strong>{{referencialCtrl.referencialQueryEdit.label}}</strong></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger" ng-click="referencialCtrl.referencialQueryEdit = undefined" data-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-success" ng-click="referencialCtrl.confirmDeleteRefQuery()">Valider</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>

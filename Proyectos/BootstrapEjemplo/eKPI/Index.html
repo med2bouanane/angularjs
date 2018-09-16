@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <link rel="Icon" type="image/png" href="~/Images/faviconarcelormittal.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link href="Styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/eKPI.css" rel="stylesheet" type="text/css" />
+    <title></title>
+</head>
+<body ><!--ng-controller="IndexController"-->
+
+    <div class="container "><!--largeurSite-->
+
+        <h1>{{idioma}}</h1>
+        <h1>{{langue}}</h1>
+        <header>
+            <div>
+            <div id="transverse">
+                <ul>
+                    <li style="width:150px">
+                        <label id="lblLangue" class="Traduction" data-i18n="lblLangue" ng-model="lblLangue">Language</label>
+                        <select id="ddlLangue">
+                            <option  value="en">Anglais</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </li>
+                    <li ><a id="lnkConfiguration" href="#Conditions" class="Traduction" data-i18n="lnkConfiguration">Configuration supported</a></li>
+                    <li ><a id="lnkContact" href="#Contact" class="Traduction" data-i18n="lnkContact">Contact</a></li>
+                    <li ><a id="lnkSuggestion" href="#Suggestion" class="Traduction" data-i18n="lnkSuggestion">Suggestions</a></li>
+                    <li ><a id="lnkConfidentialite" href="#Confidentialite" class="Traduction" data-i18n="lnkConfidentialite">Confidentialit� et s�curit�</a></li>
+                </ul>
+            </div>
+            <div id="login" >
+                <label id="lblIdentifiant" class="Traduction" data-i18n="lblIdentifiant" ng-model="lblIdentifiant">Identifiant</label>
+                <input type="text" ng-model="identifiant.login" />
+                <label id="lblMotPasse" class="Traduction" data-i18n="lblMotPasse" ng-model="lblMotPasse">Mot de passe</label>
+                <input type="password" ng-model="identifiant.motPasse"/>
+                <input type="button" value="Valider" id="btnValider" data-i18n="btnValider" ng-click="connecterUtilisateur()"/>
+
+
+            </div>
+            <div>
+                <div>
+                    <label id="FailureText" ng-model="FailureText" class="texterouge" style="_Position: absolute; _right:20px">dsljfdljaflkdsa</label>
+                </div>
+                <div id="inscription" style="width: 100%;float: right;position: relative;top: 8px;left: 600px;">
+
+                    <a id="lnkInscription" href="#Inscription">S'inscrire</a>
+                    <span id="spnSeparateur"  visible="False">&nbsp;|&nbsp;</span>
+                    <a id="lnkMotPasse" href="#MotPassePerdu">Mot de passe perdu ?</a>
+                </div>
+
+            </div>
+            </div>
+            <div id="titre">
+                <span style="color:#BCBDC0">e-KPI</span>&nbsp;<span  id="lblTitreIndusteel" style="color:#FF3700">Industeel</span>
+            </div>
+            <div id="home">
+                <a id="lnkAccueil" href="#/"></a>
+            </div>
+        </header>
+
+        <div id="divNavigation" class="GeneralMenu">
+
+                <nav>
+                    <ul menu="menu" class="ng-isolate-scope">
+                        <ul>
+                            <li>Livraison
+                                <ul>
+                                    <li class="PointMenu"><a href="#RetardsProfonds">Retard profond</a></li></ul></li><li>Documentation</li><li>Produit</li><li>Offre</li><li>Satisfaction</li><li>Administration<ul><li class="PointMenu"><a href="#Redefinition">Change password</a></li><li class="PointMenu"><a href="#Preferences">preference </a></li><li class="PointMenu"><a href="#MiseJourProfil">Update Profile</a></li><li>Delivery<ul><li class="PointMenu"><a href="#EncodageRetardsProfonds">Encodage retard profond</a></li><li class="PointMenu"><a href="#ObjectifRetardsProfonds">Objectif retard profond</a></li></ul></li></ul></li></ul></ul>
+                </nav>
+
+
+
+
+
+        </div>
+
+        <div class="FondBlanc" ng-view ></div>
+        <footer>
+	        <div class="fin" id="divFondBlanc">   
+            
+	        </div>
+        </footer>
+    </div>
+    <!--Librairies-->
+    <script src="Scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui-1.8.12.custom.min.js" type="text/javascript"></script>
+    <script src="Scripts/Angular/angular.min.js" type="text/javascript"></script>
+    <script src="Scripts/Angular/angular-route.min.js" type="text/javascript"></script>
+    <script src="Scripts/Angular/ui-bootstrap-tpls-0.12.0.min.js" type="text/javascript"></script>
+    <script src="Scripts/i18next-1.7.4.js"type="text/javascript"></script>
+    <script src="Scripts/highcharts.js" type="text/javascript"></script>
+    <script src="Scripts/angular-translate.min.js" ></script>
+    <script src="Scripts/angular-translate-loader-url.min.js"></script>
+    <!--Fichier contenant la variable app-->
+    <script src="Controlleurs/GestionRouteController.js" type="text/javascript"></script>
+    <!--Services:-->
+    <script src="Scripts/Services/Traduction.js" type="text/javascript"></script>
+    <script src="Scripts/Administration/ServicesAdministration.js" type="text/javascript"></script>
+    <script src="Scripts/Livraison/ServiceLivraison.js" type="text/javascript"></script>
+    <!--Directives :-->
+    <script src="Scripts/Directives/accordeon.js" type="text/javascript"></script>
+    <script src="Scripts/Directives/numerique.js" type="text/javascript"></script>
+    <script src="Scripts/Directives/i18n.js" type="text/javascript"></script>
+    <!--Controlleurs-->
+    <script src="Controlleurs/ConfidentialiteController.js" type="text/javascript"></script>
+    <script src="Scripts/Administration/ObjectifsLivraison.js" type="text/javascript"></script>
+    <script src="Scripts/Administration/BlocageClient.js" type="text/javascript"></script>
+    <script src="Scripts/Livraison/VueEnsemble.js" type="text/javascript"></script>
+    <script src="Controlleurs/SuggestionController.js" type="text/javascript"></script>
+    <script src="Controlleurs/IndexController.js" type="text/javascript"></script>
+    <script src="Scripts/Utilisateur/ServiceUtilisateur.js" type="text/javascript"></script>
+    <script src="Controlleurs/MotPassePerduController.js" type="text/javascript"></script>
+    <script src="Controlleurs/RedifinitionController.js" type="text/javascript"></script>
+    <script src="Controlleurs/ContactController.js" type="text/javascript"></script>
+
+
+    <!-- Librería jQuery requerida por los plugins de JavaScript
+    <script src="http://code.jquery.com/jquery.js"></script>-->
+
+    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
+         incluir archivos JavaScript individuales de los únicos
+         plugins que utilices) -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

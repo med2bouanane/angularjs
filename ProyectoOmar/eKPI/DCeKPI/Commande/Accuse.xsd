@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Accuse" targetNamespace="http://tempuri.org/Accuse.xsd" xmlns:mstns="http://tempuri.org/Accuse.xsd" xmlns="http://tempuri.org/Accuse.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Accuse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Accuse" msprop:Generator_UserDSName="Accuse">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Accuse" msprop:Generator_TableClassName="AccuseDataTable" msprop:Generator_TableVarName="tableAccuse" msprop:Generator_TablePropName="_Accuse" msprop:Generator_RowDeletingName="AccuseRowDeleting" msprop:Generator_RowChangingName="AccuseRowChanging" msprop:Generator_RowEvHandlerName="AccuseRowChangeEventHandler" msprop:Generator_RowDeletedName="AccuseRowDeleted" msprop:Generator_UserTableName="Accuse" msprop:Generator_RowChangedName="AccuseRowChanged" msprop:Generator_RowEvArgName="AccuseRowChangeEvent" msprop:Generator_RowClassName="AccuseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumAccuse" msprop:Generator_ColumnVarNameInTable="columnnumaccuse" msprop:Generator_ColumnPropNameInRow="numaccuse" msprop:Generator_ColumnPropNameInTable="numaccuseColumn" msprop:Generator_UserColumnName="NumAccuse" type="xs:int" minOccurs="0" />
+              <xs:element name="IdBackOffice" msprop:Generator_ColumnVarNameInTable="columnIdBackOffice" msprop:Generator_ColumnPropNameInRow="IdBackOffice" msprop:Generator_ColumnPropNameInTable="IdBackOfficeColumn" msprop:Generator_UserColumnName="IdBackOffice" type="xs:int" minOccurs="0" />
+              <xs:element name="DateAccuse" msprop:Generator_ColumnVarNameInTable="columndateaccuse" msprop:Generator_ColumnPropNameInRow="dateaccuse" msprop:Generator_ColumnPropNameInTable="dateaccuseColumn" msprop:Generator_UserColumnName="DateAccuse" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CodeCli" msprop:Generator_ColumnVarNameInTable="columncodecli" msprop:Generator_ColumnPropNameInRow="codecli" msprop:Generator_ColumnPropNameInTable="codecliColumn" msprop:Generator_UserColumnName="CodeCli" type="xs:string" minOccurs="0" />
+              <xs:element name="Sent" msprop:Generator_ColumnVarNameInTable="columnsent" msprop:Generator_ColumnPropNameInRow="sent" msprop:Generator_ColumnPropNameInTable="sentColumn" msprop:Generator_UserColumnName="Sent" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DateSent" msprop:Generator_ColumnVarNameInTable="columndatesent" msprop:Generator_ColumnPropNameInRow="datesent" msprop:Generator_ColumnPropNameInTable="datesentColumn" msprop:Generator_UserColumnName="DateSent" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Printed" msprop:Generator_ColumnVarNameInTable="columnprinted" msprop:Generator_ColumnPropNameInRow="printed" msprop:Generator_ColumnPropNameInTable="printedColumn" msprop:Generator_UserColumnName="Printed" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DatePrinted" msprop:Generator_ColumnVarNameInTable="columndateprinted" msprop:Generator_ColumnPropNameInRow="dateprinted" msprop:Generator_ColumnPropNameInTable="dateprintedColumn" msprop:Generator_UserColumnName="DatePrinted" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Preliminaire" msprop:Generator_ColumnVarNameInTable="columnPreliminaire" msprop:Generator_ColumnPropNameInRow="Preliminaire" msprop:Generator_ColumnPropNameInTable="PreliminaireColumn" msprop:Generator_UserColumnName="Preliminaire" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Revision" msprop:Generator_ColumnVarNameInTable="columnRevision" msprop:Generator_ColumnPropNameInRow="Revision" msprop:Generator_ColumnPropNameInTable="RevisionColumn" msprop:Generator_UserColumnName="Revision" type="xs:int" minOccurs="0" />
+              <xs:element name="DateCloture" msprop:Generator_ColumnVarNameInTable="columnDateCloture" msprop:Generator_ColumnPropNameInRow="DateCloture" msprop:Generator_ColumnPropNameInTable="DateClotureColumn" msprop:Generator_UserColumnName="DateCloture" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ICONVuDate" msprop:Generator_ColumnVarNameInTable="columnICONVuDate" msprop:Generator_ColumnPropNameInRow="ICONVuDate" msprop:Generator_ColumnPropNameInTable="ICONVuDateColumn" msprop:Generator_UserColumnName="ICONVuDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ICONVuIDUtilisateur" msprop:Generator_ColumnVarNameInTable="columnICONVuIDUtilisateur" msprop:Generator_ColumnPropNameInRow="ICONVuIDUtilisateur" msprop:Generator_ColumnPropNameInTable="ICONVuIDUtilisateurColumn" msprop:Generator_UserColumnName="ICONVuIDUtilisateur" type="xs:int" minOccurs="0" />
+              <xs:element name="ICONTelechargeDate" msprop:Generator_ColumnVarNameInTable="columnICONTelechargeDate" msprop:Generator_ColumnPropNameInRow="ICONTelechargeDate" msprop:Generator_ColumnPropNameInTable="ICONTelechargeDateColumn" msprop:Generator_UserColumnName="ICONTelechargeDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ICONTelechargeIDUtilisateur" msprop:Generator_ColumnVarNameInTable="columnICONTelechargeIDUtilisateur" msprop:Generator_ColumnPropNameInRow="ICONTelechargeIDUtilisateur" msprop:Generator_ColumnPropNameInTable="ICONTelechargeIDUtilisateurColumn" msprop:Generator_UserColumnName="ICONTelechargeIDUtilisateur" type="xs:int" minOccurs="0" />
+              <xs:element name="ICONEnvoyeDate" msprop:Generator_ColumnVarNameInTable="columnICONEnvoyeDate" msprop:Generator_ColumnPropNameInRow="ICONEnvoyeDate" msprop:Generator_ColumnPropNameInTable="ICONEnvoyeDateColumn" msprop:Generator_UserColumnName="ICONEnvoyeDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ICONEnvoyeIDUtilisateur" msprop:Generator_ColumnVarNameInTable="columnICONEnvoyeIDUtilisateur" msprop:Generator_ColumnPropNameInRow="ICONEnvoyeIDUtilisateur" msprop:Generator_ColumnPropNameInTable="ICONEnvoyeIDUtilisateurColumn" msprop:Generator_UserColumnName="ICONEnvoyeIDUtilisateur" type="xs:int" minOccurs="0" />
+              <xs:element name="IdTypeCommande" msprop:Generator_ColumnVarNameInTable="columnIdTypeCommande" msprop:Generator_ColumnPropNameInRow="IdTypeCommande" msprop:Generator_ColumnPropNameInTable="IdTypeCommandeColumn" msprop:Generator_UserColumnName="IdTypeCommande" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

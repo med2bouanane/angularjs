@@ -1,0 +1,20 @@
+/* --- Tree --- */
+.tree-node {
+    border: 1px solid #dae2ea;
+    background: #f8faff;
+    color:black; /*#7c9eb2;*/
+    font-weight: normal;
+}
+
+.nodrop {
+    background-color: #f2dede;
+}
+
+.tree-node-content {
+    margin: 10px;
+}
+.tree-handle {
+    padding: 5px;
+    margin-right: 10px;
+}
+

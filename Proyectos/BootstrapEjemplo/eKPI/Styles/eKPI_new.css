@@ -1,0 +1,221 @@
+﻿/**************************************************************************************
+						        	- Master head -
+***************************************************************************************/
+header 
+{
+    color:White;
+}
+
+header a
+{
+    color:White;
+}
+
+.largeurSite
+{
+     width:955px;
+     margin-left:auto;
+     margin-right:auto;
+}
+
+header #login
+{
+    display:none;
+}
+
+header #identification
+{
+    display:inline-block;
+    width:100%;
+    text-align:right;
+}
+
+body
+{
+    background-color: #b7b8b1;
+    font: 11px Arial, Helvetica, Verdana, sans-serif;
+}
+
+H2
+{
+    font: 20px VAGRoundedThin, Arial;
+    color: #414141;
+}
+
+H4
+{
+    font: 18px VAGRoundedThin, Arial;
+    font-weight: bold;
+    color: #ff3700;
+}
+
+fieldset.title {
+    border-top: 1px solid #a0a0a0;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    display: block;
+    text-align: left;
+    clear:left;
+}
+
+fieldset.title legend
+{
+    padding: 5px 10px;
+}
+
+fieldset.title label
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #a0a0a0;
+}
+
+label
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    color: black;
+}
+
+input[type=text].zonetxtdefaut, .zonetxtdefaut
+{
+    background-color: #FFFFFF;
+    border: 1px solid #b7b8b1;
+    height:15px;
+}
+
+input[type=text].zonetxtgris, .zonetxtgris
+{
+    background-color: #b7b8b1;
+    border: 1px solid #b7b8b1;
+    height:15px;
+}
+
+input[type=text].zonetxtoblig, .zonetxtoblig
+{
+    border: 1px solid #ff3700;
+    height:15px;
+}
+
+input[type=button]
+{
+    border-bottom: #999999 1px solid;
+    border-left: #999999 1px solid;
+    border-top: #999999 1px solid;
+    border-right: #999999 1px solid;
+    background-color: white;
+    font-size: 11px;
+    /*color: #FFFFFF;*/
+    font-family: Arial;
+    height: 20px;
+}
+
+input[type=button]:hover
+{
+    color: #ff3700;
+}
+
+.Formulaire select
+{
+    border-bottom: #b7b8b1 1px solid; 
+    border-left: #b7b8b1 1px solid; 
+    padding-bottom: 2px; 
+    background-color: white; 
+    padding-left: 2px; 
+    padding-right: 2px; 
+    font: 11px/11px Arial, Helvetica, Verdana, sans-serif; 
+    border-top: #b7b8b1 1px solid; 
+    border-right: #b7b8b1 1px solid; 
+    padding-top: 2px;
+   /* display:block;*/
+    width:160px;
+    float:left;
+    margin-top: 5px;
+    _margin-top: 2px;
+    _margin-left: 3px;
+    
+}
+
+.Formulaire span
+{
+ /*   display: block;*/
+    width: 160px;
+    float: left;
+    line-height: 25px;
+}
+
+.Formulaire label
+{
+     /*   display: block;*/
+    width: 160px;
+    float: left;
+    line-height: 25px;
+    left: 10px;
+}
+
+.Formulaire input[type=radio]
+{
+     /*   display: block;*/
+    float: left;
+    line-height: 25px;
+}
+
+.Formulaire input[type=text]
+{
+   /*   display: block;*/
+    float: left;
+    line-height: 25px;
+}
+
+.Colonne
+{
+    float: left;
+    width: 50%;
+    line-height: 25px;
+    background-color: Inherit;
+}
+
+.Colonne div, .Colonne span, .Colonne label
+{
+    clear: none;
+}
+
+.Colonne span.gras
+{
+    clear: none;
+   
+}
+
+.divBoutonRechercher
+{
+    text-align:right;
+    width:100%;
+}
+
+.divBoutonRechercher input[type=button]
+{
+    width:100px;
+}
+
+.FondBlanc
+{
+    background-color: White;
+}
+
+.TextboxRecherche img:hover
+{
+    cursor: pointer;
+}
+
+.tableWidth
+{
+    width:100%
+}
+
+.divPageAcceuil
+{
+    padding-top:10px; 
+    padding-left:25px
+}
+

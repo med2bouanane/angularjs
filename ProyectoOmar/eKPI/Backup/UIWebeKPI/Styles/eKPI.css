@@ -1,0 +1,343 @@
+﻿
+.ImageIdentification
+{
+    background-image:url('../Images/eKPI.jpg');
+    background-repeat:no-repeat; 
+    height:426px;
+    width:282px;
+}
+
+.EnteteIdentification
+{
+    background-image:url('../Images/CoinBlanc.gif');
+    background-repeat:no-repeat;
+    background-position:top right;
+    Height:39px;
+    padding-left:20px;
+    padding-top:40px;
+    vertical-align:baseline;
+    line-height:20px;
+}
+
+.PiedPageIdentification
+{
+    background-image:url('../Images/CoinGris.gif');
+    background-repeat:no-repeat;
+    background-position:bottom right;
+    height:63px;
+    background-color:#414141;
+}
+
+.LogoCapclient
+{
+    padding-bottom:10px;
+    background-repeat:no-repeat;
+    background-image: url('../Images/LogoFiveStar.png');
+    background-position: bottom 10px right 10px; 
+    height:80px;
+    background-size: 80px;
+}
+
+H4
+{
+    font-weight:bold;   
+    color: #ff3700;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 18px;
+    line-height: normal;
+    font-family: VAGRoundedThin, Arial;
+    width: 245px;
+}
+
+.FondBlanc
+{
+    background-color: White;
+}
+input[type=text].zonetxtoblig, .zonetxtoblig
+{
+    border: 1px solid #ff3700;
+}
+
+.texterouge
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    color: #ff3700;
+    font-size: 11px;
+}
+
+.texteboxLength
+{
+    width:350px;
+    height: 21px;
+}
+input[type=text].zonetxtgris, .zonetxtgris
+{
+    background-color: #b7b8b1;
+    border: 1px solid #b7b8b1;
+}
+
+input[type=text].zonetxtgris2, .zonetxtgris2
+{
+    background-color: #414141;
+    border: 1px solid #b7b8b1;
+    color: #ddd9cd;
+}
+
+.btdefaut
+{
+    border-bottom: #999999 1px solid;
+    border-left: #999999 1px solid;
+    background-color: white;
+    font: 11px/11px Arial, Helvetica, Verdana, sans-serif;
+    height: 20px;
+    border-top: #999999 1px solid;
+    border-right: #999999 1px solid;
+    width:100px;
+}
+
+
+/**************************************************************************************
+						        	- Master head -
+***************************************************************************************/
+
+.largeurSite
+{
+    width:955px;
+     margin-left:auto;
+     margin-right:auto;
+}
+
+.divBienvenueDroite
+{
+    width:100%;
+     text-align:right;
+}
+
+/**************************************************************************************
+						        	- Etapes -
+***************************************************************************************/
+
+
+.DebutEtapeGrise
+{
+	background-image: url(../Images/Etapes/DebutEtapeGrise.gif);
+	background-size:10px 20px;
+	/*height: 20px;*/
+	background-repeat: no-repeat;
+/*	background-position-x: right;*/
+}
+
+.EtapeGrise
+{
+	font-family: Arial, Helvetica, sans-serif;
+	/*height: 20px;*/
+	background-color: #737572;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 10px;
+}
+
+.EtapeFondGrisClair
+{
+	/*height: 20px;*/
+	background-color: #e6e1d4;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 10px;
+	white-space:nowrap;
+}
+
+.DebutEtapeGrisClair
+{
+	background-image: url(../Images/Etapes/DebutEtapeGrisClair.gif);
+	background-size:10px 20px;
+	background-repeat: no-repeat;
+	/*width: 10px;*/
+	/*height: 20px;*/
+	/*width: 10px;*/
+	/*background-position-x: right;*/
+}
+
+.TransitionEtapeGrisClair
+{
+   	background-image: url(../Images/Etapes/TransitionEtapeGrisClair.gif);
+	background-size:10px 20px;
+	background-repeat: no-repeat;
+	padding-left: 10px;
+}
+
+.FinEtapeGrisClair
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 10px;
+	background-image: url(../Images/Etapes/FinEtapeGrisClair.gif);
+	background-size:10px 20px;
+	background-repeat: no-repeat;
+	/*height: 20px;*/
+	/*width: 10px;*/
+	/*background-position-x: right;*/
+}
+
+.FinEtapeGrisFonce
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 10px;
+	background-image: url(../Images/Etapes/FinEtapeGrisfonce.gif);
+	background-size:10px 20px;
+	background-repeat: no-repeat;
+	/*height: 20px;*/
+	/*width: 10px;*/
+	/*background-position-x: right;*/
+}
+
+.stretch {
+    /*width:100%;*/
+    height:100%;
+}
+/**************************************************************************************
+						        	- CheckBoxList -
+***************************************************************************************/
+
+.scrollingControlContainer
+{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.scrollingCheckBoxList
+{
+    border: 1px #808080 solid;
+    margin: 10px 10px 10px 10px;
+}
+
+/**************************************************************************************
+						        	- Datagrid -
+***************************************************************************************/
+
+.DatagridHeader
+{
+    /*font-weight: bold;*/
+    color: Black;
+    background-color: #999999;
+    height: 25px;
+    vertical-align: middle;
+    /*font-variant: normal;*/
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.DatagridHeader td, .DatagridItemStyle td, .DatagridAlternatingItemStyle td, .DatagridEditItemStyle td, .DatagridHeader th
+{
+    padding-left: 2px; 
+    padding-right: 2px;
+    border-style: none;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.DatagridHeader td table td, .DatagridItemStyle td table td, .DatagridAlternatingItemStyle td table td, .DatagridEditItemStyle td table td, .DatagridHeader th table td
+{
+    border-color: transparent;
+}
+
+/*.DatagridHeader td td, .DatagridItemStyle td td, .DatagridAlternatingItemStyle td td, .DatagridEditItemStyle td td
+{
+    padding-left: 2px; 
+    padding-right: 2px;
+    border-style: none;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}*/
+
+.DatagridItemStyle
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    background-color: #ddd9cd;
+    padding-left: 4px;
+    line-height: 14px;
+    height: 25px;
+}
+
+.DatagridAlternatingItemStyle
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    color: Black;
+    background-color: white;
+    padding-left: 4px;
+    line-height: 14px;
+    height: 25px;
+}
+
+.DatagridFooterStyle
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+    color: Black;
+    background-color: #999999;
+    height: 25px;
+    vertical-align: middle;
+    font-variant: normal;
+    padding-left: 4px;
+    line-height: 14px;
+    height: 25px;
+    border-style: none;
+    border-left: 1px solid White;
+    border-right: 1px solid White;
+}
+
+.DatagridPagerStyle
+{
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #999999;
+    height: 25px;
+    vertical-align: middle;
+    font-variant: normal;
+    line-height: 14px;
+    text-align: right;
+    border-style: none;
+    border-left: 1px solid White;
+    border-right: 1px solid White;
+}
+
+.DatagridPagerStyle table {
+    float: right;
+}
+
+.DatagridEditItemStyle
+{
+    font-size: x-small;
+    height: 25px;
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    color: Black;
+}
+
+.divApplyAll
+{
+    position: absolute;
+    width: 184px;
+    display: none;
+    border-right: black thin solid;
+    border-top: black thin solid;
+    border-left: black thin solid;
+    border-bottom: black thin solid;
+    left: 56px;
+    top: 8px;
+    background-color: #ddd9cd;
+    color: #425963;
+}
+
+
+/* Supprimer les croix qui permettent de vider les champs texte dans IE */
+
+input[type=text]::-ms-clear {
+    display: none;
+}
+

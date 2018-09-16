@@ -1,0 +1,110 @@
+<!-- Navigation -->
+<header id="header">
+    <nav id="navbar" class="navbar navbar-custom navbar-default navbar-static-top" role="navigation"
+         ng-controller="NavigationController as navCtrl">
+        <div class="navbar-header">
+            <a class="navbar-brand" ng-href="#/home">
+                <img src="img/{{navCtrl.client.logo}}" onerror="this.src='img/logo.png'">
+            </a>
+            <span class="profile-ava"><img src="img/{{account.honorific}}.png"></span>
+            <span class="navbar-text navbar-right">Bonjour, {{account.honorific}}. {{account.firstName}} {{account.lastName}}</span>
+        </div>
+        <!-- /.navbar-header -->
+        <ul id="top-navbar" class="nav navbar-top-links navbar-right">
+
+            <li access="##ADMINISTRATOR_ROLE##,##SUPERVISOR_ROLE##,##OPERATOR_ROLE##" class="dropdown"
+                id="dropdown_dashboard">
+                <button type="button" id="idLinkHome" ng-click="navCtrl.goHome()" class="btn btn-primary navbar-btn"><i
+                        class="fa fa-dashboard fa-fw "></i> Tableau de bord
+                </button>
+            </li>
+            <!-- /.dropdown -->
+
+            <li access="##ADMINISTRATOR_ROLE##,##SUPERVISOR_ROLE##,##OPERATOR_ROLE##,##OTC_ROLE##" class="dropdown"
+                id="dropdown_tray">
+                <button type="button" ng-click="navCtrl.refreshTrays()"
+                        class="btn btn-primary navbar-btn dropdown-toggle" data-toggle="dropdown"><i
+                        class="fa fa-cubes "></i> Corbeilles de traitements <i class="fa fa-caret-down "></i></button>
+                <ul class="dropdown-menu">
+                    <li access="{{tray.authoritiesAsString}}" ng-repeat="tray in navCtrl.trays ">
+                        <a href="#/tray-detail/{{tray.id}} ">{{tray.label}}
+                            <span ng-class="tray.nbEnvelopes ? 'badge badge-success':'badge badge-warning'">{{tray.nbEnvelopes}}</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-menu -->
+            </li>
+            <!-- /.dropdown -->
+
+            <li access="##ADMINISTRATOR_ROLE##,##SUPERVISOR_ROLE##" class="dropdown" id="dropdown_administration">
+                <button type="button" class="btn btn-primary navbar-btn dropdown-toggle" data-toggle="dropdown"><i
+                        class="fa fa-wrench fa-fw "></i> Administration <i class="fa fa-caret-down"></i></button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#/admin-trays">Corbeilles</a>
+                    </li>
+                    <li>
+                        <a href="#/admin-indexes">Indexs</a>
+                    </li>
+                    <li>
+                        <a href="#/admin-lists">Listes</a>
+                    </li>
+                    <li>
+                        <a href="#/admin/entity-type/batch-type">Type de Lot</a>
+                    </li>
+                    <li>
+                        <a href="#/admin-users ">Utilisateurs / Rôle</a>
+                    </li>
+                    <li>
+                        <a href="#/admin-xpath"> Batch intégration</a>
+                    </li>
+                    <li>
+                        <a href="#/admin-application">Application</a>
+                    </li>
+                    <li>
+                        <a href="#/admin-referencial">Réferentiel</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-menu -->
+            </li>
+            <!-- /.dropdown -->
+
+            <li access="##ADMINISTRATOR_ROLE##,##SUPERVISOR_ROLE##" class="dropdown" id="dropdown_supervision">
+                <button type="button" class="btn btn-primary navbar-btn dropdown-toggle" data-toggle="dropdown"><i
+                        class="fa fa-eye"></i> supervision <i class="fa fa-caret-down"></i></button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#/historic">Historique des plis</a>
+                    </li>
+                    <li>
+                        <a href="#/historic-batch">Historique des lots</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-menu -->
+            </li>
+            <!-- /.dropdown -->
+
+            <li class="dropdown" id="dropdown_user">
+                <button type="button" class="btn btn-primary navbar-btn dropdown-toggle" data-toggle="dropdown"><i
+                        class="fa fa-user fa-fw "></i> <i class="fa fa-caret-down"></i></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#/user/profile "><i class="fa fa-user fa-fw "></i> Profil</a>
+                    </li>
+                    <li class="divider "></li>
+                    <li><a ng-href="#/logout "><i class="fa fa-sign-out fa-fw "></i> Déconnexion</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-menu -->
+            </li>
+            <!-- /.dropdown -->
+
+            <li class="dropdown" id="dropdown_help">
+                <button type="button" class="btn btn-primary navbar-btn" ng-click="navCtrl.toggleHelp()"><i
+                        class="fa fa-keyboard-o"></i> Aide
+                </button>
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+    </nav>
+</header>

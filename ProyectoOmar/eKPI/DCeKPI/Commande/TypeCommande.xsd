@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TypeCommande" targetNamespace="http://tempuri.org/TypeCommande.xsd" xmlns:mstns="http://tempuri.org/TypeCommande.xsd" xmlns="http://tempuri.org/TypeCommande.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="certificatConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="certificatConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DCeKPI.My.MySettings.GlobalReference.Default.certificatConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TypeCommande" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TypeCommande" msprop:Generator_UserDSName="TypeCommande">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TypeCommande" msprop:Generator_TableClassName="TypeCommandeDataTable" msprop:Generator_TableVarName="tableTypeCommande" msprop:Generator_TablePropName="_TypeCommande" msprop:Generator_RowDeletingName="TypeCommandeRowDeleting" msprop:Generator_RowChangingName="TypeCommandeRowChanging" msprop:Generator_RowEvHandlerName="TypeCommandeRowChangeEventHandler" msprop:Generator_RowDeletedName="TypeCommandeRowDeleted" msprop:Generator_UserTableName="TypeCommande" msprop:Generator_RowChangedName="TypeCommandeRowChanged" msprop:Generator_RowEvArgName="TypeCommandeRowChangeEvent" msprop:Generator_RowClassName="TypeCommandeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdTypeCommande" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdTypeCommande" msprop:Generator_ColumnPropNameInRow="IdTypeCommande" msprop:Generator_ColumnPropNameInTable="IdTypeCommandeColumn" msprop:Generator_UserColumnName="IdTypeCommande" type="xs:int" />
+              <xs:element name="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_UserColumnName="Code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Actif" msprop:Generator_ColumnVarNameInTable="columnActif" msprop:Generator_ColumnPropNameInRow="Actif" msprop:Generator_ColumnPropNameInTable="ActifColumn" msprop:Generator_UserColumnName="Actif" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TypeCommande" />
+      <xs:field xpath="mstns:IdTypeCommande" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

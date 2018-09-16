@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "preserveConstEnums": true,
+        "noImplicitAny": false,
+        "target": "es5"
+    },
+    "include": [
+        "src/application/typescript/**/*.ts",
+        "src/application/assets/references/**/*.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "src/application/assets/references/angular/.angular.d.ts"
+    ]
+}

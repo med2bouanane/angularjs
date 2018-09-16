@@ -1,0 +1,65 @@
+﻿
+<div class="row">
+    <div class="col-xs-6">
+        <h1><label id="lblTitreGlobal" ng-model="lblTitreGlobal">Label1</label></h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6">
+        <h2><label id="lblTitreSecondaire"  ng-model="titreSecondaire">Label2</label></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6">
+        <label id="lblNotification" class="Traduction" data-i18n="lblNotification" ng-model="lblNotification">lblNotification</label>
+        <img id="imgNotification" src="Images/ok.gif"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+        <label id="lblIdentifiantLibelle" class="Traduction" data-i18n="lblIdentifiantLibelle">lblIdentifiantLibelle:</label>
+    </div>
+    <div class="col-sm-1">
+        <input id="txlLogin" type="text" readonly="readonly"   class="zonetxtgris2"  ng-model="login"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+        <label id="lblIdentifiantLibelle" class="Traduction" data-i18n="lblIdentifiantLibelle">lblIdentifiantLibelle:</label>
+    </div>
+    <div class="col-sm-1">
+        <input id="txlLogin" type="text" readonly="readonly"   class="zonetxtgris2"  ng-model="login"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+        <label id="lblAncienMotPass" class="Traduction" data-i18n="lblAncienMotPass">lblAncienMotPass:</label>
+    </div>
+    <div class="col-sm-1">
+        <input id="txtAncienMotPasse"  type="password" class="zonetxtoblig" maxlength="50" ng-model="AncienMotPasse"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+        <label id="lblNouveauMotPass" class="Traduction" data-i18n="lblNouveauMotPass">lblNouveauMotPass:</label>
+    </div>
+    <div class="col-sm-1">
+        <input id="txtNouveauMotPasse"  type="password" class="zonetxtoblig" maxlength="50" ng-model="nouveauMotPasse"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+        <label id="lblConfirmationMotPass" class="Traduction" data-i18n="lblConfirmationMotPass">lblConfirmationMotPass:</label>
+    </div>
+    <div class="col-sm-1">
+        <input id="txtNouveauMotPasseConfirmation" type="password" class="zonetxtoblig" maxlength="50" ng-model="nouveauMotPasseConfirmation" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-1">
+        <input id="btnValider" type="submit" value="btnValider" ng-click="ValiderMotPasse()" />
+    </div>
+</div>
+

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IncotermSAP" targetNamespace="http://tempuri.org/IncotermSAP.xsd" xmlns:mstns="http://tempuri.org/IncotermSAP.xsd" xmlns="http://tempuri.org/IncotermSAP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="IncotermSAP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="IncotermSAP" msprop:Generator_UserDSName="IncotermSAP">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="IncotermSAP" msprop:Generator_TableClassName="IncotermSAPDataTable" msprop:Generator_TableVarName="tableIncotermSAP" msprop:Generator_TablePropName="_IncotermSAP" msprop:Generator_RowDeletingName="IncotermSAPRowDeleting" msprop:Generator_RowChangingName="IncotermSAPRowChanging" msprop:Generator_RowEvHandlerName="IncotermSAPRowChangeEventHandler" msprop:Generator_RowDeletedName="IncotermSAPRowDeleted" msprop:Generator_UserTableName="IncotermSAP" msprop:Generator_RowChangedName="IncotermSAPRowChanged" msprop:Generator_RowEvArgName="IncotermSAPRowChangeEvent" msprop:Generator_RowClassName="IncotermSAPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdIncotermSAP" msprop:Generator_ColumnVarNameInTable="columnIdIncotermSAP" msprop:Generator_ColumnPropNameInRow="IdIncotermSAP" msprop:Generator_ColumnPropNameInTable="IdIncotermSAPColumn" msprop:Generator_UserColumnName="IdIncotermSAP" type="xs:int" minOccurs="0" />
+              <xs:element name="IDBackOffice" msprop:Generator_ColumnVarNameInTable="columnIDBackOffice" msprop:Generator_ColumnPropNameInRow="IDBackOffice" msprop:Generator_ColumnPropNameInTable="IDBackOfficeColumn" msprop:Generator_UserColumnName="IDBackOffice" type="xs:int" minOccurs="0" />
+              <xs:element name="CodeIncotermSAP" msprop:Generator_ColumnVarNameInTable="columnCodeIncotermSAP" msprop:Generator_ColumnPropNameInRow="CodeIncotermSAP" msprop:Generator_ColumnPropNameInTable="CodeIncotermSAPColumn" msprop:Generator_UserColumnName="CodeIncotermSAP" type="xs:string" minOccurs="0" />
+              <xs:element name="CodeAffichage" msprop:Generator_ColumnVarNameInTable="columnCodeAffichage" msprop:Generator_ColumnPropNameInRow="CodeAffichage" msprop:Generator_ColumnPropNameInTable="CodeAffichageColumn" msprop:Generator_UserColumnName="CodeAffichage" type="xs:string" minOccurs="0" />
+              <xs:element name="Franco" msprop:Generator_ColumnVarNameInTable="columnFranco" msprop:Generator_ColumnPropNameInRow="Franco" msprop:Generator_ColumnPropNameInTable="FrancoColumn" msprop:Generator_UserColumnName="Franco" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CodeIncotermSAP2" msprop:Generator_ColumnVarNameInTable="columnCodeIncotermSAP2" msprop:Generator_ColumnPropNameInRow="CodeIncotermSAP2" msprop:Generator_ColumnPropNameInTable="CodeIncotermSAP2Column" msprop:Generator_UserColumnName="CodeIncotermSAP2" type="xs:string" minOccurs="0" />
+              <xs:element name="Camion" msprop:Generator_ColumnVarNameInTable="columnCamion" msprop:Generator_ColumnPropNameInRow="Camion" msprop:Generator_ColumnPropNameInTable="CamionColumn" msprop:Generator_UserColumnName="Camion" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Wagon" msprop:Generator_ColumnVarNameInTable="columnWagon" msprop:Generator_ColumnPropNameInRow="Wagon" msprop:Generator_ColumnPropNameInTable="WagonColumn" msprop:Generator_UserColumnName="Wagon" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Allege" msprop:Generator_ColumnVarNameInTable="columnAllege" msprop:Generator_ColumnPropNameInRow="Allege" msprop:Generator_ColumnPropNameInTable="AllegeColumn" msprop:Generator_UserColumnName="Allege" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Maritime" msprop:Generator_ColumnVarNameInTable="columnMaritime" msprop:Generator_ColumnPropNameInRow="Maritime" msprop:Generator_ColumnPropNameInTable="MaritimeColumn" msprop:Generator_UserColumnName="Maritime" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Ordre" msprop:Generator_ColumnVarNameInTable="columnOrdre" msprop:Generator_ColumnPropNameInRow="Ordre" msprop:Generator_ColumnPropNameInTable="OrdreColumn" msprop:Generator_UserColumnName="Ordre" type="xs:int" minOccurs="0" />
+              <xs:element name="Supprime" msprop:Generator_ColumnVarNameInTable="columnSupprime" msprop:Generator_ColumnPropNameInRow="Supprime" msprop:Generator_ColumnPropNameInTable="SupprimeColumn" msprop:Generator_UserColumnName="Supprime" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Aerien" msprop:Generator_ColumnVarNameInTable="columnAerien" msprop:Generator_ColumnPropNameInRow="Aerien" msprop:Generator_ColumnPropNameInTable="AerienColumn" msprop:Generator_UserColumnName="Aerien" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BlocageClient" msprop:Generator_ColumnVarNameInTable="columnBlocageClient" msprop:Generator_ColumnPropNameInRow="BlocageClient" msprop:Generator_ColumnPropNameInTable="BlocageClientColumn" msprop:Generator_UserColumnName="BlocageClient" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

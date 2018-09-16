@@ -1,0 +1,100 @@
+﻿    <link rel="stylesheet" href="Styles/reset.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/stock.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/eKPI_org.css" type="text/css" media="screen" />
+
+
+    <div class="row">
+        <div class="col-xs-6">
+            <h1>{{TitreGlobal}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <h2>{{TitreSecondaire}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            {{divNotification}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            Login
+        </div>
+        <div class="col-sm-1">
+            <label class="zonetxtgris2"> Login</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            Titre
+        </div>
+        <div class="col-sm-6">
+            <input type ="radio" id="rbtM" name="rdbTitre"/>
+            <label for="rbtM">Sir</label>
+            &nbsp;&nbsp;
+            <input type ="radio" id="rbtMme" name="rdbTitre"/>
+            <label for="rbtMme">Mme</label>
+            &nbsp;&nbsp;
+            <input type ="radio" id="rbtMlle" name="rdbTitre"/>
+            <label for="rbtMlle">Ms</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2">
+            Nom
+        </div>
+        <div class="col-sm-10">
+            <input type="text" id="txtNom" class="zonetxtoblig texteboxLength"
+                   meta:resourcekey="txtNomResource1"/>
+            <asp:requiredfieldvalidator id="rfvNom" runat="server"
+                                        ControlToValidate="txtNom" CssClass="texterouge"  ErrorMessage="Fields marked with * are required"
+                                        meta:resourcekey="rfvNomResource1" >*</asp:requiredfieldvalidator>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            First name
+        </div>
+        <div class="col-sm-10">
+            <input type="text" id="txtPrenom" class="zonetxtoblig texteboxLength"/>
+            <asp:requiredfieldvalidator id="rfvPrenom" runat="server"
+                                        ControlToValidate="txtPrenom" CssClass="texterouge"  ErrorMessage="Fields marked with * are required"
+                                        meta:resourcekey="rfvPrenomResource1" >*</asp:requiredfieldvalidator>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            Occupation
+        </div>
+        <div class="col-sm-10">
+            <input type="text" id="txtFonction" class="texteboxLength"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            Email
+        </div>
+        <div class="col-sm-10">
+            <input type="text" id="txtEmail" runat="server" class="zonetxtoblig texteboxLength"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            Phone
+        </div>
+        <div class="col-sm-10">
+            <input type="text" id="txtTelephone" class="texteboxLength"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+        </div>
+        <div class="col-sm-2">
+            <input type="button" ID="btnValider" runat="server" value="Validate"/>
+        </div>
+    </div>
+

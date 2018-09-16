@@ -1,0 +1,238 @@
+﻿    <link rel="stylesheet" href="Styles/reset.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/stock.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/eKPI.css" type="text/css" media="screen" />
+    
+<table width="100%">
+        <tr>
+            <td style="padding-left:15px">
+                <h1><label id="lblTitreGlobal" class="Traduction" data-i18n="lblTitreGlobal"></label></h1>
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr id="trSteps"   >
+                        <td>
+                             <table id="steps" class="steps"  cellpadding="0" cellspacing="0" border="0">
+                                <tr style="height:20px;">
+                                    <td id="tdDebutEtape1" class="DebutEtapeGrise" style="width:10px">
+                                    </td>
+                                    <td id="tdEtape1"  
+                                        class="EtapeGrise" style="padding-right:5px; padding-left:5px;">
+                                        <label id="lblEtape1"></label>
+                                    </td>
+                                    <td id="tdDebutEtape2"  class="DebutEtapeGrisClair EtapeGrise">
+                                        </td>
+                                    <td id="tdEtape2"  class="EtapeFondGrisClair" style="padding-right:5px; padding-left:5px;">
+                                        <label id="lblEtape2"></label>
+                                    </td>
+                                    <td id="tdFinEtape2"  class="FinEtapeGrisClair EtapeFondGrisClair">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="padding-left:10px" >
+                        <div class="notification texterouge">
+                            <label id="lblNotification" class="Traduction" data-i18n="lblNotification"></label>
+                            <img id="imgNotification" src="Images/ok.gif"/>
+                        </div> 
+                            <input type="hidden" id="hdnCurrentStep"/>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="padding-left:10px; padding-top:10px; line-height:23px">
+                                         <div id="divStep1">
+                                            <table id="tblTypeCompte" >
+                                                <tr>
+                                                    <td valign="top" style="padding-top:2px; width:150px">
+                                                        
+                                                        <label id="Utilisateur" class="Traduction" data-i18n="lblUtilisateur">Utilisateur</label>
+                                                    </td>
+                                                    <td>
+                                                        <input type="radio" id="rbtCompteExistant" checked="checked" name="typeUtilisateur"/>
+                                                        <label id="lblCompteExistant" for="rbtCompteExistant" data-i18n="lblCompteExistant">Oui</label>   &nbsp;&nbsp;
+                                                        <input type="radio" id="rbtCompteNoExistant"  name="typeUtilisateur"/>
+                                                        <label id="lblCompteNoExistant" for="rbtCompteNoExistant" data-i18n="lblCompteNoExistant">Non</label>   &nbsp;&nbsp;
+                                                    </td>
+                                                </tr>
+                                              </table>
+                                            <table id="tblVueConecte" >
+                                                <tr>
+                                                    <td valign="top" style="padding-top:2px; width:150px">
+                                                        <label id="lblIdentifiantExistant" class="Traduction" data-i18n="lblIdentifiantExistant">Identifiant</label>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" id="txtIdentifiant"  class="zonetxtoblig" Width="170px" MaxLength="50"  >
+<!--                                                             <asp:CustomValidator ID="cuvIdentifiant"  ClientValidationFunction="validerCompte" ControlToValidate="txtIdentifiant" ValidateEmptyText="True"
+                                                             ErrorMessage="Les champs marqués avec * sont obligatoires" CssClass="texterouge" meta:resourcekey="cuvIdentifiantResource1" >*</asp:CustomValidator>-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top" style="padding-top:2px; width:150px">
+                                                        
+                                                        <label id="lblMotPassExistant" class="Traduction" data-i18n="lblMotPassExistant">Mot de passe</label>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" id="txtMotPasse"  Width="170px"  CssClass="zonetxtoblig" MaxLength="50" TextMode="Password">
+						                               <!-- <asp:CustomValidator ID="cuvMotPasse"  ClientValidationFunction="validerCompte" ControlToValidate="txtMotPasse" ValidateEmptyText="True"
+                                                             ErrorMessage="Les champs marqués avec * sont obligatoires" CssClass="texterouge"   meta:resourcekey="cuvMotPasseResource1">*</asp:CustomValidator>-->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <div id="divDescription" width="100%" style="padding-top:6px; padding-bottom:6px">
+                                                 <label id="lblDescription" class="Traduction" data-i18n="lblDescription">Description</label>
+                                            </div>
+                                            <table width="100%" id="tblVueNoConecte" >
+                                                <tr>
+					                                <td valign="top"  style="padding-top:2px; width:150px">
+                                                        <label id="lblTitre" class="Traduction" data-i18n="lblTitre">Titre</label>
+                                                    </td>
+					                                <td valign="top">
+                                                        <input type ="radio" id="rbtM" name="rdbTitre"/>
+                                                        <label id="lblM" for="rbtM">Sir</label> 
+                                                        &nbsp;&nbsp;
+                                                        <input type ="radio" id="rbtMme" name="rdbTitre"/>
+                                                        <label id="lblMme" for="rbtMme">Mme</label>   
+                                                        &nbsp;&nbsp;
+                                                        <input type ="radio" id="rbtMlle" name="rdbTitre"/>
+                                                        <label id="lblMlle" for="rbtMlle">Ms</label> 
+                                                    </td>
+				                                </tr>
+                                                <tr>
+					                                <td valign="top" style="padding-top:2px; width:150px">
+                                                        <label id="lblNom" class="Traduction" data-i18n="lblNom">Nom</label>
+                                                    </td>
+					                                <td valign="top">
+                                                        <input type="text" id="txtNom"  cssclass="zonetxtoblig" Width="350px"/>
+                                                        <!--<asp:CustomValidator ID="cuvNom"  ClientValidationFunction="validerCompte"  ControlToValidate="txtNom" ValidateEmptyText="True"
+                                                             ErrorMessage="Les champs marqués avec * sont obligatoires" CssClass="texterouge"  meta:resourcekey="cuvNomResource1">*</asp:CustomValidator>-->
+                                                    </td>
+				                                </tr>
+				                                <tr>
+					                                <td valign="top" style="padding-top:2px; width:150px">
+                                                        <label id="lblPrenom" class="Traduction" data-i18n="lblPrenom">Prenom</label>
+                                                        </td>
+					                                <td valign="top">
+                                                        <input type="text" id="txtPrenom"   cssclass="zonetxtoblig"
+                                                            Width="350px">
+<!--                                                        <asp:CustomValidator ID="cuvPrenom"  ClientValidationFunction="validerCompte" ControlToValidate="txtPrenom" ValidateEmptyText="True"
+                                                        ErrorMessage="Les champs marqués avec * sont obligatoires" CssClass="texterouge"  meta:resourcekey="cuvPrenomResource1" >*</asp:CustomValidator>-->
+                                                    </td>
+				                                </tr>
+				                                <tr>
+					                                <td valign="top" style="padding-top:2px; width:150px">
+                                                        <label id="lblFonction" class="Traduction" data-i18n="lblFonction">Fonction</label>
+                                                    </td>
+					                                <td valign="top"><input type="text" id="txtFonction"  
+                                                            Width="350px"/></td>
+				                                </tr>
+                                                <tr>
+					                                <td valign="top" style="padding-top:2px; width:150px">
+                                                        <label id="lblEmail" class="Traduction" data-i18n="lblEmail">Fonction</label>
+                                                    </td>
+					                                <td valign="top"><input type="text" id="txtEmail"  
+                                                            cssclass="zonetxtoblig" Width="350px"/>
+                                                       <!-- <asp:CustomValidator ID="cuvMail"  ClientValidationFunction="validerCompte"  ControlToValidate="txtEmail" ValidateEmptyText="True"
+                                                        ErrorMessage="Les champs marqués avec * sont obligatoires" CssClass="texterouge" meta:resourcekey="cuvMailResource1" >*</asp:CustomValidator>-->
+                                                       <!-- <asp:CustomValidator ID="cuvDestinataires"  ClientValidationFunction="validerExpression"  ControlToValidate="txtEmail" ValidateEmptyText="false"
+                                                        ErrorMessage="Un ou plusieurs champs ne respectent pas le format requis" CssClass="texterouge" meta:resourcekey="cuvDestinatairesResource1" >*</asp:CustomValidator>-->
+                                                        </td>
+				                                </tr>
+                                                <tr>
+					                                <td valign="top">
+                                                        <label id="lblTelephone" class="Traduction" data-i18n="lblTelephone">Telephone</label>
+                                                    </td>
+					                                <td valign="top"><input type="text" id="txtTelephone"  
+                                                            Width="350px"/></td>
+				                                </tr>
+                                                <tr>
+					                                <td valign="top">
+                                                        <label id="lblLangue" class="Traduction" data-i18n="lblLangue">Langue</label>
+                                                    </td>
+					                                <td valign="top">
+                                                        <select id ="ddlLangue" class="Traduction" data-i18n="ddlLangue">
+	                                                        <option selected="selected" value="en">Anglais</option>
+	                                                        <option value="fr">Français</option>
+                                                        </select>
+                                                    </td>
+				                                </tr>
+                                            </table>
+                                        </div>
+                                        <div ID="divStep2">
+                                            <table id="tblSaisiCredencial">
+                                                <tr>
+                                                    <td style="width:150px">
+                                                        <label id="lblIdentifiant" class="Traduction" data-i18n="lblIdentifiant">Identifiant</label>    
+                                                    </td>
+					                                <td>
+						                                <input type="text" id="txtIdentifiantAcces"  Width="170px"  
+                                                            maxlength="50" class="zonetxtgris2" readonly="true"/>
+					                                </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label id="lblMotPasse" class="Traduction" data-i18n="lblMotPasse">Mot de passe</label>
+                                                    </td>
+					                                <td>
+						                                <input type="password" id="txtMotPasseAcces"  Width="170px" 
+                                                            class="zonetxtoblig" maxlength="50"/>
+						                                
+                                                            <!--<asp:CustomValidator ID="cuvMotPasseAcces"  
+                                                            ClientValidationFunction="validerCompte" 
+                                                            ControlToValidate="txtMotPasseAcces" ValidateEmptyText="True"
+                                                        ErrorMessage="Les champs marqués avec * sont obligatoires" 
+                                                            CssClass="texterouge" meta:resourcekey="cuvMotPasseAccesResource1"  >*</asp:CustomValidator>
+                                                       
+
+                                                            <asp:CustomValidator ID="cuvMotPasseAccesValidation"  
+                                                            ClientValidationFunction="validerExpression"  ControlToValidate="txtMotPasseAcces"
+                                                            ValidateEmptyText="false" ErrorMessage="Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et 6 caractères de longueur" 
+                                                            CssClass="texterouge" 
+                                                            meta:resourcekey="cuvMotPasseAccesValidationResource1"   >*</asp:CustomValidator>-->
+					                                </td>
+                                                </tr>
+                                                 <tr>
+                                                    <td>
+                                                        <label id="lblConfirmerMotPasseAcces" class="Traduction" data-i18n="lblConfirmerMotPasseAcces">Confirmation mot de passe</label>        
+                                                    </td>
+					                                <td>
+						                                <input type="password" id="txtConfirmerMotPasseAcces"  Width="170px"  
+                                                            class="zonetxtoblig" maxlength="50"/>
+						                                
+                                                            <!--<asp:CustomValidator ID="cuvConfirmerMotPasseAccess"  
+                                                            ClientValidationFunction="validerCompte" ControlToValidate="txtConfirmerMotPasseAcces"
+                                                        ErrorMessage="Les champs marqués avec * sont obligatoires" 
+                                                            CssClass="texterouge" ValidateEmptyText="True" meta:resourcekey="cuvConfirmerMotPasseAccessResource1" 
+                                                             >*</asp:CustomValidator>-->   
+                                                        <!--<asp:CustomValidator ID="cuvNouveauMotPasse"  
+                                                            ClientValidationFunction="validerExpression"  ControlToValidate="txtConfirmerMotPasseAcces"
+                                                        ErrorMessage="Les mots de passe ne correspondent pas" CssClass="texterouge"  
+                                                            ValidateEmptyText="false" meta:resourcekey="cuvNouveauMotPasseResource1"
+                                                              >*</asp:CustomValidator>-->
+					                                </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div id="Step3"
+                                            <table>
+                                            </table>
+                                        </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" colspan="1">
+                                <input type ="button" id="brnPrecedant" value="Precedant" />
+                                <input type ="button" id="btnSuivant" value="Suivant"  />
+                                <input type ="button" id="btnFinish" value="Terminer" />
+                            </td>   
+                        </tr>
+                </table>
+            </td>
+        </tr>
+    </table>

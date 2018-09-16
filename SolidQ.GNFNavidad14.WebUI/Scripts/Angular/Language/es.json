@@ -1,0 +1,10 @@
+﻿{
+    "REQUIRED": "Campo obligatorio",
+    "EMAILFORMAT": "El formato del campo email no es correcto.",
+    "DUPLICATECONTACT": "Un contacto con el mismo email ya ha sido agregado.",
+    "NONECONTACT": "No se ha agregado ningún contacto.",
+    "LOGINERROR": "Usuario o contraseña incorrectos.",
+    "CONFIRMDELETE": "¿Está seguro de que desea eliminar el contacto seleccionado?",
+    "CONFIRMDELETEALL": "¿Está seguro de que desea eliminar todos los contactos?",
+    "SENDINGERROR": "No se ha podido enviar la felicitación."
+}

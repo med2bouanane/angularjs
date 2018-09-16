@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConfigurationObjectifLivraison" targetNamespace="http://tempuri.org/ConfigurationObjectifLivraison.xsd" xmlns:mstns="http://tempuri.org/ConfigurationObjectifLivraison.xsd" xmlns="http://tempuri.org/ConfigurationObjectifLivraison.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConfigurationObjectifLivraison" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ConfigurationObjectifLivraison" msprop:Generator_UserDSName="ConfigurationObjectifLivraison">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ConfigurationObjectifLivraison" msprop:Generator_TableClassName="ConfigurationObjectifLivraisonDataTable" msprop:Generator_TableVarName="tableConfigurationObjectifLivraison" msprop:Generator_TablePropName="_ConfigurationObjectifLivraison" msprop:Generator_RowDeletingName="ConfigurationObjectifLivraisonRowDeleting" msprop:Generator_RowChangingName="ConfigurationObjectifLivraisonRowChanging" msprop:Generator_RowEvHandlerName="ConfigurationObjectifLivraisonRowChangeEventHandler" msprop:Generator_RowDeletedName="ConfigurationObjectifLivraisonRowDeleted" msprop:Generator_UserTableName="ConfigurationObjectifLivraison" msprop:Generator_RowChangedName="ConfigurationObjectifLivraisonRowChanged" msprop:Generator_RowEvArgName="ConfigurationObjectifLivraisonRowChangeEvent" msprop:Generator_RowClassName="ConfigurationObjectifLivraisonRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdConfigurationObjectifLivraison" msprop:Generator_ColumnVarNameInTable="columnIdConfigurationObjectifLivraison" msprop:Generator_ColumnPropNameInRow="IdConfigurationObjectifLivraison" msprop:Generator_ColumnPropNameInTable="IdConfigurationObjectifLivraisonColumn" msprop:Generator_UserColumnName="IdConfigurationObjectifLivraison" type="xs:int" minOccurs="0" />
+              <xs:element name="IdUtilisateur" msprop:Generator_ColumnVarNameInTable="columnIdUtilisateur" msprop:Generator_ColumnPropNameInRow="IdUtilisateur" msprop:Generator_ColumnPropNameInTable="IdUtilisateurColumn" msprop:Generator_UserColumnName="IdUtilisateur" type="xs:int" minOccurs="0" />
+              <xs:element name="DateCreation" msprop:Generator_ColumnVarNameInTable="columnDateCreation" msprop:Generator_ColumnPropNameInRow="DateCreation" msprop:Generator_ColumnPropNameInTable="DateCreationColumn" msprop:Generator_UserColumnName="DateCreation" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="CommandeStandardMoinsDeuxPlusZero" msprop:Generator_ColumnVarNameInTable="columnCommandeStandardMoinsDeuxPlusZero" msprop:Generator_ColumnPropNameInRow="CommandeStandardMoinsDeuxPlusZero" msprop:Generator_ColumnPropNameInTable="CommandeStandardMoinsDeuxPlusZeroColumn" msprop:Generator_UserColumnName="CommandeStandardMoinsDeuxPlusZero" type="xs:int" minOccurs="0" />
+              <xs:element name="CommandeStandardMoinsDeuxPlusDeux" msprop:Generator_ColumnVarNameInTable="columnCommandeStandardMoinsDeuxPlusDeux" msprop:Generator_ColumnPropNameInRow="CommandeStandardMoinsDeuxPlusDeux" msprop:Generator_ColumnPropNameInTable="CommandeStandardMoinsDeuxPlusDeuxColumn" msprop:Generator_UserColumnName="CommandeStandardMoinsDeuxPlusDeux" type="xs:int" minOccurs="0" />
+              <xs:element name="CommandePackMoinsZeroPlusZero" msprop:Generator_ColumnVarNameInTable="columnCommandePackMoinsZeroPlusZero" msprop:Generator_ColumnPropNameInRow="CommandePackMoinsZeroPlusZero" msprop:Generator_ColumnPropNameInTable="CommandePackMoinsZeroPlusZeroColumn" msprop:Generator_UserColumnName="CommandePackMoinsZeroPlusZero" type="xs:int" minOccurs="0" />
+              <xs:element name="CommandePackMoinsZeroPlusUn" msprop:Generator_ColumnVarNameInTable="columnCommandePackMoinsZeroPlusUn" msprop:Generator_ColumnPropNameInRow="CommandePackMoinsZeroPlusUn" msprop:Generator_ColumnPropNameInTable="CommandePackMoinsZeroPlusUnColumn" msprop:Generator_UserColumnName="CommandePackMoinsZeroPlusUn" type="xs:int" minOccurs="0" />
+              <xs:element name="Actif" msprop:Generator_ColumnVarNameInTable="columnActif" msprop:Generator_ColumnPropNameInRow="Actif" msprop:Generator_ColumnPropNameInTable="ActifColumn" msprop:Generator_UserColumnName="Actif" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cuvConfirmerMotPasseAccessResource1.ErrorMessage" xml:space="preserve">
+    <value>Fields marked with * are required</value>
+  </data>
+  <data name="cuvConfirmerMotPasseAccessResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="cuvConfirmerMotPasseAccessResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cuvMotPasseAccesResource1.ErrorMessage" xml:space="preserve">
+    <value>Fields marked with * are required</value>
+  </data>
+  <data name="cuvMotPasseAccesResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="cuvMotPasseAccesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cuvMotPasseAccesValidationResource1.ErrorMessage" xml:space="preserve">
+    <value>The password must contain at least one uppercase letter, a lowercase letter, a number and 6 characters in length</value>
+  </data>
+  <data name="cuvMotPasseAccesValidationResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="cuvMotPasseAccesValidationResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cuvNouveauMotPasseResource1.ErrorMessage" xml:space="preserve">
+    <value>Thèse passwords don't match.</value>
+  </data>
+  <data name="cuvNouveauMotPasseResource1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="cuvNouveauMotPasseResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblConfirmerMotPasseAccesResource1.Text" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="lblConfirmerMotPasseAccesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblDescriptionResource1.Text" xml:space="preserve">
+    <value>Insert here your profile. This information is intended only to be used by ArcelorMittal Industeel. This information will not be passed to any third party.</value>
+  </data>
+  <data name="lblDescriptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEtape1Resource1.Text" xml:space="preserve">
+    <value>Profile Information</value>
+  </data>
+  <data name="lblEtape1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEtape2Resource1.Text" xml:space="preserve">
+    <value>Access Information</value>
+  </data>
+  <data name="lblEtape2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblIdentifiantResource1.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="lblIdentifiantResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblMotPasseResource1.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lblMotPasseResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitreGlobalResource1.Text" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="lblTitreGlobalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>e-KPI Industeel</value>
+  </data>
+  <data name="txtConfirmerMotPasseAccesResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtConfirmerMotPasseAccesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIdentifiantAccesResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtIdentifiantAccesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMotPasseAccesResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMotPasseAccesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WizardStep1Resource1.Title" xml:space="preserve">
+    <value>Step 1</value>
+  </data>
+  <data name="WizardStep2Resource1.Title" xml:space="preserve">
+    <value>Step 2</value>
+  </data>
+  <data name="WizardStep3Resource1.Title" xml:space="preserve">
+    <value>Step 3</value>
+  </data>
+  <data name="wzdInscriptionResource1.CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="wzdInscriptionResource1.FinishCompleteButtonText" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="wzdInscriptionResource1.FinishPreviousButtonText" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="wzdInscriptionResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="wzdInscriptionResource1.SkipLinkText" xml:space="preserve">
+    <value>Skip Navigation Links.</value>
+  </data>
+  <data name="wzdInscriptionResource1.StartNextButtonText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="wzdInscriptionResource1.StepNextButtonText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="wzdInscriptionResource1.StepPreviousButtonText" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="wzdInscriptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rbtCompteExistantResource1.Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="rbtCompteNoExistantResource1.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="EnvoiInscriptionSucces" xml:space="preserve">
+    <value>Your registration has been sent</value>
+  </data>
+  <data name="lblTypeUtilisateurResource1.Text" xml:space="preserve">
+    <value>Existing Web account</value>
+  </data>
+  <data name="lblEmailResource1.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="lblFonctionResource1.Text" xml:space="preserve">
+    <value>Occupation</value>
+  </data>
+  <data name="lblIdentifiantExisteResource1.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="lblLangueResource1.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="lblMotPassExistantResource1.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lblNomResource1.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lblPhoneResource1.Text" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="lblPrenomResource1.Text" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="lblTitreResource1.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="rbtMlleResource1.Text" xml:space="preserve">
+    <value>Ms</value>
+  </data>
+  <data name="rbtMmeResource1.Text" xml:space="preserve">
+    <value>Mme</value>
+  </data>
+  <data name="rbtMResource1.Text" xml:space="preserve">
+    <value>Sir</value>
+  </data>
+  <data name="cuvDestinatairesResource1.ErrorMessage" xml:space="preserve">
+    <value>One or more fields do not meet the required format</value>
+  </data>
+  <data name="cuvIdentifiantResource1.ErrorMessage" xml:space="preserve">
+    <value>Fields marked with * are required</value>
+  </data>
+  <data name="cuvMailResource1.ErrorMessage" xml:space="preserve">
+    <value>Fields marked with * are required</value>
+  </data>
+  <data name="cuvMotPasseResource1.ErrorMessage" xml:space="preserve">
+    <value>Fields marked with * are required</value>
+  </data>
+  <data name="cuvNomResource1.ErrorMessage" xml:space="preserve">
+    <value>Fields marked with * are required</value>
+  </data>
+  <data name="cuvPrenomResource1.ErrorMessage" xml:space="preserve">
+    <value>Fields marked with * are required</value>
+  </data>
+  <data name="NotificationMessageClient" xml:space="preserve">
+    <value>Hi {0} {1}
+
+Your registration has been considered. One of our staff will handle it to validate it.
+
+You will be notified by email when validation is effective.
+
+Thank you for your confidence.
+
+Best regards.
+
+The KPI Portal team.</value>
+  </data>
+  <data name="NotificationMessageGestionnaire" xml:space="preserve">
+    <value>hello, 
+
+A request for access to KPI Industeel portal has arrived: 
+
+WEB existing account: {0} 
+ID: {1} 
+Title: {2} 
+Name: {3} 
+Name: {4} 
+Function: {5} 
+Email: {6} 
+Phone: {7} 
+Language: {8} 
+
+Thank you to validate the registration and forward the request to the following address: mailto: helpdesk.industeelweb@arcelormittal.com 
+
+The KPI Portal team.</value>
+  </data>
+  <data name="TitreMessageGestionnaire" xml:space="preserve">
+    <value>Title: New application access portal KPI Industeel</value>
+  </data>
+  <data name="ErreurEmailExistant" xml:space="preserve">
+    <value>This email address already exists, you can not sign up for a second time. &lt;br /&gt; Please wait until your registration has been validated if this is not the case or contact the helpdesk</value>
+  </data>
+  <data name="TitreMessageClient" xml:space="preserve">
+    <value>Title: Your entry portal KPI Industeel</value>
+  </data>
+  <data name="ComptePossedeDroitAcces" xml:space="preserve">
+    <value>This Web account already has access to the portal</value>
+  </data>
+  <data name="ComptExistantDemandeAcces" xml:space="preserve">
+    <value>WEB account attached to this email already exists, click &lt;a href="#" onClick="ActiverVueOUI();"" &gt;here&lt;/a&gt; to request access.</value>
+  </data>
+</root>

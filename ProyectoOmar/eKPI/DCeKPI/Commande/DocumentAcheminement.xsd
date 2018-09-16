@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DocumentAcheminement" targetNamespace="http://tempuri.org/DocumentAcheminement.xsd" xmlns:mstns="http://tempuri.org/DocumentAcheminement.xsd" xmlns="http://tempuri.org/DocumentAcheminement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DocumentAcheminement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DocumentAcheminement" msprop:Generator_UserDSName="DocumentAcheminement">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DocumentAcheminement" msprop:Generator_TableClassName="DocumentAcheminementDataTable" msprop:Generator_TableVarName="tableDocumentAcheminement" msprop:Generator_TablePropName="_DocumentAcheminement" msprop:Generator_RowDeletingName="DocumentAcheminementRowDeleting" msprop:Generator_RowChangingName="DocumentAcheminementRowChanging" msprop:Generator_RowEvHandlerName="DocumentAcheminementRowChangeEventHandler" msprop:Generator_RowDeletedName="DocumentAcheminementRowDeleted" msprop:Generator_UserTableName="DocumentAcheminement" msprop:Generator_RowChangedName="DocumentAcheminementRowChanged" msprop:Generator_RowEvArgName="DocumentAcheminementRowChangeEvent" msprop:Generator_RowClassName="DocumentAcheminementRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdDocumentAcheminement" msprop:Generator_ColumnVarNameInTable="columnIdDocumentAcheminement" msprop:Generator_ColumnPropNameInRow="IdDocumentAcheminement" msprop:Generator_ColumnPropNameInTable="IdDocumentAcheminementColumn" msprop:Generator_UserColumnName="IdDocumentAcheminement" type="xs:int" minOccurs="0" />
+              <xs:element name="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" msprop:Generator_UserColumnName="Numero" type="xs:string" minOccurs="0" />
+              <xs:element name="StatutSextant" msprop:Generator_ColumnVarNameInTable="columnStatutSextant" msprop:Generator_ColumnPropNameInRow="StatutSextant" msprop:Generator_ColumnPropNameInTable="StatutSextantColumn" msprop:Generator_UserColumnName="StatutSextant" type="xs:int" minOccurs="0" />
+              <xs:element name="LettreVoiture" msprop:Generator_ColumnVarNameInTable="columnLettreVoiture" msprop:Generator_ColumnPropNameInRow="LettreVoiture" msprop:Generator_ColumnPropNameInTable="LettreVoitureColumn" msprop:Generator_UserColumnName="LettreVoiture" type="xs:string" minOccurs="0" />
+              <xs:element name="CodeModeTransport" msprop:Generator_ColumnVarNameInTable="columnCodeModeTransport" msprop:Generator_ColumnPropNameInRow="CodeModeTransport" msprop:Generator_ColumnPropNameInTable="CodeModeTransportColumn" msprop:Generator_UserColumnName="CodeModeTransport" type="xs:string" minOccurs="0" />
+              <xs:element name="DateSortieMarchandise" msprop:Generator_ColumnVarNameInTable="columnDateSortieMarchandise" msprop:Generator_ColumnPropNameInRow="DateSortieMarchandise" msprop:Generator_ColumnPropNameInTable="DateSortieMarchandiseColumn" msprop:Generator_UserColumnName="DateSortieMarchandise" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateDocumentAcheminement" msprop:Generator_ColumnVarNameInTable="columnDateDocumentAcheminement" msprop:Generator_ColumnPropNameInRow="DateDocumentAcheminement" msprop:Generator_ColumnPropNameInTable="DateDocumentAcheminementColumn" msprop:Generator_UserColumnName="DateDocumentAcheminement" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,57 @@
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header"><i class="fa fa fa-history fa-fw "></i> Liste des enveloppes par lot</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <i class="fa fa-info-circle"></i> Informations
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <span><b>Id Lot : </b>{{envelopeCtrl.envelopes[0].batch.id}}</span><br>
+                    <span><b>Lot :</b> {{envelopeCtrl.envelopes[0].batch.label}}</span>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-md-12 -->
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped table-hover" ng-if="envelopeCtrl.envelopes.length">
+                <thead>
+                    <tr class="warning">
+                        <th class="text-center">Numéro d'enveloppe</th>
+                        <th class="text-center">Commentaire</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="env in envelopeCtrl.envelopes | limitTo : envelopeCtrl.itemsPerPage : (envelopeCtrl.currentPage-1)*envelopeCtrl.itemsPerPage">
+                        <td ng-click="envelopeCtrl.openEnvelopeHistoric(env.id)" class="text-center"><span class="fa fa-envelope-o text-primary">{{env.label}}</span></td>
+                        <td class="text-center">{{env.comment}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="main-pagination" ng-show="envelopeCtrl.envelopes && envelopeCtrl.envelopes.length">
+                <uib-pagination total-items="envelopeCtrl.envelopes.length" ng-model="envelopeCtrl.currentPage" max-size="envelopeCtrl.maxSize"
+                    class="pagination-sm" rotate="false" first-text="Premier" last-text="Dernier" previous-text="Précédent" next-text="Suivant"
+                    items-per-page="envelopeCtrl.itemsPerPage">
+                </uib-pagination>
+            </div>
+        </div>
+        <!-- /.col-md-12 -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->

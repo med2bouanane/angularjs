@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MenuLibelle" targetNamespace="http://tempuri.org/MenuLibelle.xsd" xmlns:mstns="http://tempuri.org/MenuLibelle.xsd" xmlns="http://tempuri.org/MenuLibelle.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="AccesConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AccesConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DCeKPI.My.MySettings.GlobalReference.Default.AccesConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MenuLibelle" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MenuLibelle" msprop:Generator_UserDSName="MenuLibelle">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MenuLibelle" msprop:Generator_TableClassName="MenuLibelleDataTable" msprop:Generator_TableVarName="tableMenuLibelle" msprop:Generator_TablePropName="_MenuLibelle" msprop:Generator_RowDeletingName="MenuLibelleRowDeleting" msprop:Generator_UserTableName="MenuLibelle" msprop:Generator_RowChangingName="MenuLibelleRowChanging" msprop:Generator_RowEvHandlerName="MenuLibelleRowChangeEventHandler" msprop:Generator_RowDeletedName="MenuLibelleRowDeleted" msprop:Generator_RowEvArgName="MenuLibelleRowChangeEvent" msprop:Generator_RowChangedName="MenuLibelleRowChanged" msprop:Generator_RowClassName="MenuLibelleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdMenu" msprop:Generator_ColumnVarNameInTable="columnIdMenu" msprop:Generator_ColumnPropNameInRow="IdMenu" msprop:Generator_ColumnPropNameInTable="IdMenuColumn" msprop:Generator_UserColumnName="IdMenu" type="xs:int" minOccurs="0" />
+              <xs:element name="CodeLangue" msprop:Generator_ColumnVarNameInTable="columnCodeLangue" msprop:Generator_ColumnPropNameInRow="CodeLangue" msprop:Generator_ColumnPropNameInTable="CodeLangueColumn" msprop:Generator_UserColumnName="CodeLangue" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Libelle" msprop:Generator_ColumnVarNameInTable="columnLibelle" msprop:Generator_ColumnPropNameInRow="Libelle" msprop:Generator_ColumnPropNameInTable="LibelleColumn" msprop:Generator_UserColumnName="Libelle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

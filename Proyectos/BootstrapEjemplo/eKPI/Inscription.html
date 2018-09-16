@@ -1,0 +1,205 @@
+﻿    <script src="Controlleurs/InscriptionController.js" type="text/javascript"></script>
+        <!--Librairies-->
+    <script src="Scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui-1.8.12.custom.min.js" type="text/javascript"></script>
+    <script src="Scripts/Angular/angular.min.js" type="text/javascript"></script>
+    <script src="Scripts/Angular/angular-route.min.js" type="text/javascript"></script>
+    <script src="Scripts/Angular/ui-bootstrap-tpls-0.12.0.min.js" type="text/javascript"></script>
+    <script src="Scripts/i18next-1.7.4.js"type="text/javascript"></script>
+    <script src="Scripts/highcharts.js" type="text/javascript"></script>
+    <!--Fichier contenant la variable app-->
+
+    <script src="Controlleurs/GestionRouteController.js" type="text/javascript"></script>
+    <script src="Controlleurs/PrincipalController.js" type="text/javascript"></script>
+    <!--Directives :-->
+    <script src="Scripts/Directives/accordeon.js" type="text/javascript"></script>
+    <!--Services:-->
+    <script src="Scripts/Administration/ServicesAdministration.js" type="text/javascript"></script>
+    <script src="Scripts/Livraison/ServiceLivraison.js" type="text/javascript"></script>
+    <!--Controlleurs-->
+    <script src="Controlleurs/ConfidentialiteController.js" type="text/javascript"></script>
+    <script src="Scripts/Administration/ObjectifsLivraison.js" type="text/javascript"></script>
+    <script src="Scripts/Administration/BlocageClient.js" type="text/javascript"></script>
+    <script src="Scripts/Livraison/VueEnsemble.js" type="text/javascript"></script>
+
+
+
+    <div class="Titre" style="padding-left:15px">
+        <h1><label id="lblTitreGlobal" class="Traduction" data-i18n="lblTitreGlobal">Label1</label></h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-6" >
+            <table id="steps" class="steps"  cellpadding="0" cellspacing="0" border="0">
+                <tr style="height:20px;">
+                    <td id="tdDebutEtape1" class="DebutEtapeGrise" style="width:10px">
+                    </td>
+                    <td id="tdEtape1"
+                        class="EtapeGrise" style="padding-right:5px; padding-left:5px;">
+                        <label id="lblEtape1">Label2</label>
+                    </td>
+                    <td id="tdDebutEtape2"  class="DebutEtapeGrisClair EtapeGrise">
+                    </td>
+                    <td id="tdEtape2"  class="EtapeFondGrisClair" style="padding-right:5px; padding-left:5px;">
+                        <label id="lblEtape2">Label3</label>
+                    </td>
+                    <td id="tdFinEtape2"  class="FinEtapeGrisClair EtapeFondGrisClair">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 notification texterouge">
+            <label id="lblNotification" class="Traduction" data-i18n="lblNotification">Label4</label>
+            <img id="imgNotification" src="Images/ok.gif"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <input type="hidden" id="hdnCurrentStep" ng-model="hdnCurrentStep" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">
+            <label id="Utilisateur" class="Traduction" data-i18n="lblUtilisateur">Utilisateur</label>
+        </div>
+        <div class="col-sm-6">
+            <input type="radio" id="rbtCompteExistant" checked="checked" name="typeUtilisateur" value="0" ng-model="utilisateur.typeUtilisateur"/>
+            <label id="lblCompteExistant" for="rbtCompteExistant" data-i18n="lblCompteExistant">Oui</label>   &nbsp;&nbsp;
+            <input type="radio" id="rbtCompteNoExistant"  name="typeUtilisateur"value="0" ng-model="utilisateur.typeUtilisateur"/>
+            <label id="lblCompteNoExistant" for="rbtCompteNoExistant" data-i18n="lblCompteNoExistant">Non</label>   &nbsp;&nbsp;
+        </div>
+
+
+    </div>
+    <div class="row" ng-hide="CompteExistant()">
+        <div class="col-sm-2">
+            <label id="lblIdentifiantExistant" class="Traduction" data-i18n="lblIdentifiantExistant">Identifiant</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtIdentifiant"  class="zonetxtoblig" MaxLength="50" />
+        </div>
+    </div>
+    <div class="row" ng-hide="CompteExistant()">
+        <div class="col-sm-2">
+            <label id="lblMotPassExistant" class="Traduction" data-i18n="lblMotPassExistant">Mot de passe</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="password" id="txtMotPasse"  class="zonetxtoblig" maxlength="50"/>
+        </div>
+    </div>
+    <div class="row" ng-hide="NouveauComptePas1()">
+        <div class="col-sm-2">
+            <label id="lblDescription" class="Traduction" class="Traduction" data-i18n="lblDescription">Description</label>
+        </div>
+    </div>
+    <div ng-hide="NouveauCompte()">
+        <div class="row" >
+            <div class="col-xs-2">
+                <label id="lblTitre" class="Traduction" data-i18n="lblTitre">Titre</label>
+            </div>
+            <div class="col-sm-6">
+                <input type ="radio" id="rbtM" checked="checked" name="rdbTitre"/>
+                <label id="lblM" for="rbtM">Sir</label>   &nbsp;&nbsp;
+                <input type ="radio" id="rbtMme" name="rdbTitre"/>
+                <label id="lblMme" for="rbtMme">Mme</label>   &nbsp;&nbsp;
+                <input type ="radio" id="rbtMlle" name="rdbTitre"/>
+                <label id="lblMlle" for="rbtMlle">Ms</label>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label id="lblNom" class="Traduction" data-i18n="lblNom">Nom</label>
+            </div>
+            <div class="col-sm-1">
+                <input type="text" id="txtNom"  class="zonetxtoblig"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label id="lblPrenom" class="Traduction" data-i18n="lblPrenom">Prenom</label>
+            </div>
+            <div class="col-sm-1">
+                <input type="text" id="txtPrenom"  class="zonetxtoblig">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label id="lblFonction" class="Traduction" data-i18n="lblFonction">Fonction</label>
+            </div>
+            <div class="col-sm-1">
+                <input type="text" id="txtFonction"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label id="lblEmail" class="Traduction" data-i18n="lblEmail">Email</label>
+            </div>
+            <div class="col-sm-1">
+                <input type="text" id="txtEmail"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label id="lblTelephone" class="Traduction" data-i18n="lblTelephone">Telephone</label>
+            </div>
+            <div class="col-sm-1">
+                <input type="text" id="txtTelephone" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label id="lblLangue" class="Traduction" data-i18n="lblLangue">Langue</label>
+            </div>
+            <div class="col-sm-1">
+                <select id ="ddlLangue">
+                    <option selected="selected" value="en">Anglais</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="divStep2" ng-hide="NouveauComptePas2()">
+        <div class="row">
+            <div class="col-sm-2">
+                <label id="lblIdentifiant" class="Traduction" data-i18n="lblIdentifiant">Identifiant</label>
+            </div>
+            <div class="col-sm-1">
+                <input type="text" id="txtIdentifiantAcces" maxlength="50" class="zonetxtgris2" readonly="readonly" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label id="lblMotPasse" class="Traduction" data-i18n="lblMotPasse">Mot de passe</label>
+            </div>
+            <div class="col-sm-1">
+                <input type="password" id="txtMotPasseAcces" class="zonetxtoblig" maxlength="50"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label id="lblConfirmerMotPasseAcces" class="Traduction" data-i18n="lblConfirmerMotPasseAcces">Confirmation mot de passe</label>
+            </div>
+            <div class="col-sm-1">
+                <input type="password" id="txtConfirmerMotPasseAcces" class="zonetxtoblig" maxlength="50"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+            </div>
+            <div class="col-sm-1">
+                <input type ="button" id="brnPrecedant" value="Precedant"  />
+            </div>
+            <div class="col-sm-1">
+                <input type ="button" id="btnSuivant" value="Suivant"  />
+            </div>
+            <div class="col-sm-1">
+                <input type ="button" id="btnFinish" value="Terminer" />
+            </div>
+        </div>
+
+
+
+    </div>

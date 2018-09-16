@@ -1,0 +1,15 @@
+﻿{
+  "lblLangue": "Default language",
+  "ddlLangue":
+  {
+	"Francais": "French",
+	"Anglais": "English"
+  },
+  "lblPageAccueil": "Homepage",
+  "btnValider": "Validate",
+  
+  "msgSucces": "Your setting has been saved",
+  "msgErreurGeneral": "An erreur est suvenue at server side."
+}
+
+  

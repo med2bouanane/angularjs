@@ -1,0 +1,57 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+UIWebResources
+</name>
+</assembly>
+<members>
+<member name="P:UIWebResources.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:UIWebResources.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:UIWebResources.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:UIWebResources.My.Resources.Suggestions.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:UIWebResources.My.Resources.Suggestions.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:UIWebResources.My.Resources.Suggestions.emailContenuMessage">
+	<summary>
+  Looks up a localized string similar to Une suggestion pour le portail KPI Industeel est arrivée :
+
+Titre : {0} 
+Nom : {1} 
+Prénom : {2} 
+Fonction : {3} 
+Email : {4}
+Téléphone : {5} 
+Langue : {6} 
+Sujet : {7} 
+Message : {8} 
+
+L’équipe Portail KPI..
+</summary>
+</member><member name="P:UIWebResources.My.Resources.Suggestions.emailTitreMessage">
+	<summary>
+  Looks up a localized string similar to Titre : Suggestion pour le portail KPI Industeel.
+</summary>
+</member><member name="T:UIWebResources.My.Resources.Suggestions">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,23 @@
+﻿{
+  "lblTitreGlobal": "Suggestion",
+  "lblNotification": "",
+  "lblTitre": "Title",
+  "lblM": "Mr",
+  "lblMme": "Mme",    
+  "lblMlle": "Ms",
+  "lblNom": "Name",
+  "lblPrenom": "Omar First name",
+  "lblFonction": "Occupation",
+  "lblEmail": "Email",
+  "lblPhone": "Phone",
+  "lblLangue": "Language",
+  "lblSujet": "Subject",
+  "lblMessage": "Message",
+  "btnEnvoyer": "Send Message",
+  "EmailTitreMessage": "Titre : Suggestion pour le portail KPI Industeel",
+  
+  "msgErrorFormat": "One or more fields do not meet the required format",
+  "msgErrorEncodage": "Fields marked with * are required",
+  "msgSucces": "Your suggestion has been sent successfully",
+  "msgErreurGeneral": "An error has occurred at server side."
+}

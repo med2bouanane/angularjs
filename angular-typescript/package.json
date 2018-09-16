@@ -1,0 +1,19 @@
+{
+  "name": "angular-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.8.4"
+  },
+  "dependencies": {
+    "@types/angular": "^1.5.23",
+    "tsd": "^0.6.5"
+  }
+}

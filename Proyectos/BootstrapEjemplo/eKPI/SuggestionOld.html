@@ -1,0 +1,108 @@
+﻿<h1>{{idioma}}</h1>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <h1><label id="lblTitreGlobal" class="Traduction" data-i18n="lblTitreGlobal">Label1</label></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <label id="lblNotification" >Label2</label>
+            <img id="imgNotification" src="Images/ok.gif"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            <label >Label3</label>
+        </div>
+
+        <div class="col-xs-1">
+            <input id="rbtM" type="radio"  value="M" checked="checked" name="rdbTitre" />
+            <label id="lblM" for="rbtM" class="Traduction" data-i18n="lblM">Label4</label>
+        </div>
+        <div class="col-xs-1">
+            <input id="rbtMme" type="radio" value="Mme" name="rdbTitre" />
+            <label id="lblMme" for="rbtMme" class="Traduction" data-i18n="lblMme">Label5</label>
+        </div>
+        <div class="col-xs-1">
+            <input id="rbtMlle" type="radio" value="Ms" name="rdbTitre" />
+            <label id="lblMlle"for="rbtMlle" class="Traduction" data-i18n="lblMlle">Label6</label>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2">
+            <label id="lblNom" class="Traduction" data-i18n="lblNom">Label7</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtNom" class="zonetxtoblig texteboxLength" ng-model="nom"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-2">
+            <label id="lblPrenom" >{{'lblPrenom' | translate}}</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtPrenom" class="texteboxLength" ng-model="prenom"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label id="lblFonction" class="Traduction" data-i18n="lblFonction">Label9</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtFonction" class="texteboxLength" ng-model="fonction"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label id="lblEmail" class="Traduction" data-i18n="lblEmail">Label10</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtEmail" class="zonetxtoblig texteboxLength" ng-model="email"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label id="lblPhone" class="Traduction" data-i18n="lblPhone">Label11</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtTelephone" class="texteboxLength" ng-model="telephone"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label id="lblLangue" class="Traduction" data-i18n="lblLangue">Label12</label>
+        </div>
+        <div class="col-sm-1">
+            <select id="ddlLangue" class="texteboxLength Traduction" ng-model="langue" data-i18n="ddlLangue">
+                <option value ="fr"></option>
+                <option value ="en"></option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label id="lblSujet" class="Traduction" data-i18n="lblSujet">Label13</label>
+        </div>
+        <div class="col-sm-1">
+            <input type="text" id="txtSujet" maxlength ="2147483647" class="zonetxtoblig texteboxLength" ng-model="sujet"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label id="lblMessage" class="Traduction" data-i18n="lblMessage">Label14</label>
+        </div>
+        <div class="col-sm-1">
+            <textarea id="txtMessage" rows="5" cols="60" ></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+        </div>
+        <div class="col-sm-2">
+            <input id="btnEnvoyer" type="submit" value="" class="Traduction" data-i18n="btnEnvoyer" ng-click="EnvoyerSuggestion()"/>
+        </div>
+    </div>

@@ -1,0 +1,10 @@
+﻿{
+    "REQUIRED": "Verplicht veld",
+    "EMAILFORMAT": "Het formaat van het e-mailadres is niet correct.",
+    "DUPLICATECONTACT": "Er is al een contact met hetzelfde e-mailadres toegevoegd.",
+    "NONECONTACT": "Er zijn geen contacten toegevoegd.",
+    "LOGINERROR": "Incorrecte gebruiker of wachtwoord.",
+    "CONFIRMDELETE": "Weet u zeker dat u het geselecteerde contact wilt verwijderen?",
+    "SENDINGERROR": "Het was niet mogelijk de gelukwens te versturen.",
+    "CONFIRMDELETEALL": "Bent u zeker dat u al uw contacten wenst te elimineren?"
+}

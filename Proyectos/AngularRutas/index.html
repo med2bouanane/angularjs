@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+	
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="miApp">
+	<nav class="navbar navbar-default" role="navigation">
+	<div class="collapse navbar-collapse">
+		<ul class="nav navbar-nav">
+			<li><a href="#/">Inicio</a></li>
+			<li><a href="#/tareas">Tareas</a></li>
+			<li><a href="#/empleados">Empleasdos</a></li>
+		</ul>
+	</div>
+	</nav>
+
+	<div ng-view="views"></div>
+
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.26/angular-route.min.js"></script>
+    -->
+    <script src="src/lib/angular.js"></script>
+    <script src="src/lib/angular-route.min.js"></script>
+    <script src="src/lib/angular-animate.js"></script>
+
+    <script src="src/main.js"></script>
+    <script src="src/controllers/TareasController.js"></script>
+    <script src="src/controllers/EmpleadosController.js"></script>
+    <script src="src/services/TareasFactory.js"></script>
+    <script src="src/services/EmpleadosFactory.js"></script>
+</body>
+</html>

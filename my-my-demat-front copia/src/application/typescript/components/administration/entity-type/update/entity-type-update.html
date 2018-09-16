@@ -1,0 +1,51 @@
+<div id="page-wrapper">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header"><i class="fa fa-list-alt" aria-hidden="true"></i> Ajout d'un type d'entité :
+                {{entityTypeUpdateCtrl.routeParams.entityTypeParams}}</h2>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-12">
+
+            <form role="form_create" class="form-horizontal">
+                <div class="form-group">
+                    <label for="label" class="col-sm-2 control-label">Code :</label>
+                    <div class="col-sm-10">
+                        <input type="text" ng-model="entityTypeUpdateCtrl.entityTypeModel.code"
+                               class="form-control" id="code" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="label" class="col-sm-2 control-label">Libellé :</label>
+                    <div class="col-sm-10">
+                        <input type="text" ng-model="entityTypeUpdateCtrl.entityTypeModel.label"
+                               class="form-control" id="label" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="label" class="col-sm-2 control-label">Activé :</label>
+                    <div class="col-sm-10">
+                        <input type="checkbox" ng-model="entityTypeUpdateCtrl.entityTypeModel.enabled"
+                               class="form-control" id="enabled">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success"
+                            ng-disabled="!entityTypeUpdateCtrl.isFilled()"
+                            ng-click="entityTypeUpdateCtrl.updateEntityType()">Valider
+                    </button>
+                    <a href="#/admin/entity-type/{{entityTypeUpdateCtrl.routeParams.entityTypeParams}}"
+                       class="btn btn-danger">Annuler</a>
+                </div>
+            </form>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->

@@ -1,0 +1,192 @@
+@font-face {
+	font-family: VAGRoundedThin;
+	src:url(../Fonts/vrt2-webfont.eot?iefix) format("eot"), url(../Fonts/vrt2-webfont.woff) format("woff"), url(../Fonts/vrt2-webfont.ttf) format("truetype"), url(../Fonts/vrt2-webfont.svg#webfontkrKyjpO0) format("svg");
+}
+article {
+	DISPLAY: block
+}
+aside {
+	DISPLAY: block
+}
+audio {
+	DISPLAY: block
+}
+canvas {
+	DISPLAY: block
+}
+command {
+	DISPLAY: block
+}
+datalist {
+	DISPLAY: block
+}
+details {
+	DISPLAY: block
+}
+EMBED {
+	DISPLAY: block
+}
+figcaption {
+	DISPLAY: block
+}
+figure {
+	DISPLAY: block
+}
+footer {
+	DISPLAY: block
+}
+header {
+	DISPLAY: block
+}
+hgroup {
+	DISPLAY: block
+}
+keygen {
+	DISPLAY: block
+}
+meter {
+	DISPLAY: block
+}
+nav {
+	DISPLAY: block
+}
+output {
+	DISPLAY: block
+}
+progress {
+	DISPLAY: block
+}
+section {
+	DISPLAY: block
+}
+source {
+	DISPLAY: block
+}
+video {
+	DISPLAY: block
+}
+mark {
+	DISPLAY: inline
+}
+RP {
+	DISPLAY: inline
+}
+RT {
+	DISPLAY: inline
+}
+RUBY {
+	DISPLAY: inline
+}
+summary {
+	DISPLAY: inline
+}
+time {
+	DISPLAY: inline
+}
+BODY {
+	FONT: 10px/10px Arial, Helvetica, Verdana, sans-serif
+}
+H1 {
+	FONT-SIZE: 4.4em; FONT-WEIGHT: normal
+}
+H2 {
+	FONT-SIZE: 2.8em; FONT-WEIGHT: bold
+}
+H3 {
+	FONT-SIZE: 1.6em; FONT-WEIGHT: bold
+}
+H4 {
+	FONT-SIZE: 1.2em; FONT-WEIGHT: bold
+}
+.left {
+	FLOAT: left
+}
+.right {
+	FLOAT: right
+}
+.inside {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.half {
+	WIDTH: 100%
+}
+.third {
+	WIDTH: 100%
+}
+.quarter {
+	WIDTH: 100%
+}
+.fifth {
+	WIDTH: 100%
+}
+.sixth {
+	WIDTH: 100%
+}
+.half LI {
+	FLOAT: left
+}
+.third LI {
+	FLOAT: left
+}
+.quarter LI {
+	FLOAT: left
+}
+.fifth LI {
+	FLOAT: left
+}
+.sixth LI {
+	FLOAT: left
+}
+.half LI {
+	WIDTH: 45%; PADDING-RIGHT: 5%
+}
+.third LI {
+	WIDTH: 28.3%; PADDING-RIGHT: 5%
+}
+.quarter LI {
+	WIDTH: 20%; PADDING-RIGHT: 5%
+}
+.fifth LI {
+	WIDTH: 15%; PADDING-RIGHT: 5%
+}/*
+.separator {
+	WIDTH: 100%; FLOAT: left; HEIGHT: 1px; CLEAR: both
+}*/
+#wrap {
+	MARGIN: 0px auto; WIDTH: 900px; /*position: relative; */
+}
+header {
+	WIDTH: 100%; FLOAT: left
+}
+article {
+	WIDTH: 66.7%; FLOAT: left
+}
+aside {
+	WIDTH: 33.3%; FLOAT: left
+}
+footer {
+	WIDTH: 100%; FLOAT: left
+}
+
+/* Accordeon */
+
+.accordeon
+{
+    width: 810px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.accordeonEnTete
+{
+    background-color: #b7b8b1;
+    cursor: pointer;
+    line-height: 20px;
+    color: Black;
+    font-weight: bold;
+    font-family: Arial,Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+}

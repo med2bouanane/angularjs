@@ -1,0 +1,135 @@
+﻿<div ng-controller="SuggestionController">
+    <table class="tableMargin"  >   
+    <tr>
+        <td>
+	        <table width="100%" id="tblEntete" runat="server">
+				    <tr>
+					    <td>
+                            <h1><label id="lblTitreGlobal" class="Traduction" data-i18n="lblTitreGlobal"></label></h1>
+                        </td>
+				    </tr>
+				    <tr>
+                    <td >
+                        <div class="notification texterouge">
+                            <label id="lblNotification" class="Traduction" >{{lblNotification | translate}}</label>
+                            <img id="imgNotification" src="Images/ok.gif"/>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                 <table width="100%" id="tblVueNoConecte">
+            
+            <tr>
+				<td>
+                    <label id="lblTitre" class="Traduction" data-i18n="lblTitre">Title</label>
+                </td>
+				<td>    
+                    <input id="rbtM" type="radio"  value="M" checked="checked" name="rdbTitre" />
+                    <label id="lblM" for="rbtM" class="Traduction" data-i18n="lblM">Mr</label>
+                    &nbsp;&nbsp;
+                    <input id="rbtMme" type="radio" value="Mme" name="rdbTitre" />
+                    <label id="lblMme" for="rbtMme" class="Traduction" data-i18n="lblMme">Mme</label>
+                    &nbsp; &nbsp;  
+                    <input id="rbtMlle" type="radio" value="Ms" name="rdbTitre" />
+                    <label id="lblMlle"for="Ms" class="Traduction" data-i18n="lblMlle">Ms</label>        
+                </td>
+			</tr>
+            <tr>
+				<td class="TdTop">
+                    <label id="lblNom" class="Traduction" data-i18n="lblNom">Nom</label>
+                </td>
+				<td class="TdTop" >
+                    <input type="text" id="txtNom" class="zonetxtoblig texteboxLength" ng-model="nom"/>
+<!--                        <asp:requiredfieldvalidator id="rfvNom" runat="server" 
+                        ControlToValidate="txtNom" CssClass="texterouge"  ErrorMessage="Fields marked with * are required"
+                        meta:resourcekey="rfvNomResource1" >*</asp:requiredfieldvalidator>-->
+                </td>
+			</tr>
+			<tr>
+				<td class="TdTop">
+                    <!--<label id="lblPreom" class="Traduction" data-i18n="lblPrenom">Prénom</label>-->
+                    <label id="lblPrenom" class="Traduction">{{'lblPrenom' | translate}}</label>
+                </td>
+				<td valign="top">
+                <input type="text" id="txtPrenom" class="texteboxLength" ng-model="prenom"/>
+                </td>
+			</tr>
+			<tr>
+				<td class="TdTop">
+                    <label id="lblFonction" class="Traduction" data-i18n="lblFonction">Fonction</label>
+                </td>
+				<td >
+                    <input type="text" id="txtFonction" class="texteboxLength" ng-model="fonction"/>
+                </td>
+			</tr>
+            <tr>
+				<td class="TdTop">
+                    <label id="lblEmail" class="Traduction" data-i18n="lblEmail">Email</label>
+                </td>
+				<td >
+                <input type="text" id="txtEmail" class="zonetxtoblig texteboxLength" ng-model="email"/>
+                </td>
+<!--                        <asp:requiredfieldvalidator id="rfvEmail" runat="server" 
+                        ControlToValidate="txtEmail" CssClass="texterouge" 
+                        meta:resourcekey="rfvEmailResource1" ErrorMessage="Fields marked with * are required">*</asp:requiredfieldvalidator>
+                    <asp:regularexpressionvalidator id="revDestinataires" runat="server" 
+                        CssClass="texterouge" ControlToValidate="txtEmail"
+						ErrorMessage="One or more fields do not meet the required format"
+                        ValidationExpression="(\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*;)*(\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)$" 
+                        meta:resourcekey="revDestinatairesResource1" >*</asp:regularexpressionvalidator></td>-->
+			</tr>
+            <tr>
+				<td class="TdTop">
+                    T<label id="lblPhone" class="Traduction" data-i18n="lblPhone">élephone</label>
+                </td>
+				<td >
+                    <input type="text" id="txtTelephone" class="texteboxLength" ng-model="telephone"/>
+                </td>
+			</tr>
+            <tr>
+				<td class="TdTop">
+                    <label id="lblLangue" class="Traduction" data-i18n="lblLangue">Langue</label>
+                </td>
+				<td >
+                    <select id="ddlLangue" class="texteboxLength Traduction" ng-model="langue" data-i18n="ddlLangue">
+                        <option value ="fr">Français</option>
+                        <option value ="en">Anglais</option>
+                    </select>
+                </td>
+			</tr>
+            <tr>
+				<td  class="TdTop">
+                    <label id="lblSujet" class="Traduction" data-i18n="lblSujet">Sujet</label>
+                </td>
+				<td ">
+                <input type="text" id="txtSujet"  maxlength ="2147483647" class="zonetxtoblig texteboxLength" ng-model="sujet">
+                    <!--<asp:requiredfieldvalidator id="rfvSujet" runat="server" 
+                        ControlToValidate="txtSujet" CssClass="texterouge" 
+                        meta:resourcekey="rfvSujetResource1" ErrorMessage="Fields marked with * are required">*</asp:requiredfieldvalidator>-->
+				</td>
+            </tr>
+			<tr>
+				<td class="TdTop">
+                    <label id="lblMessage" class="Traduction" data-i18n="lblMessage">Message</label> 
+                </td >
+				<td   valign="top" style="padding-right:50px" >
+                    <textarea id="txtMessage" rows="5" cols="60"  class="texteboxLength" style="width: 100%; height:100%" ng-model="message"></textarea>
+                </td>
+			</tr>
+			<tr>
+				<td>&nbsp; </td>
+                <td align="right" style="padding-right:44px" >
+                    <input id="btnEnvoyer" type="submit" value="Envoyer message" class="Traduction" data-i18n="btnEnvoyer" ng-click="EnvoyerSuggestion()"/>
+                </td>	
+			</tr>
+        </table>
+            </td>
+
+
+        </tr>
+    </table>
+</div>
